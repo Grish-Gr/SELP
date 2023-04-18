@@ -31,7 +31,11 @@ class MainFragment: BaseFragment() {
 
     private fun initAction(){
         binding.helpCard.setOnClickListener {
-            openFragment(BreathHelpVolumeFragment())
+            if (binding.toggleHelpBreath.checkedButtonId == R.id.help_with_video){
+                openFragment(BreathHelpVideoFragment())
+            } else {
+                openFragment(BreathHelpVolumeFragment())
+            }
         }
         binding.exercisesProgessive.setOnClickListener {
             openFragment(MeditationFragment())
