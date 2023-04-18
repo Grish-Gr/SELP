@@ -80,7 +80,6 @@ tools:context=".MainActivity">
                             android:layout_weight="1"
                             android:drawableTint="?attr/colorOnSurface"
                             android:gravity="center"
-                            android:onClick="openVideo"
                             android:text="Video"
                             android:textColor="?attr/colorOnSurface"
                             app:drawableTopCompat="@drawable/ic_videocam" />
