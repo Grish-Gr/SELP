@@ -1,0 +1,63 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="128dp"
+    android:height="111dp"
+    android:viewportWidth="128"
+    android:viewportHeight="111"
+    >
+    <group>
+        <clip-path
+            android:pathData="M15 0H113C121.284 0 128 6.71573 128 15V96C128 104.284 121.284 111 113 111H15C6.71573 111 0 104.284 0 96V15C0 6.71573 6.71573 0 15 0Z"
+            />
+        <group
+            android:translateX="0.23"
+            android:translateY="-1.287"
+            android:pivotX="64"
+            android:pivotY="55.5"
+            android:scaleX="4.348"
+            android:scaleY="4.348"
+            android:rotation="43.633"
+            >
+            <path
+                android:pathData="M0 0V111H128V0"
+                >
+                <aapt:attr name="android:fillColor">
+                    <gradient
+                        android:type="radial"
+                        android:centerX="64"
+                        android:centerY="55.5"
+                        android:gradientRadius="32"
+                        >
+                        <item
+                            android:color="#9CC5F1"
+                            android:offset="0"
+                            />
+                        <item
+                            android:color="#9CC5F1"
+                            android:offset="0.25"
+                            />
+                        <item
+                            android:color="#9CC5F1"
+                            android:offset="0.5"
+                            />
+                        <item
+                            android:color="#9CC5F1"
+                            android:offset="0.75"
+                            />
+                        <item
+                            android:color="#0078F1"
+                            android:offset="1"
+                            />
+                    </gradient>
+                </aapt:attr>
+            </path>
+
+        </group>
+        <path
+            android:pathData="M15 0H113C121.284 0 128 6.71573 128 15V96C128 104.284 121.284 111 113 111H15C6.71573 111 0 104.284 0 96V15C0 6.71573 6.71573 0 15 0Z"
+            android:strokeWidth="2"
+            android:strokeColor="#A9FFFFFF"
+            />
+    </group>
+</vector>
