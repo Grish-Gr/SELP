@@ -3,19 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/moon"
-        android:layout_width="44dp"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="71dp"
-        android:layout_marginTop="757dp"
-        android:background="@drawable/baseline_bookmarks_24" />
 
 
     <RelativeLayout
-        android:id="@+id/moon"
+        android:id="@+id/icon_menu"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentLeft="true"
@@ -26,30 +17,42 @@
         android:elevation="4dp" />
 
     <RelativeLayout
-        android:id="@+id/moon"
+        android:id="@+id/icon_person"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="407dp"
+        android:layout_marginLeft="350dp"
         android:layout_marginTop="14dp"
         android:background="@drawable/person"
         android:elevation="4dp" />
 
     <View
-        android:id="@+id/rectangle_2"
+        android:id="@+id/circle_center"
         android:layout_width="306dp"
         android:layout_height="300dp"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp"
         android:background="@drawable/rectangle_2"
+        android:elevation="0dp" />
+
+    <View
+        android:id="@+id/rectangle_5"
+        android:layout_width="1.48dp"
+        android:layout_height="62.3dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="365dp"
+        android:background="@drawable/line"
         android:elevation="4dp"
         />
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_press_to"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="148dp"
@@ -60,9 +63,11 @@
         android:textColor="#ffffff"
         android:textStyle="bold" />
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="110dp"
         android:layout_marginTop="135dp"
         android:elevation="4dp"
@@ -72,19 +77,21 @@
         android:textStyle="bold" />
 
     <View
-        android:id="@+id/rectangle_5"
+        android:id="@+id/video_box"
         android:layout_width="169dp"
         android:layout_height="73dp"
         android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="359dp"
-        android:layout_marginLeft="660px"
+        android:layout_marginRight="16dp"
         android:background="@drawable/rectangle_5"
         android:elevation="0dp" />
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="270dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="235dp"
         android:layout_marginTop="374dp"
         android:elevation="4dp"
         android:text="Video"
@@ -93,19 +100,20 @@
         android:textStyle="bold" />
 
     <View
-        android:id="@+id/rectangle_7"
+        android:id="@+id/sound_box"
         android:layout_width="169dp"
         android:layout_height="73dp"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="150px"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="359dp"
         android:background="@drawable/rectangle_5"
         android:elevation="0dp" />
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_sound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="120dp"
+        android:layout_marginLeft="82dp"
         android:layout_marginTop="374dp"
         android:elevation="4dp"
         android:text="Sound"
@@ -118,7 +126,9 @@
         android:layout_width="match_parent"
         android:layout_height="460dp"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="-4dp"
         android:layout_marginTop="450dp"
         android:background="@drawable/rectangle_6"
@@ -127,31 +137,31 @@
 
 
     <RelativeLayout
-        android:id="@+id/moon"
+        android:id="@+id/smile"
         android:layout_width="44dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="69dp"
+        android:layout_marginLeft="55dp"
         android:layout_marginTop="627dp"
         android:background="@drawable/smile"
         android:elevation="4dp" />
 
     <RelativeLayout
-        android:id="@+id/moon"
+        android:id="@+id/icon_exercise"
         android:layout_width="44dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="69dp"
-        android:layout_marginTop="467dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="480dp"
         android:elevation="4dp"
         android:background="@drawable/progresive" />
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_exercise"
         android:layout_width="105dp"
         android:layout_height="48dp"
-        android:layout_marginLeft="71dp"
+        android:layout_marginLeft="55dp"
         android:layout_marginTop="530dp"
         android:elevation="4dp"
         android:textStyle="bold"
@@ -159,96 +169,98 @@
         android:textSize="20dp" />
 
     <RelativeLayout
-        android:id="@+id/moon"
+        android:id="@+id/icon_video"
         android:layout_width="44dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="365dp"
+        android:layout_marginLeft="329dp"
         android:layout_marginTop="374dp"
         android:background="@drawable/play"
         android:elevation="4dp" />
 
     <RelativeLayout
-        android:id="@+id/moon"
+        android:id="@+id/icon_sound"
         android:layout_width="44dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="66dp"
+        android:layout_marginLeft="29dp"
         android:layout_marginTop="374dp"
         android:background="@drawable/airphone"
         android:elevation="4dp" />
 
     <View
-        android:id="@+id/rectangle_1"
-        android:layout_width="140dp"
+        android:id="@+id/box_1"
+        android:layout_width="144dp"
         android:layout_height="120dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="57dp"
-        android:layout_marginTop="461dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="471dp"
         android:background="@drawable/rectangle_1"
         android:elevation="0dp" />
 
     <RelativeLayout
-        android:id="@+id/moon"
+        android:id="@+id/icon_psycho"
         android:layout_width="44dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="318dp"
-        android:layout_marginTop="473dp"
+        android:layout_marginLeft="235dp"
+        android:layout_marginTop="480dp"
         android:background="@drawable/book"
         android:elevation="4dp" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_psycho"
         android:layout_width="130dp"
         android:layout_height="48dp"
-        android:layout_marginLeft="310dp"
+        android:layout_marginLeft="235dp"
         android:layout_marginTop="530dp"
         android:elevation="4dp"
         android:textStyle="bold"
         android:text="Psychological Test"
         android:textSize="20dp" />
 
+
     <View
-        android:id="@+id/rectangle_"
-        android:layout_width="140dp"
+        android:id="@+id/box_2"
+        android:layout_width="144dp"
         android:layout_height="120dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="301dp"
-        android:layout_marginTop="461dp"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="470dp"
         android:background="@drawable/rectangle_1"
-        android:elevation="0dp" />
+         />
 
     <RelativeLayout
-        android:id="@+id/moon"
+        android:id="@+id/icon_moon"
         android:layout_width="44dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="320dp"
+        android:layout_marginLeft="235dp"
         android:layout_marginTop="629dp"
         android:background="@drawable/moon"
         android:elevation="4dp"/>
 
     <View
-        android:id="@+id/rectangle_2"
-        android:layout_width="140dp"
+        android:id="@+id/box_4"
+        android:layout_width="144dp"
         android:layout_height="120dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="302dp"
-        android:layout_marginTop="612dp"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="605dp"
         android:background="@drawable/rectangle_1"
         android:elevation="0dp" />
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_mood"
         android:layout_width="105dp"
         android:layout_height="48dp"
-        android:layout_marginLeft="71dp"
+        android:layout_marginLeft="55dp"
         android:layout_marginTop="679dp"
         android:elevation="4dp"
         android:textStyle="bold"
@@ -256,21 +268,21 @@
         android:textSize="20dp" />
 
     <View
-        android:id="@+id/rectangle_3"
-        android:layout_width="140dp"
+        android:id="@+id/box_3"
+        android:layout_width="144dp"
         android:layout_height="120dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="58dp"
-        android:layout_marginTop="611dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="605dp"
         android:background="@drawable/rectangle_1"
         android:elevation="0dp" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="105dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="312dp"
+        android:id="@+id/text_sleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="235dp"
         android:layout_marginTop="679dp"
         android:elevation="4dp"
         android:textStyle="bold"
@@ -279,42 +291,42 @@
 
 
     <View
-        android:id="@+id/rectangle_4"
-        android:layout_width="140dp"
+        android:id="@+id/box_5"
+        android:layout_width="144dp"
         android:layout_height="120dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="61dp"
-        android:layout_marginTop="745dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="739dp"
         android:background="@drawable/rectangle_1"
         android:elevation="0dp" />
 
     <RelativeLayout
-        android:id="@+id/moon"
+        android:id="@+id/icon_music"
         android:layout_width="44dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="323dp"
+        android:layout_marginLeft="235dp"
         android:layout_marginTop="760dp"
         android:background="@drawable/volumen"
         android:elevation="4dp" />
 
     <View
-        android:id="@+id/rectangle_5"
-        android:layout_width="140dp"
+        android:id="@+id/box_6"
+        android:layout_width="144dp"
         android:layout_height="120dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="303dp"
-        android:layout_marginTop="745dp"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="739dp"
         android:background="@drawable/rectangle_1"
         android:elevation="0dp" />
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_music"
         android:layout_width="105dp"
         android:layout_height="48dp"
-        android:layout_marginLeft="312dp"
+        android:layout_marginLeft="235dp"
         android:layout_marginTop="805dp"
         android:elevation="4dp"
         android:textStyle="bold"
@@ -322,20 +334,20 @@
         android:textSize="20dp" />
 
     <RelativeLayout
-        android:id="@+id/moon"
+        android:id="@+id/icon_book"
         android:layout_width="44dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="71dp"
+        android:layout_marginLeft="55dp"
         android:layout_marginTop="757dp"
         android:background="@drawable/mark" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_notes"
         android:layout_width="105dp"
         android:layout_height="48dp"
-        android:layout_marginLeft="71dp"
+        android:layout_marginLeft="55dp"
         android:layout_marginTop="805dp"
         android:elevation="4dp"
         android:textStyle="bold"
