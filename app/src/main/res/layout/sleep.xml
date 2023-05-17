@@ -146,7 +146,7 @@
     <View
         android:id="@+id/line_5"
         android:layout_width="290dp"
-        android:layout_height="1dp"
+        android:layout_height="0dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/botom_sleep"
@@ -155,17 +155,122 @@
         android:elevation="9dp"
         />
 
+    <View
+        android:id="@+id/line_6"
+        android:layout_width="290dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/botom_sleep"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/line5"
+        android:elevation="9dp"
+        />
+    <!--hours-->
+
+    <TextView
+        android:id="@+id/h4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_6"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="2dp"
+        android:elevation="4dp"
+        android:text="8"
+        android:textSize="12dp"
+        />
+    <TextView
+        android:id="@+id/h5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="10"
+        android:layout_below="@id/line_6"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/h4"
+        android:layout_marginLeft="30dp"
+        android:elevation="4dp"
+        />
+
+    <TextView
+        android:id="@+id/h6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="4"
+        android:layout_below="@id/line_6"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/h5"
+        android:layout_marginLeft="30dp"
+        android:elevation="4dp"
+        />
+
+    <TextView
+        android:id="@+id/h7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="11"
+        android:layout_below="@id/line_6"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/h6"
+        android:layout_marginLeft="25dp"
+        android:elevation="4dp"
+        />
+
+    <TextView
+        android:id="@+id/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="35dp"
+        android:layout_toLeftOf="@+id/h4"
+        android:elevation="4dp"
+        android:text="6"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="35dp"
+        android:layout_toLeftOf="@+id/h3"
+        android:elevation="4dp"
+        android:text="6"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="35dp"
+        android:layout_toLeftOf="@+id/h2"
+        android:elevation="4dp"
+        android:text="6"
+        android:textSize="12dp" />
+
+    <!--hours-->
+
+
+
     <TextView
         android:id="@+id/thursday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12dp"
-        android:text="1"
         android:layout_below="@id/line_5"
+        android:layout_centerInParent="true"
         android:layout_marginTop="2dp"
         android:elevation="4dp"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
+        android:text="чт"
+        android:textSize="12dp"
 
         />
 
@@ -173,15 +278,77 @@
         android:id="@+id/wdn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/line_5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="25dp"
+        android:layout_toLeftOf="@+id/thursday"
+        android:elevation="4dp"
+        android:text="ср"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tusd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textSize="12dp"
-        android:text="9"
+        android:text="вт"
         android:layout_below="@id/line_5"
         android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@+id/wdn"
+        android:layout_marginRight="25dp"
         android:elevation="4dp"
+        />
+
+    <TextView
+        android:id="@+id/mon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="пн"
+        android:layout_below="@id/line_5"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@+id/tusd"
+        android:layout_marginRight="25dp"
+        android:elevation="4dp"
+        />
+
+    <TextView
+        android:id="@+id/friday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="пт"
+        android:layout_below="@id/line_5"
+        android:layout_marginTop="2dp"
         android:layout_toRightOf="@+id/thursday"
-        android:layout_marginRight="50dp"
+        android:layout_marginLeft="25dp"
+        android:elevation="4dp"
+        />
 
-
+    <TextView
+        android:id="@+id/saturday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="сб"
+        android:layout_below="@id/line_5"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/friday"
+        android:layout_marginLeft="25dp"
+        android:elevation="4dp"
+        />
+    <TextView
+        android:id="@+id/sunday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:text="вс"
+        android:layout_below="@id/line_5"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/saturday"
+        android:layout_marginLeft="25dp"
+        android:elevation="4dp"
         />
 
 
@@ -213,6 +380,8 @@
         android:elevation="4dp"
 
         />
+
+
 
 
 
