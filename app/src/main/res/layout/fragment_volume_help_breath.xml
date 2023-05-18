@@ -36,6 +36,7 @@
         android:background="@drawable/background_icon_button"
         android:elevation="2dp"
         android:layout_margin="16dp"
+        android:onClick="playAndPauseSound"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
