@@ -42,7 +42,7 @@ class BreathHelpVideoFragment: BaseFragment() {
     }
 
     private fun initHelpVideo(){
-        val helpVideo = Uri.parse("android.resource://" + activity?.packageName + "/" + R.raw.example_video)
+        val helpVideo = Uri.parse("android.resource://" + activity?.packageName + "/" + R.raw.definition)
         binding.helpBreathVideo.setVideoURI(helpVideo);
         binding.helpBreathVideo.start()
     }
