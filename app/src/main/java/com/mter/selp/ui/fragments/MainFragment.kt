@@ -40,6 +40,9 @@ class MainFragment: BaseFragment() {
         binding.exercisesProgessive.setOnClickListener {
             openFragment(MeditationFragment())
         }
+        binding.myMood.setOnClickListener {
+            openFragment(MoodFragment())
+        }
     }
 
     private companion object{

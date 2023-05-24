@@ -24,7 +24,7 @@ class VideoFragment : AppCompatActivity() {
             mediaController!!.setAnchorView(videoView)
         }
         videoView!!.setMediaController(mediaController)
-        videoView!!.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.definition))
+        videoView!!.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.example_video))
         videoView!!.requestFocus()
         videoView!!.start()
         videoView!!.setOnCompletionListener {
