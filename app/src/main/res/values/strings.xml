@@ -9,4 +9,6 @@
     <string name="title_meditation_music">Meditation music</string>
     <string name="title_button_video">Video</string>
     <string name="title_buttonsound">Sound</string>
+    <string name="hint_breath_inhale">Slow inhale</string>
+    <string name="hint_breath_exhale">Slow exhale</string>
 </resources>

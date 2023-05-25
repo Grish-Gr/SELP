@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.mter.selp.databinding.FragmentDayMoodBinding
 import com.mter.selp.databinding.FragmentWeekMoodBinding
 
@@ -32,8 +34,21 @@ class MoodDayFragment: Fragment() {
         entries.add(Entry(3f, 2f, "18:00"))
         entries.add(Entry(4f, 5f, "22:00"))
 
-        val dataset = LineDataSet(entries, "Mood on week")
+        val dataset = LineDataSet(entries, "Mood on day")
         dataset.mode = LineDataSet.Mode.CUBIC_BEZIER
+        dataset.setDrawFilled(true)
+
+        binding.chartDayMood.data = LineData(dataset)
+
+        binding.chartDayMood.xAxis.setDrawGridLines(false)
+        binding.chartDayMood.axisLeft.setDrawGridLines(false)
+
+        with(binding.chartDayMood.xAxis) {
+            position = XAxis.XAxisPosition.BOTTOM
+            valueFormatter = IndexAxisValueFormatter(entries.map {
+                it.data.toString()
+            })
+        }
 
         binding.chartDayMood.data = LineData(dataset)
         binding.chartDayMood.invalidate()

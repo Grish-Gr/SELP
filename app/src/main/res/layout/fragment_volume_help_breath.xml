@@ -15,11 +15,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <View
+        android:id="@+id/help_breath_indicator_circle"
+        android:layout_width="156dp"
+        android:layout_height="156dp"
+        android:background="@drawable/indicator_breath"
+        android:layout_marginTop="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <TextView
+        android:id="@+id/hint_breath"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="22sp"
         android:layout_margin="16dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the printer took a galley of type and  "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,28 +54,16 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
-        android:id="@+id/pause_help_breath"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:foreground="@drawable/ic_pause"
-        android:background="@drawable/background_icon_button"
-        android:elevation="2dp"
-        android:layout_margin="16dp"
-        android:foregroundTint="?attr/colorOnSurface"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <Button
         android:id="@+id/play_help_breath"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:foreground="@drawable/ic_play"
+        android:foreground="@drawable/ic_pause"
         android:elevation="2dp"
         android:background="@drawable/background_icon_button"
         android:layout_margin="16dp"
         android:foregroundTint="?attr/colorOnSurface"
-        app:layout_constraintStart_toEndOf="@id/volume_help_breath"
-        app:layout_constraintEnd_toStartOf="@id/pause_help_breath"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
