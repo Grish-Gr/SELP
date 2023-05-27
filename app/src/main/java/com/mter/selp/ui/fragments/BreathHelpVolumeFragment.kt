@@ -49,15 +49,7 @@ class BreathHelpVolumeFragment: BaseFragment() {
                 isPLayAnimation = true
             }
         }
-        binding.volumeHelpBreath.setOnClickListener {
-            if (volumeOn){
-                it.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_volume_off)
-                volumeOn = false
-            } else {
-                it.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_volume_on)
-                volumeOn = true
-            }
-        }
+
         binding.back.setOnClickListener {
             parentFragmentManager.popBackStack()
         }
@@ -95,6 +87,7 @@ class BreathHelpVolumeFragment: BaseFragment() {
         })
         binding.helpBreathIndicatorCircle.startAnimation(animationIncrease)
     }
+
 
     override fun onDestroy() {
         binding.helpBreathIndicatorCircle.clearAnimation()
