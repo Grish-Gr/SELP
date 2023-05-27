@@ -37,5 +37,12 @@ class MoodFragment: BaseFragment() {
             }
         }.attach()
         Log.e("Position in mood tab", "init")
+        initAction()
+    }
+
+    private fun initAction(){
+        binding.account.setOnClickListener{
+            openFragment(AccountFragment())
+        }
     }
 }

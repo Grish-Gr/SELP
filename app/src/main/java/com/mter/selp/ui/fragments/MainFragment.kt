@@ -75,6 +75,9 @@ class MainFragment: BaseFragment() {
         binding.myMood.setOnClickListener {
             openFragment(MoodFragment())
         }
+        binding.account.setOnClickListener{
+            openFragment(AccountFragment())
+        }
     }
 
     private companion object {

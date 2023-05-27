@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorTertiaryContainer">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="top"
+        android:background="?attr/colorTertiaryContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="30dp"
+                android:foreground="@drawable/ic_dehaze"
+                android:foregroundTint="?attr/colorOnSurface"
+                android:background="@drawable/ic_dehaze"
+                android:layout_gravity="center_vertical|start"/>
+
+            <View
+                android:layout_width="90dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/label_selp"
+                android:backgroundTint="?attr/colorOnSurface"
+                android:layout_gravity="end|center_vertical"/>
+
+        </FrameLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:id="@+id/profile_picture"
+        android:layout_width="152dp"
+        android:layout_height="152dp"
+        android:background="@drawable/ic_profile_pic"
+        android:layout_marginTop="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="256dp"
+        android:text="Your name"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:inputType="text"
+        android:autofillHints=""
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/change_info"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="?attr/colorTertiaryContainer"
+        android:text="Изменить"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:paddingTop="2dp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@android:color/black"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/result"
+        android:layout_width="270dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="331dp"
+        android:backgroundTint="?attr/colorTertiaryContainer"
+        android:text="Мои результаты"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:gravity="left"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@android:color/black"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/premium"
+        android:layout_width="270dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="391dp"
+        android:backgroundTint="?attr/colorTertiaryContainer"
+        android:background="@drawable/selp_premium_button"
+        android:text="Selp PREMIUM"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:gravity="left"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@android:color/black"
+        app:strokeWidth="1dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/theme_constraint"
+        android:layout_width="270dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/premium">
+
+        <Button
+            android:id="@+id/theme"
+            android:layout_width="270dp"
+            android:layout_height="49dp"
+            android:backgroundTint="?attr/colorTertiaryContainer"
+            android:gravity="left"
+            android:text="Тема"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@android:color/black"
+            app:strokeWidth="1dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/theme_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="20dp"
+            android:text="Светлая"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/notification_constraint"
+        android:layout_width="270dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/theme_constraint">
+
+        <Button
+            android:id="@+id/notification"
+            android:layout_width="270dp"
+            android:layout_height="49dp"
+            android:backgroundTint="?attr/colorTertiaryContainer"
+            android:gravity="left"
+            android:text="Уведомления"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:cornerRadius="15dp"
+            app:strokeColor="@android:color/black"
+            app:strokeWidth="1dp"
+            tools:ignore="MissingConstraints,RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/status_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="20dp"
+            android:text="Выключены"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/language_constraint"
+        android:layout_width="270dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notification_constraint">
+
+        <Button
+            android:id="@+id/language"
+            android:layout_width="270dp"
+            android:layout_height="49dp"
+            android:backgroundTint="?attr/colorTertiaryContainer"
+            android:gravity="left"
+            android:text="Язык"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:cornerRadius="15dp"
+            app:strokeColor="@android:color/black"
+            app:strokeWidth="1dp"
+            tools:ignore="MissingConstraints"/>
+
+        <TextView
+            android:id="@+id/status_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="20dp"
+            android:text="Русский"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
