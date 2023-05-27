@@ -44,5 +44,10 @@ class MoodFragment: BaseFragment() {
         binding.account.setOnClickListener{
             openFragment(AccountFragment())
         }
+        binding.addMood.setOnClickListener {
+            val dialog = MoodAddDialogFragment()
+            dialog.show(parentFragmentManager, null)
+        }
     }
+
 }
