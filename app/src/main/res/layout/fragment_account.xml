@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="?attr/colorTertiaryContainer">
+    android:background="?attr/colorPrimaryContainer">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/main_app_bar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_gravity="top"
-        android:background="?attr/colorTertiaryContainer"
+        android:background="?attr/colorPrimaryContainer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -26,9 +26,9 @@
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:layout_marginStart="30dp"
-                android:foreground="@drawable/ic_dehaze"
+                android:foreground="@drawable/ic_back"
                 android:foregroundTint="?attr/colorOnSurface"
-                android:background="@drawable/ic_dehaze"
+                android:background="@drawable/ic_back"
                 android:layout_gravity="center_vertical|start"/>
 
             <View
@@ -74,7 +74,7 @@
         android:layout_width="110dp"
         android:layout_height="30dp"
         android:layout_marginTop="300dp"
-        android:backgroundTint="?attr/colorTertiaryContainer"
+        android:backgroundTint="?attr/colorPrimaryContainer"
         android:text="Изменить"
         android:textColor="@android:color/black"
         android:textSize="12sp"
@@ -91,7 +91,7 @@
         android:layout_width="270dp"
         android:layout_height="49dp"
         android:layout_marginTop="331dp"
-        android:backgroundTint="?attr/colorTertiaryContainer"
+        android:backgroundTint="?attr/colorPrimaryContainer"
         android:text="Мои результаты"
         android:textColor="@android:color/black"
         android:textSize="18sp"
@@ -136,7 +136,7 @@
             android:id="@+id/theme"
             android:layout_width="270dp"
             android:layout_height="49dp"
-            android:backgroundTint="?attr/colorTertiaryContainer"
+            android:backgroundTint="?attr/colorPrimaryContainer"
             android:gravity="left"
             android:text="Тема"
             android:textColor="@android:color/black"
@@ -174,7 +174,7 @@
             android:id="@+id/notification"
             android:layout_width="270dp"
             android:layout_height="49dp"
-            android:backgroundTint="?attr/colorTertiaryContainer"
+            android:backgroundTint="?attr/colorPrimaryContainer"
             android:gravity="left"
             android:text="Уведомления"
             android:textColor="@android:color/black"
@@ -212,7 +212,7 @@
             android:id="@+id/language"
             android:layout_width="270dp"
             android:layout_height="49dp"
-            android:backgroundTint="?attr/colorTertiaryContainer"
+            android:backgroundTint="?attr/colorPrimaryContainer"
             android:gravity="left"
             android:text="Язык"
             android:textColor="@android:color/black"

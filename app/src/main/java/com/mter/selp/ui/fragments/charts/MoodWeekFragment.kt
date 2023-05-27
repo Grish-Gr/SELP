@@ -55,7 +55,6 @@ class MoodWeekFragment: Fragment() {
             })
         }
 
-
         binding.chartWeekMood.invalidate()
     }
 }

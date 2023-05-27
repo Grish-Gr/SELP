@@ -25,7 +25,7 @@ class VideoFragment : AppCompatActivity() {
         pause_def_video = findViewById(R.id.pause_def_video)
         reset_def_video = findViewById(R.id.restart_def_video)
 
-        videoView!!.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.definition))
+        videoView!!.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.example_video))
         videoView!!.requestFocus()
         videoView!!.start()
         videoView!!.setOnCompletionListener {
