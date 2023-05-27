@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import com.mter.selp.databinding.ActivityMainBinding
 import com.mter.selp.ui.fragments.MainFragment
-import com.mter.selp.ui.fragments.ReadFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -57,10 +56,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun openRead(view: View) {
-        val intent = Intent(this, ReadFragment::class.java)
-        startActivity(intent)
-    }
 
     private fun createSimpleDialog(){
         val builder = AlertDialog.Builder(this)
