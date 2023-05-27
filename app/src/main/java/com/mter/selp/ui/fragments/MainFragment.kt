@@ -1,6 +1,9 @@
 package com.mter.selp.ui.fragments
 
 import android.content.Context
+import android.content.res.ColorStateList
+import android.content.res.Resources.Theme
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,13 +32,42 @@ class MainFragment: BaseFragment() {
         initAction()
     }
 
+    override fun onStart() {
+        super.onStart()
+        val settings = this.activity?.getSharedPreferences(SETTINGS_APP, Context.MODE_PRIVATE)
+        if (settings?.getBoolean(HELP_WITH_SOUND, true) == true){
+            binding.optionHelpBreathSound.backgroundTintList = context?.getColorStateList(R.color.md_theme_light_colorSecondaryVariant)
+            binding.optionHelpBreathVideo.backgroundTintList =
+                ColorStateList.valueOf(Color.WHITE)
+        } else {
+            binding.optionHelpBreathVideo.backgroundTintList = context?.getColorStateList(R.color.md_theme_light_colorSecondaryVariant)
+            binding.optionHelpBreathSound.backgroundTintList =
+                ColorStateList.valueOf(Color.WHITE)
+        }
+    }
+
     private fun initAction(){
         binding.helpCard.setOnClickListener {
-            if (binding.toggleHelpBreath.checkedButtonId == R.id.help_with_video){
-                openFragment(BreathHelpVideoFragment())
-            } else {
+            val settings = this.activity?.getSharedPreferences(SETTINGS_APP, Context.MODE_PRIVATE)
+            if (settings?.getBoolean(HELP_WITH_SOUND, true) == true){
                 openFragment(BreathHelpVolumeFragment())
+            } else {
+                openFragment(BreathHelpVideoFragment())
             }
+        }
+        binding.optionHelpBreathSound.setOnClickListener {
+            it.backgroundTintList = context?.getColorStateList(R.color.md_theme_light_colorSecondaryVariant)
+            binding.optionHelpBreathVideo.backgroundTintList =
+                ColorStateList.valueOf(Color.WHITE)
+            val settings = this.activity?.getSharedPreferences(SETTINGS_APP, Context.MODE_PRIVATE)
+            settings?.edit()?.putBoolean(HELP_WITH_SOUND, true)?.apply()
+        }
+        binding.optionHelpBreathVideo.setOnClickListener {
+            it.backgroundTintList = context?.getColorStateList(R.color.md_theme_light_colorSecondaryVariant)
+            binding.optionHelpBreathSound.backgroundTintList =
+                ColorStateList.valueOf(Color.WHITE)
+            val settings = this.activity?.getSharedPreferences(SETTINGS_APP, Context.MODE_PRIVATE)
+            settings?.edit()?.putBoolean(HELP_WITH_SOUND, false)?.apply()
         }
         binding.exercisesProgessive.setOnClickListener {
             openFragment(MeditationFragment())
@@ -45,8 +77,8 @@ class MainFragment: BaseFragment() {
         }
     }
 
-    private companion object{
-        const val SETTING = "Settings"
-        const val HELP_WITH_SOUND = "KeyHelpWithSound"
+    private companion object {
+        const val SETTINGS_APP = "SettingsApp"
+        const val HELP_WITH_SOUND = "SettingOptionHelpBreath"
     }
 }
