@@ -1,16 +1,15 @@
 package com.mter.selp
 
-import android.content.Context
-import android.content.DialogInterface
+import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
+import androidx.appcompat.content.res.AppCompatResources
 import com.mter.selp.databinding.ActivityMainBinding
 import com.mter.selp.ui.fragments.MainFragment
+import com.mter.selp.ui.fragments.ReadFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -31,12 +30,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private var mediaPlayer: MediaPlayer? = null
-    var count = 1
-    var secCount = 1
+    var count = true
 
 
     fun playAndPauseSound(view: View){
-        if (count == 0){
+        if (!count){
             pauseSound(view)
         }
         else{
@@ -45,17 +43,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun playSound(view: View) {
-        if (mediaPlayer == null) {
-            mediaPlayer = MediaPlayer.create(this, R.raw.relax)
-            mediaPlayer!!.isLooping = true
-            mediaPlayer!!.start()
-        } else mediaPlayer!!.start()
-        count = 0
+        view.foreground = AppCompatResources.getDrawable(view.context, R.drawable.ic_volume_off)
+        mediaPlayer = MediaPlayer.create(this, R.raw.relax)
+        mediaPlayer!!.isLooping = true
+        mediaPlayer!!.start()
+        count = false
     }
 
-    fun pauseSound(view: View) {
+    private fun pauseSound(view: View) {
+        view.foreground = AppCompatResources.getDrawable(view.context, R.drawable.ic_volume_on)
         mediaPlayer?.pause()
-        count = 1
+        count = true
+    }
+
+
+    fun openRead(view: View) {
+        val intent = Intent(this, ReadFragment::class.java)
+        startActivity(intent)
     }
 
     private fun createSimpleDialog(){
@@ -63,11 +67,9 @@ class MainActivity : AppCompatActivity() {
         builder.setTitle("Дружеское напоминание")
         builder.setMessage("Привет, не забудь пожалуйста выбрать какое у тебя сейчас настроение, это достаточно важно, спасибо.")
         builder.setNeutralButton("Хорошо"){ dialog, which ->
-
-        }
-        builder.setNegativeButton("Позже"){dialog, which ->
             dialog.dismiss()
         }
         builder.show()
     }
+
 }
