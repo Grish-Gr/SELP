@@ -78,6 +78,12 @@ class MainFragment: BaseFragment() {
         binding.account.setOnClickListener{
             openFragment(AccountFragment())
         }
+        binding.sleep.setOnClickListener {
+            openFragment(SleepAnalyzedFragment())
+        }
+        binding.psychologicalTest.setOnClickListener {
+            openFragment(PanicAttackInfoFragment())
+        }
     }
 
     private companion object {

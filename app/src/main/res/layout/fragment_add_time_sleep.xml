@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_margin="8dp"
+        android:foreground="@drawable/ic_back"
+        android:foregroundTint="?attr/colorOnSurface"
+        android:background="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/title_going_to_bed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:text="Going to bed"
+        app:layout_constraintTop_toBottomOf="@id/back"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/time_going_to_bed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="23:35"
+        app:layout_constraintTop_toBottomOf="@id/title_going_to_bed"
+        app:layout_constraintStart_toStartOf="@id/title_going_to_bed"
+        app:layout_constraintEnd_toEndOf="@id/title_going_to_bed"/>
+
+    <Button
+        android:id="@+id/add_time_going_to_bed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Enter the time"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/title_going_to_bed"
+        app:layout_constraintTop_toTopOf="@id/title_going_to_bed"
+        app:layout_constraintBottom_toBottomOf="@id/time_going_to_bed"/>
+
+    <TextView
+        android:id="@+id/title_awakening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:text="Awakening"
+        app:layout_constraintEnd_toEndOf="@id/title_going_to_bed"
+        app:layout_constraintTop_toBottomOf="@id/time_going_to_bed"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/time_awakening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="07:45"
+        app:layout_constraintTop_toBottomOf="@id/title_awakening"
+        app:layout_constraintStart_toStartOf="@id/title_awakening"
+        app:layout_constraintEnd_toEndOf="@id/title_awakening"/>
+
+    <Button
+        android:id="@+id/add_time_awakening"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Enter the time"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/add_time_going_to_bed"
+        app:layout_constraintTop_toTopOf="@id/title_awakening"
+        app:layout_constraintBottom_toBottomOf="@id/time_awakening"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider_enters_time"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time_awakening"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Total sleep time: 8h 10m"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/divider_enters_time"
+        app:layout_constraintEnd_toEndOf="@id/divider_enters_time"
+        app:layout_constraintTop_toBottomOf="@id/divider_enters_time"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/save_total_sleep_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:drawableEnd="@drawable/ic_add"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
