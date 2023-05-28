@@ -1,6 +1,5 @@
 package com.mter.selp
 
-import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
@@ -8,7 +7,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import com.mter.selp.databinding.ActivityMainBinding
-import com.mter.selp.ui.fragments.MainFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,19 +15,19 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        createSimpleDialog()
+
         binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
         if (supportFragmentManager.fragments.isEmpty()) {
             supportFragmentManager.beginTransaction()
-                .add(R.id.container_fragment, MainFragment())
+                .add(R.id.container_fragment, FragmentSign())
                 .commit()
         }
 
     }
 
     private var mediaPlayer: MediaPlayer? = null
-    var count = true
+    private var count = true
 
 
     fun playAndPauseSound(view: View){
@@ -55,13 +53,11 @@ class MainActivity : AppCompatActivity() {
         count = true
     }
 
-
-
-    private fun createSimpleDialog(){
+    fun createSimpleDialog(){
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Дружеское напоминание")
         builder.setMessage("Привет, не забудь пожалуйста выбрать какое у тебя сейчас настроение, это достаточно важно, спасибо.")
-        builder.setNeutralButton("Хорошо"){ dialog, which ->
+        builder.setNeutralButton("Хорошо"){ dialog, _ ->
             dialog.dismiss()
         }
         builder.show()
