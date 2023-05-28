@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_sign"
+    tools:context=".FragmentSign">
+
+    <ImageView
+        android:id="@+id/selpLogoSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="134dp"
+        android:layout_marginEnd="132dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/signIn"
+        android:layout_width="190dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="85dp"
+        android:backgroundTint="#BBDCFF"
+        android:paddingTop="1px"
+        android:text="Войти"
+        android:textColor="#231F20"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selpLogoSign"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="190dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="85dp"
+        android:backgroundTint="#BBDCFF"
+        android:paddingTop="1px"
+        android:text="Создать профиль"
+        android:textColor="#231F20"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selpLogoSign"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
