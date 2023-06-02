@@ -40,18 +40,94 @@
             />
 
         <TextView
+            android:id="@+id/text_large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:textColor="#FF000000"
             android:text="@string/large_text"
             android:gravity="top"
+            android:fontFamily="@font/Alegreya"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rectangle_7"
+            />
+        <View
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_large"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/jp"
+            />
+        <TextView
+            android:id="@+id/second_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:textSize="30sp"
+            android:textColor="#FF000000"
+            android:text="@string/second_text"
+            android:gravity="top"
+            android:fontFamily="@font/Alegreya"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo"
+            />
+        <View
+            android:id="@+id/photo2"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toBottomOf="@+id/second_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/jp2"
+            />
+        <TextView
+            android:id="@+id/three_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:textSize="30sp"
+            android:textColor="#FF000000"
+            android:text="@string/three_text"
+            android:gravity="top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo2"
+            />
+        <View
+            android:id="@+id/photo3"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toBottomOf="@+id/three_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/jp3"
+            />
+
+        <TextView
+            android:id="@+id/four_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:textSize="25sp"
+            android:textColor="#FF000000"
+            android:text="@string/four_text"
+            android:gravity="top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo3"
             />
 
 
