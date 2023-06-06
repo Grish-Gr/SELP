@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_margin="2dp"
-        android:text="Your mood now: "
+        android:text="@string/title_mood_dialog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -32,31 +32,31 @@
             android:id="@+id/mood_angry"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Angry"/>
+            android:text="@string/mood_angry"/>
 
         <RadioButton
             android:id="@+id/mood_dreary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Dreary"/>
+            android:text="@string/mood_dreary"/>
 
         <RadioButton
             android:id="@+id/mood_depressed"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Depressed"/>
+            android:text="@string/mood_depressed"/>
 
         <RadioButton
             android:id="@+id/mood_elated"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Elated"/>
+            android:text="@string/mood_elated"/>
 
         <RadioButton
             android:id="@+id/mood_cheerful"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Cheerful"/>
+            android:text="@string/mood_cheerful"/>
 
     </RadioGroup>
 
@@ -64,7 +64,7 @@
         android:id="@+id/cancel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Cancel"
+        android:text="@string/title_cancel"
         android:layout_marginTop="16dp"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_marginEnd="2dp"
@@ -77,7 +77,7 @@
         android:id="@+id/save_mood"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="@string/title_save"
         android:layout_marginTop="16dp"
         android:layout_marginStart="2dp"
         app:layout_constraintStart_toEndOf="@id/cancel"

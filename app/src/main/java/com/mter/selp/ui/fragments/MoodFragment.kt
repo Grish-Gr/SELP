@@ -29,14 +29,12 @@ class MoodFragment: BaseFragment() {
 
         binding.viewPagerMoodCharts.adapter = ViewChartsAdapter(this)
         TabLayoutMediator(binding.tabsMoodCharts, binding.viewPagerMoodCharts) { tab, position ->
-            Log.e("Position in mood tab", position.toString())
             if (position == 0){
-                tab.text = "On day"
+                tab.text = "За день"
             } else {
-                tab.text = "On week"
+                tab.text = "За неделю"
             }
         }.attach()
-        Log.e("Position in mood tab", "init")
         initAction()
     }
 

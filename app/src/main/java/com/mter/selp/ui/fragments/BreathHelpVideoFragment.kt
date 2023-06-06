@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentVideoHelpBreathBinding
-import com.mter.selp.databinding.FragmentVolumeHelpBreathBinding
 
 class BreathHelpVideoFragment: BaseFragment() {
 
@@ -42,7 +41,7 @@ class BreathHelpVideoFragment: BaseFragment() {
     }
 
     private fun initHelpVideo(){
-        val helpVideo = Uri.parse("android.resource://" + activity?.packageName + "/" + R.raw.breath)
+        val helpVideo = Uri.parse("android.resource://" + activity?.packageName + "/" + R.raw.definition)
         binding.helpBreathVideo.setVideoURI(helpVideo);
         binding.helpBreathVideo.start()
     }

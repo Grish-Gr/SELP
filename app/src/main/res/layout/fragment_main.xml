@@ -68,6 +68,7 @@
                 android:id="@+id/help_card"
                 android:layout_width="256dp"
                 android:layout_height="256dp"
+                android:elevation="4dp"
                 android:background="@drawable/background_button_help_breath"
                 android:layout_marginTop="48dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +122,7 @@
                     android:textSize="24sp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginVertical="16dp"
-                    android:text="Sound"
+                    android:text="@string/title_sound"
                     android:gravity="center"
                     app:drawableTint="?attr/colorOnSurface"
                     app:drawableStartCompat="@drawable/ic_headphone" />
@@ -155,10 +156,10 @@
                         android:textSize="24sp"
                         android:layout_marginHorizontal="16dp"
                         android:layout_marginVertical="16dp"
-                        android:drawableTint="?attr/colorOnSurface"
-                        android:text="Video"
+                        android:text="@string/title_video"
                         android:gravity="center"
-                        app:drawableEndCompat="@drawable/ic_videocam" />
+                        app:drawableEndCompat="@drawable/ic_videocam"
+                        app:drawableTint="?attr/colorOnSurface" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -314,7 +315,6 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:background="@drawable/ic_sleep"
-                            android:backgroundTint="?attr/colorOnSurface"
                             android:layout_margin="16dp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"/>

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.timepicker.MaterialTimePicker
+import com.google.android.material.timepicker.MaterialTimePicker.INPUT_MODE_CLOCK
 import com.google.android.material.timepicker.TimeFormat
 import com.mter.selp.databinding.FragmentAddTimeSleepBinding
 
@@ -44,9 +45,10 @@ class SleepTimeAddFragment: BaseFragment() {
     private fun openDialogBeingToBed(){
         val picker = MaterialTimePicker.Builder()
             .setTimeFormat(TimeFormat.CLOCK_24H)
-            .setHour(12)
-            .setMinute(10)
-            .setTitleText("Select Appointment time")
+            .setHour(23)
+            .setMinute(0)
+            .setInputMode(INPUT_MODE_CLOCK)
+            .setTitleText("Select being to bed time")
             .build()
         picker.show(parentFragmentManager, null)
     }
@@ -54,9 +56,10 @@ class SleepTimeAddFragment: BaseFragment() {
     private fun openDialogAwake(){
         val picker = MaterialTimePicker.Builder()
             .setTimeFormat(TimeFormat.CLOCK_24H)
-            .setHour(12)
+            .setHour(7)
             .setMinute(10)
-            .setTitleText("Select Appointment time")
+            .setInputMode(INPUT_MODE_CLOCK)
+            .setTitleText("Select awaking time")
             .build()
         picker.show(parentFragmentManager, null)
 

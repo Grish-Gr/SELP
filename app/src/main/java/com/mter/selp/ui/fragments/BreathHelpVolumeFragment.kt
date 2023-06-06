@@ -35,6 +35,8 @@ class BreathHelpVolumeFragment: BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         initAnimation()
         initAction()
+        val mediaPlayer = MediaPlayer.create(this.context, R.raw.relax)
+
     }
 
     private fun initAction(){

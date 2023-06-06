@@ -81,12 +81,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
         android:layout_marginEnd="18dp"
+        android:layout_marginBottom="32dp"
         android:contextClickable="true"
         android:text="Создать профиль"
         android:textColor="#99231F20"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

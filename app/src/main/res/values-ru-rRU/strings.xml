@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SELP</string>
+    <string name="title_exercise_progress">Прогресс упражнений</string>
+    <string name="title_psychological_test">Тесты</string>
+    <string name="title_my_mood">Моё настроение</string>
+    <string name="title_sleep">Сон</string>
+    <string name="title_notes">Заметки</string>
+    <string name="title_meditation_music">Музыка для медитации</string>
+    <string name="title_button_video">Видео</string>
+    <string name="title_buttonsound">Звук</string>
+    <string name="hint_breath_inhale">Медленный вдох</string>
+    <string name="hint_breath_exhale">Медленный выдох</string>
+    <string name="title_cancel">Отмена</string>
+    <string name="title_save">Ок</string>
+    <string name="title_time_sleep">Время сна</string>
+    <string name="title_mood_dialog">Ваше настроение сейчас:</string>
+    <string name="mood_angry">Злое</string>
+    <string name="mood_dreary">Мрачное</string>
+    <string name="mood_depressed">Депрессивное</string>
+    <string name="mood_elated">Приподнятое</string>
+    <string name="mood_cheerful">Бодрое</string>
+    <string name="title_video">Видео</string>
+    <string name="title_your_mood">Ваше настроение</string>
+    <string name="going_to_bed">Время засыпания</string>
+    <string name="enter_the_time">Ввести время</string>
+    <string name="awakening">Время пробуждения</string>
+    <string name="ex_total_sleep_time_8h_10m">Общее время сна: 8ч. 10м.</string>
+    <string name="title_sound">Звук</string>
+    <string name="date_range_analyzed">Промежуток анализа</string>
+</resources>

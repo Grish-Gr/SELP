@@ -69,9 +69,6 @@ class MainFragment: BaseFragment() {
             val settings = this.activity?.getSharedPreferences(SETTINGS_APP, Context.MODE_PRIVATE)
             settings?.edit()?.putBoolean(HELP_WITH_SOUND, false)?.apply()
         }
-        binding.exercisesProgessive.setOnClickListener {
-            openFragment(MeditationFragment())
-        }
         binding.myMood.setOnClickListener {
             openFragment(MoodFragment())
         }
