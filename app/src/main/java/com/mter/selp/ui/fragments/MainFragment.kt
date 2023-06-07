@@ -107,9 +107,6 @@ class MainFragment: BaseFragment() {
                 openSleepHint = false
             }
         }
-        binding.psychologicalTest.setOnClickListener {
-            openFragment(PanicAttackInfoFragment())
-        }
         binding.notes.setOnClickListener{
             openFragment(InformationFragment())
             if (openNoteHint) {
