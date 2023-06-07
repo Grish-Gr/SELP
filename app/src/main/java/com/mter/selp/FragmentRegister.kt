@@ -1,20 +1,18 @@
 package com.mter.selp
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.mter.selp.databinding.FragmentAccountBinding
+import androidx.fragment.app.activityViewModels
 import com.mter.selp.databinding.FragmentRegisterBinding
-import com.mter.selp.databinding.FragmentSignBinding
-import com.mter.selp.ui.fragments.AccountFragment
 import com.mter.selp.ui.fragments.BaseFragment
 import com.mter.selp.ui.fragments.MainFragment
+import com.mter.selp.ui.fragments.DataModel
 
 class FragmentRegister : BaseFragment() {
     private lateinit var binding: FragmentRegisterBinding
+    private val dataModel : DataModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,6 +31,8 @@ class FragmentRegister : BaseFragment() {
     fun initAction(){
         binding.create.setOnClickListener {
             openFragment(MainFragment())
+            dataModel.name.value = binding.profileName.text.toString()
+            dataModel.mail.value = binding.registerEmail.text.toString()
         }
 
     }
