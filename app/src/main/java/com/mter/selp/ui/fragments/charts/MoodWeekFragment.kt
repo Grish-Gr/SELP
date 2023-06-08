@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
@@ -13,10 +14,16 @@ import com.github.mikephil.charting.formatter.IAxisValueFormatter
 import com.github.mikephil.charting.formatter.IValueFormatter
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.formatter.ValueFormatter
+import com.mter.selp.R
 import com.mter.selp.databinding.FragmentWeekMoodBinding
+import com.mter.selp.model.Mood
+import com.mter.selp.viewmodels.MoodAnalyzedViewModel
+import java.text.SimpleDateFormat
+import java.util.Date
 
 class MoodWeekFragment: Fragment() {
     private lateinit var binding: FragmentWeekMoodBinding
+    private val viewModel by viewModels<MoodAnalyzedViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,17 +36,21 @@ class MoodWeekFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.listMoodStat.observe(this.viewLifecycleOwner){
+            showChart(it)
+        }
+        viewModel.getMoodsOnWeek()
+    }
 
+    private fun showChart(listMoodOnWeek: List<Mood>){
         val entries = ArrayList<Entry>()
-        entries.add(Entry(1f, 3f, "22.05"))
-        entries.add(Entry(2f, 4f, "23.05"))
-        entries.add(Entry(3f, 2f, "24.05"))
-        entries.add(Entry(4f, 5f, "25.05"))
-        entries.add(Entry(5f, 3f, "26.05"))
-        entries.add(Entry(6f, 4f, "27.05"))
-        entries.add(Entry(7f, 5f, "28.05"))
 
-        val dataset = LineDataSet(entries, "Mood on week")
+        listMoodOnWeek.mapIndexed { index, mood ->
+            if (!entries.any { it.data == SimpleDateFormat("dd-MM").format(Date(mood.date))}){
+                entries.add(Entry(index.toFloat(), mood.moodState, SimpleDateFormat("dd-MM").format(Date(mood.date))))
+            }
+        }
+        val dataset = LineDataSet(entries, resources.getString(R.string.title_tab_on_week))
         dataset.mode = LineDataSet.Mode.CUBIC_BEZIER
         dataset.setDrawFilled(true)
 

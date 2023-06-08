@@ -6,12 +6,12 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "stat_mood")
 data class MoodStat(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     val id: Long,
 
     @ColumnInfo(name = "mood_state")
-    val moodState: Byte,
+    val moodState: Float,
 
     @ColumnInfo(name = "date")
     val date: Long

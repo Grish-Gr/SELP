@@ -1,19 +1,20 @@
 package com.mter.selp.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.google.android.material.tabs.TabLayout
+import androidx.fragment.app.viewModels
 import com.google.android.material.tabs.TabLayoutMediator
+import com.mter.selp.R
 import com.mter.selp.databinding.FragmentMoodBinding
 import com.mter.selp.ui.fragments.charts.ViewChartsAdapter
-import java.io.Console
-import kotlin.math.log
+import com.mter.selp.viewmodels.MoodAnalyzedViewModel
+import com.mter.selp.viewmodels.SleepAnalyzedViewModel
 
 class MoodFragment: BaseFragment() {
     private lateinit var binding: FragmentMoodBinding
+    private val viewModel by viewModels<MoodAnalyzedViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,9 +31,9 @@ class MoodFragment: BaseFragment() {
         binding.viewPagerMoodCharts.adapter = ViewChartsAdapter(this)
         TabLayoutMediator(binding.tabsMoodCharts, binding.viewPagerMoodCharts) { tab, position ->
             if (position == 0){
-                tab.text = "За день"
+                tab.setText(R.string.title_tab_on_day)
             } else {
-                tab.text = "За неделю"
+                tab.setText(R.string.title_tab_on_week)
             }
         }.attach()
         initAction()
@@ -43,8 +44,7 @@ class MoodFragment: BaseFragment() {
             openFragment(AccountFragment())
         }
         binding.addMood.setOnClickListener {
-            val dialog = MoodAddDialogFragment()
-            dialog.show(parentFragmentManager, null)
+            openFragment(MoodAddFragment())
         }
     }
 

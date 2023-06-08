@@ -128,7 +128,12 @@
     <string name="going_to_bed">Going to bed</string>
     <string name="enter_the_time">Enter the time</string>
     <string name="awakening">Awakening</string>
-    <string name="ex_total_sleep_time_8h_10m">Total sleep time: 8h 10m</string>
+    <string name="ex_total_sleep_time_8h_10m">Total sleep time: </string>
     <string name="title_sound">Sound</string>
     <string name="date_range_analyzed">Date range analyzed</string>
+    <string name="title_dialog_add_sleep_go_bed">Select being to bed time</string>
+    <string name="title_dialog_add_sleep_awake">Select being to bed time</string>
+    <string name="title_dialog_range_sleep_date">Select a date</string>
+    <string name="title_tab_on_day">On day</string>
+    <string name="title_tab_on_week">On week</string>
 </resources>

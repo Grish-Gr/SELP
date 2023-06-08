@@ -5,7 +5,7 @@ import com.mter.selp.data.entities.MoodStat
 
 data class Mood(
     val id: Long,
-    val moodState: Byte,
+    val moodState: Float,
     val date: Long
 ) {
     companion object{

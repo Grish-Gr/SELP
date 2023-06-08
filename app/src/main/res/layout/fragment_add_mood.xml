@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    <TextView
+        android:id="@+id/title_mood_dialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_margin="2dp"
+        android:text="@string/title_mood_dialog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/mood_choice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:checkedButton="@id/mood_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_mood_dialog">
+
+        <RadioButton
+            android:id="@+id/mood_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Отлично"/>
+
+        <RadioButton
+            android:id="@+id/mood_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Хорошо"/>
+
+        <RadioButton
+            android:id="@+id/mood_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Нормально"/>
+
+        <RadioButton
+            android:id="@+id/mood_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Плохо"/>
+
+        <RadioButton
+            android:id="@+id/mood_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ужасно"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/title_mood_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_margin="2dp"
+        android:text="Оцените на сколько сильно вы ощущаете данную эмоцию?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mood_choice"/>
+
+    <RadioGroup
+        android:id="@+id/mood_choice_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:checkedButton="@id/proc_75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_mood_2">
+
+        <RadioButton
+            android:id="@+id/proc_15"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="0% - 15%"/>
+
+        <RadioButton
+            android:id="@+id/proc_30"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="15% - 30%"/>
+
+        <RadioButton
+            android:id="@+id/proc_45"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="30% - 45%"/>
+
+        <RadioButton
+            android:id="@+id/proc_60"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="45% - 60%"/>
+
+        <RadioButton
+            android:id="@+id/proc_75"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="60% - 75%"/>
+
+        <RadioButton
+            android:id="@+id/proc_90"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="75% - 90%"/>
+
+        <RadioButton
+            android:id="@+id/proc_100"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="90% - 100%"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/title_mood_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_margin="2dp"
+        android:text="Оцените Ваше состояние на данный момент:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mood_choice_2"/>
+
+    <RadioGroup
+        android:id="@+id/mood_choice_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:checkedButton="@id/state_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_mood_3">
+
+        <RadioButton
+            android:id="@+id/state_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Счастье"/>
+
+        <RadioButton
+            android:id="@+id/state_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Спокойствие"/>
+
+        <RadioButton
+            android:id="@+id/state_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Усталость"/>
+
+        <RadioButton
+            android:id="@+id/state_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Стресс"/>
+
+        <RadioButton
+            android:id="@+id/state_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ненависть"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/title_cancel"
+        android:layout_marginTop="16dp"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/save_mood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mood_choice_3"/>
+
+    <Button
+        android:id="@+id/save_mood"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/title_save"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintStart_toEndOf="@id/cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mood_choice_3"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>
