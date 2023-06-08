@@ -19,6 +19,8 @@ class BreathHelpVolumeFragment: BaseFragment() {
     private lateinit var binding: FragmentVolumeHelpBreathBinding
     private lateinit var animationIncrease: Animation
     private lateinit var animationDecrease: Animation
+    private lateinit var pauseIncrease: Animation
+    private lateinit var pauseDecrease: Animation
     private var isPLayAnimation = false
     private var volumeOn = true
 
@@ -44,6 +46,7 @@ class BreathHelpVolumeFragment: BaseFragment() {
             if (isPLayAnimation){
                 it.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_play)
                 binding.helpBreathIndicatorCircle.clearAnimation()
+                binding.hintBreath.setText(R.string.hint_breath_start)
                 isPLayAnimation = false
             } else {
                 it.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_pause)
@@ -58,12 +61,29 @@ class BreathHelpVolumeFragment: BaseFragment() {
     }
 
     private fun initAnimation(){
-        isPLayAnimation = true
+        isPLayAnimation = false
         animationIncrease = AnimationUtils.loadAnimation(this.context, R.anim.anim_increase_indicator)
         animationDecrease = AnimationUtils.loadAnimation(this.context, R.anim.anim_decrease_indicator)
+        pauseIncrease = AnimationUtils.loadAnimation(this.context, R.anim.anim_increase_pause)
+        pauseDecrease = AnimationUtils.loadAnimation(this.context, R.anim.anim_decrease_pause)
+
         animationIncrease.setAnimationListener(object : AnimationListener{
             override fun onAnimationStart(p0: Animation?) {
                 binding.hintBreath.setText(R.string.hint_breath_inhale)
+            }
+
+            override fun onAnimationEnd(p0: Animation?) {
+                if (isPLayAnimation){
+                    binding.helpBreathIndicatorCircle.startAnimation(pauseIncrease)
+                }
+            }
+
+            override fun onAnimationRepeat(p0: Animation?) {}
+        })
+
+        pauseIncrease.setAnimationListener(object : AnimationListener{
+            override fun onAnimationStart(p0: Animation?) {
+                binding.hintBreath.setText(R.string.hint_breath_pause_inhale)
             }
 
             override fun onAnimationEnd(p0: Animation?) {
@@ -74,6 +94,7 @@ class BreathHelpVolumeFragment: BaseFragment() {
 
             override fun onAnimationRepeat(p0: Animation?) {}
         })
+
         animationDecrease.setAnimationListener(object : AnimationListener{
             override fun onAnimationStart(p0: Animation?) {
                 binding.hintBreath.setText(R.string.hint_breath_exhale)
@@ -81,13 +102,27 @@ class BreathHelpVolumeFragment: BaseFragment() {
 
             override fun onAnimationEnd(p0: Animation?) {
                 if (isPLayAnimation) {
+                    binding.helpBreathIndicatorCircle.startAnimation(pauseDecrease)
+                }
+            }
+
+            override fun onAnimationRepeat(p0: Animation?) {}
+        })
+
+        pauseDecrease.setAnimationListener(object : AnimationListener{
+            override fun onAnimationStart(p0: Animation?) {
+                binding.hintBreath.setText(R.string.hint_breath_pause_exhale)
+            }
+
+            override fun onAnimationEnd(p0: Animation?) {
+                if (isPLayAnimation){
                     binding.helpBreathIndicatorCircle.startAnimation(animationIncrease)
                 }
             }
 
             override fun onAnimationRepeat(p0: Animation?) {}
         })
-        binding.helpBreathIndicatorCircle.startAnimation(animationIncrease)
+
     }
 
 

@@ -55,10 +55,12 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/main_app_bar"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_app_bar"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -69,38 +71,38 @@
                 android:layout_width="256dp"
                 android:layout_height="256dp"
                 android:elevation="4dp"
+                android:layout_marginTop="14dp"
                 android:background="@drawable/background_button_help_breath"
-                android:layout_marginTop="48dp"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints">
 
                 <TextView
                     android:id="@+id/title_help_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:text="PRESS TO"
-                    android:textColor="?attr/colorSurface"
                     android:layout_marginTop="64dp"
                     android:gravity="center"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="PRESS TO"
+                    android:textColor="?attr/colorSurface"
+                    android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <TextView
                     android:id="@+id/help"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="?attr/colorSurface"
                     android:layout_marginTop="-8dp"
-                    android:text="HELP"
                     android:gravity="center"
+                    android:text="HELP"
+                    android:textColor="?attr/colorSurface"
                     android:textSize="72sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/title_help_btn"/>
+                    app:layout_constraintTop_toBottomOf="@id/title_help_btn" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -108,10 +110,11 @@
                 android:id="@+id/option_help_breath_sound"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginHorizontal="16dp"
-                app:cardCornerRadius="32dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="19.83dp"
+                android:layout_marginEnd="6.53dp"
                 android:backgroundTint="?attr/colorSecondaryVariant"
+                app:cardCornerRadius="15dp"
                 app:layout_constraintEnd_toStartOf="@id/option_help_breath_video"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/help_card">
@@ -119,41 +122,41 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginVertical="16dp"
                     android:text="@string/title_sound"
                     android:gravity="center"
-                    app:drawableTint="?attr/colorOnSurface"
-                    app:drawableStartCompat="@drawable/ic_headphone" />
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_headphone"
+                    app:drawableTint="?attr/colorOnSurface" />
 
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="1dp"
                 android:layout_height="0dp"
-                app:dividerColor="?attr/colorOnSurface"
                 android:layout_marginVertical="4dp"
-                app:layout_constraintTop_toTopOf="@id/option_help_breath_sound"
+                app:dividerColor="?attr/colorOnSurface"
                 app:layout_constraintBottom_toBottomOf="@id/option_help_breath_sound"
+                app:layout_constraintEnd_toStartOf="@id/option_help_breath_video"
                 app:layout_constraintStart_toEndOf="@id/option_help_breath_sound"
-                app:layout_constraintEnd_toStartOf="@id/option_help_breath_video"/>
+                app:layout_constraintTop_toTopOf="@id/option_help_breath_sound" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/option_help_breath_video"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginHorizontal="16dp"
-                app:cardCornerRadius="32dp"
+                android:layout_marginStart="6.53dp"
+                android:layout_marginTop="19.83dp"
+                android:layout_marginEnd="65dp"
+                app:cardCornerRadius="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/option_help_breath_sound"
                 app:layout_constraintTop_toBottomOf="@id/help_card">
-
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:layout_marginHorizontal="16dp"
                         android:layout_marginVertical="16dp"
                         android:text="@string/title_video"
@@ -166,22 +169,23 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="22dp"
                 android:background="@drawable/background_main_options"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/option_help_breath_sound"
-                app:layout_constraintBottom_toBottomOf="parent">
+                app:layout_constraintVertical_bias="1.0">
 
 
                 <FrameLayout
                     android:id="@+id/exercises_progessive"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="85dp"
+                    android:layout_height="74dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="43dp"
                     android:background="@drawable/background_item_main_options"
-                    app:layout_constraintEnd_toStartOf="@id/psychological_test"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -191,65 +195,27 @@
 
                         <ImageView
                             android:id="@+id/ic_exercises_progessive"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
+                            android:layout_width="22dp"
+                            android:layout_height="23dp"
                             android:layout_margin="16dp"
                             android:background="@drawable/ic_progress_graphics"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:minLines="2"
                             android:text="@string/title_exercise_progress"
-                            android:textSize="20sp"
-                            android:minLines="2"
-                            app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive"
-                            android:layout_margin="16dp"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:textSize="12sp"
+                            android:gravity="center"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </FrameLayout>
-
-                <FrameLayout
-                    android:id="@+id/psychological_test"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/background_item_main_options"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/exercises_progessive"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/ic_exercises_progessive_2"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:background="@drawable/ic_book"
-                            android:layout_margin="16dp"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/title_psychological_test"
-                            android:textSize="20sp"
-                            android:minLines="2"
-                            app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive_2"
-                            android:layout_margin="16dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
+                            app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -258,13 +224,14 @@
 
                 <FrameLayout
                     android:id="@+id/my_mood"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_width="85dp"
+                    android:layout_height="74dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="43dp"
                     android:background="@drawable/background_item_main_options"
                     app:layout_constraintEnd_toStartOf="@id/sleep"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/exercises_progessive">
+                    app:layout_constraintStart_toEndOf="@id/exercises_progessive"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -272,24 +239,27 @@
 
                         <ImageView
                             android:id="@+id/ic_exercises_progessive_3"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
+                            android:layout_width="22dp"
+                            android:layout_height="23dp"
                             android:layout_margin="16dp"
                             android:background="@drawable/ic_mood"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/title_my_mood"
-                            android:textSize="20sp"
-                            android:minLines="2"
-                            app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive_3"
                             android:layout_margin="16dp"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:minLines="2"
+                            android:text="@string/title_my_mood"
+                            android:textSize="12sp"
+                            android:gravity="center"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive_3" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -298,13 +268,15 @@
 
                 <FrameLayout
                     android:id="@+id/sleep"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_width="85dp"
+                    android:layout_height="74dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="43dp"
+                    android:layout_marginEnd="27dp"
                     android:background="@drawable/background_item_main_options"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/my_mood"
-                    app:layout_constraintTop_toBottomOf="@id/psychological_test">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -312,24 +284,73 @@
 
                         <ImageView
                             android:id="@+id/ic_exercises_progessive_4"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:background="@drawable/ic_sleep"
+                            android:layout_width="22dp"
+                            android:layout_height="23dp"
                             android:layout_margin="16dp"
+                            android:background="@drawable/ic_sleep"
+                            android:backgroundTint="?attr/colorOnSurface"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/title_sleep"
-                            android:textSize="20sp"
-                            android:minLines="2"
-                            app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive_4"
                             android:layout_margin="16dp"
+                            android:minLines="2"
+                            android:text="@string/title_sleep"
+                            android:textSize="12sp"
+                            android:gravity="center"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive_4" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/psychological_test"
+                    android:layout_width="85dp"
+                    android:layout_height="74dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginBottom="44dp"
+                    android:layout_marginTop="43dp"
+                    android:background="@drawable/background_item_main_options"
+                    app:layout_constraintTop_toBottomOf="@id/exercises_progessive"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/ic_exercises_progessive_2"
+                            android:layout_width="22dp"
+                            android:layout_height="23dp"
+                            android:layout_margin="16dp"
+                            android:background="@drawable/ic_book"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:minLines="2"
+                            android:text="@string/title_psychological_test"
+                            android:textSize="11sp"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive_2" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -338,13 +359,15 @@
 
                 <FrameLayout
                     android:id="@+id/notes"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_width="85dp"
+                    android:layout_height="74dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginBottom="44dp"
+                    android:layout_marginTop="43dp"
                     android:background="@drawable/background_item_main_options"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/meditation"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/psychological_test"
                     app:layout_constraintTop_toBottomOf="@id/my_mood">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -353,24 +376,26 @@
 
                         <ImageView
                             android:id="@+id/ic_exercises_progessive_5"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
+                            android:layout_width="22dp"
+                            android:layout_height="23dp"
                             android:layout_margin="16dp"
                             android:background="@drawable/ic_note"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/title_notes"
-                            android:textSize="20sp"
-                            android:minLines="2"
-                            app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive_5"
                             android:layout_margin="16dp"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:minLines="2"
+                            android:text="@string/title_notes"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive_5" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -379,13 +404,16 @@
 
                 <FrameLayout
                     android:id="@+id/meditation"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_width="85dp"
+                    android:layout_height="74dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="27dp"
+                    android:layout_marginBottom="44dp"
+                    android:layout_marginTop="43dp"
                     android:background="@drawable/background_item_main_options"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/notes"
-                    app:layout_constraintTop_toBottomOf="@id/my_mood">
+                    app:layout_constraintTop_toBottomOf="@id/sleep">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -393,24 +421,26 @@
 
                         <ImageView
                             android:id="@+id/ic_exercises_progessive_7"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:background="@drawable/ic_meditation"
+                            android:layout_width="22dp"
+                            android:layout_height="23dp"
                             android:layout_margin="16dp"
+                            android:background="@drawable/ic_meditation"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/title_meditation_music"
-                            android:textSize="20sp"
-                            android:minLines="2"
-                            app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive_7"
                             android:layout_margin="16dp"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:minLines="2"
+                            android:text="@string/title_meditation_music"
+                            android:textSize="11sp"
+                            android:gravity="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive_7" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

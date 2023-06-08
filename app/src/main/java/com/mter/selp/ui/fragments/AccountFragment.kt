@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.LifecycleOwner
 import com.mter.selp.databinding.FragmentAccountBinding
-
 
 class AccountFragment : BaseFragment() {
     private lateinit var binding: FragmentAccountBinding
+    private val dataModel : DataModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,10 +23,19 @@ class AccountFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        dataModel.name.observe(activity as LifecycleOwner) {
+            binding.userName.text = it
+        }
+
+        dataModel.mail.observe(activity as LifecycleOwner) {
+            binding.userMail.text = it
+        }
+
         initAction()
     }
 
     private fun initAction(){
+
         binding.changeInfo.setOnClickListener {
 
         }
@@ -42,18 +53,18 @@ class AccountFragment : BaseFragment() {
         }
 
         binding.theme.setOnClickListener {
-            if (binding.themeColor.text == "Светлая"){
-                binding.themeColor.setText("Тёмная")
+            if (binding.themeColor.text == "светлая"){
+                binding.themeColor.setText("тёмная")
             } else{
-                binding.themeColor.setText("Светлая")
+                binding.themeColor.setText("светлая")
             }
         }
 
         binding.notification.setOnClickListener {
-            if (binding.statusNotification.text == "Выключены"){
-                binding.statusNotification.setText("Включены")
+            if (binding.statusNotification.text == "off"){
+                binding.statusNotification.setText("on")
             } else {
-                binding.statusNotification.setText("Выключены")
+                binding.statusNotification.setText("off")
             }
         }
 
@@ -64,6 +75,7 @@ class AccountFragment : BaseFragment() {
                 binding.statusLanguage.setText("Русский")
             }
         }
+
 
     }
 }
