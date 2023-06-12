@@ -1,8 +1,6 @@
 package com.mter.selp.ui.fragments
 
-import android.media.MediaParser
 import android.media.MediaPlayer
-import android.media.MediaPlayer.OnCompletionListener
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,8 +19,10 @@ class BreathHelpVolumeFragment: BaseFragment() {
     private lateinit var animationDecrease: Animation
     private lateinit var pauseIncrease: Animation
     private lateinit var pauseDecrease: Animation
+    private lateinit var sound: MediaPlayer
+    private var startFromPlay = false
     private var isPLayAnimation = false
-    private var volumeOn = true
+    private var volumeOn = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,26 +35,64 @@ class BreathHelpVolumeFragment: BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initMedia()
         initAnimation()
         initAction()
-       
     }
 
     private fun initAction(){
         binding.playHelpBreath.setOnClickListener {
             if (isPLayAnimation){
                 it.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_play)
+                binding.volumeHelpBreath.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_volume_off)
+                sound.stop()
                 binding.helpBreathIndicatorCircle.clearAnimation()
                 binding.hintBreath.setText(R.string.hint_breath_start)
+                initMedia()
                 isPLayAnimation = false
+                volumeOn = false
             } else {
+                if (sound.isPlaying){
+                    sound.stop()
+                    initMedia()
+                }
                 it.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_pause)
+                binding.volumeHelpBreath.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_volume_on)
+                sound.start()
                 binding.helpBreathIndicatorCircle.startAnimation(animationIncrease)
+                startFromPlay = true
                 isPLayAnimation = true
+                volumeOn = true
+            }
+        }
+
+        binding.volumeHelpBreath.setOnClickListener {
+            volumeOn = if (volumeOn){
+                it.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_volume_off)
+                if (startFromPlay){
+                    sound.setVolume(0.0f, 0.0f)
+                }
+                else{
+                    sound.stop()
+                    initMedia()
+                }
+                false
+
+            } else {
+                it.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_volume_on)
+                if (!sound.isPlaying){
+                    sound.start()
+                    startFromPlay = false
+                }
+                else{
+                    sound.setVolume(1.0f, 1.0f)
+                }
+                true
             }
         }
 
         binding.back.setOnClickListener {
+            sound.stop()
             parentFragmentManager.popBackStack()
         }
     }
@@ -124,9 +162,14 @@ class BreathHelpVolumeFragment: BaseFragment() {
 
     }
 
+    private fun initMedia(){
+        sound = MediaPlayer.create(this@BreathHelpVolumeFragment.context, R.raw.breath_sound)
+        sound.isLooping = true
+    }
 
     override fun onDestroy() {
         binding.helpBreathIndicatorCircle.clearAnimation()
+        sound.stop()
         super.onDestroy()
     }
 }
