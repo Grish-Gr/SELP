@@ -1,10 +1,7 @@
 package com.mter.selp
 
-import android.media.MediaPlayer
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.content.res.AppCompatResources
 import com.mter.selp.databinding.ActivityMainBinding
 
 
@@ -24,32 +21,4 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
-    private var mediaPlayer: MediaPlayer? = null
-    private var count = true
-
-
-    fun playAndPauseSound(view: View){
-        if (!count){
-            pauseSound(view)
-        }
-        else{
-            playSound(view)
-        }
-    }
-
-    private fun playSound(view: View) {
-        view.foreground = AppCompatResources.getDrawable(view.context, R.drawable.ic_volume_off)
-        mediaPlayer = MediaPlayer.create(this, R.raw.breath_sound)
-        mediaPlayer!!.isLooping = true
-        mediaPlayer!!.start()
-        count = false
-    }
-
-    private fun pauseSound(view: View) {
-        view.foreground = AppCompatResources.getDrawable(view.context, R.drawable.ic_volume_on)
-        mediaPlayer?.pause()
-        count = true
-    }
-
 }
