@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="61dp"
-        android:text="Это страница Настроение, здесь ты будешь отслеживать своё настроение на каждый день, а результаты будут отображаться на странице Прогресс."
+        android:text="@string/message_hint_mood_dialog"
         android:textSize="18sp"
         app:layout_constraintTop_toTopOf="parent" />
 
