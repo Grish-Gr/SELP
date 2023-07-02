@@ -11,6 +11,7 @@ import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.mter.selp.R
 import com.mter.selp.databinding.FragmentAnalyzeSleepBinding
 import com.mter.selp.model.Sleep
 import com.mter.selp.viewmodels.SleepAnalyzedViewModel
@@ -37,6 +38,13 @@ class SleepAnalyzedFragment: BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         initObserve()
         iniAction()
+        showHintDialog(
+            message = resources.getString(R.string.message_hint_sleep_dialog),
+            actionCancel = {
+                enabledHintFragment(SLEEP_HINT_DIALOG_ENABLED, false)
+            },
+            codeDialog = SLEEP_HINT_DIALOG_ENABLED
+        )
     }
 
     private fun initObserve(){

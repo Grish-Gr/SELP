@@ -143,4 +143,11 @@
     <string name="title_dialog_range_sleep_date">Select a date</string>
     <string name="title_tab_on_day">On day</string>
     <string name="title_tab_on_week">On week</string>
+    <string name="message_hint_mood_dialog">Это страница Настроение, здесь ты будешь отслеживать своё настроение на каждый день, а результаты будут отображаться на странице Прогресс.</string>
+    <string name="message_hint_sleep_dialog">Это страница Сон, здесь ты будешь отслеживать кол-во твоего сна, а результаты будут отображаться на странице Прогресс.</string>
+    <string name="message_hint_note_dialog">Это страница Заметки, здесь находится вся информация, связанная с паническими атаками.</string>
+    <string name="title_hint_reminder_mood">Дружеское напоминание</string>
+    <string name="message_hint_reminder_mood">Привет, не забудь пожалуйста выбрать какое у тебя сейчас настроение, это достаточно важно, спасибо.</string>
+    <string name="cancel_later">Позже</string>
+    <string name="confirm_ok">Хорошо</string>
 </resources>

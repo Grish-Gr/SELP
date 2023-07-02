@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="61dp"
-        android:text="Это страница Сон, здесь ты будешь отслеживать кол-во твоего сна, а результаты будут отображаться на странице Прогресс."
+        android:text="@string/message_hint_sleep_dialog"
         android:textSize="18sp"
         app:layout_constraintTop_toTopOf="parent" />
 

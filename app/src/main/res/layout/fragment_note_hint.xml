@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="61dp"
-        android:text="Это страница Заметки, здесь находится вся информация, связанная с паническими атаками."
+        android:text="@string/message_hint_note_dialog"
         android:textSize="18sp"
         app:layout_constraintTop_toTopOf="parent" />
 
