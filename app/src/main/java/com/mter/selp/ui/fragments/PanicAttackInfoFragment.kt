@@ -24,6 +24,7 @@ class PanicAttackInfoFragment: BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val content = resources.getString(R.string.info_about_panic_attack)
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             binding.contentInfoPanicAttack.text = Html.fromHtml(content, Html.FROM_HTML_MODE_COMPACT);
         } else {
