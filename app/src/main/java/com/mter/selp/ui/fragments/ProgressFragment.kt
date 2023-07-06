@@ -5,77 +5,56 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.github.mikephil.charting.components.XAxis
+import com.google.android.material.tabs.TabLayoutMediator
+import com.mter.selp.R
+import com.mter.selp.databinding.FragmentProgressBinding
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
+import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
-import com.google.android.material.datepicker.MaterialDatePicker
-import com.mter.selp.R
-import com.mter.selp.databinding.FragmentAnalyzeSleepBinding
 import com.mter.selp.model.Sleep
+import com.mter.selp.ui.fragments.charts.ViewChartsAdapterForProgress
 import com.mter.selp.viewmodels.SleepAnalyzedViewModel
 import java.text.SimpleDateFormat
 import java.util.Date
 
+class ProgressFragment: BaseFragment() {
 
-class SleepAnalyzedFragment: BaseFragment() {
-
-    private lateinit var binding: FragmentAnalyzeSleepBinding
-    private val viewModel by viewModels<SleepAnalyzedViewModel>()
+    private lateinit var binding: FragmentProgressBinding
+    private val sleepViewModel by viewModels<SleepAnalyzedViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentAnalyzeSleepBinding.inflate(inflater, container, false)
+        binding = FragmentProgressBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.viewPagerMoodCharts.adapter = ViewChartsAdapterForProgress(this)
+        TabLayoutMediator(binding.tabsMoodCharts, binding.viewPagerMoodCharts) { tab, position ->
+            if (position == 0){
+
+                tab.setText(R.string.title_tab_on_day)
+            } else {
+                tab.setText(R.string.title_tab_on_week)
+            }
+        }.attach()
         initObserve()
-        iniAction()
-        showHintDialog(
-            message = resources.getString(R.string.message_hint_sleep_dialog),
-            actionCancel = {
-                enabledHintFragment(SLEEP_HINT_DIALOG_ENABLED, false)
-            },
-            codeDialog = SLEEP_HINT_DIALOG_ENABLED
-        )
     }
 
     private fun initObserve(){
-        viewModel.listSleepAnalyzed.observe(this.viewLifecycleOwner) {
+        sleepViewModel.listSleepAnalyzed.observe(this.viewLifecycleOwner) {
             showChartAnalyzedSleep(it.reversed())
         }
-        viewModel.getListAnalyzedSleep()
+        sleepViewModel.getListAnalyzedSleep()
     }
 
-    private fun iniAction(){
-        binding.rangeDateAnalyzedSleep.setOnClickListener {
-            openDateRange()
-        }
-        binding.addTimeSleep.setOnClickListener {
-            openFragment(SleepTimeAddFragment())
-            viewModel.getListAnalyzedSleep()
-        }
-    }
-
-    private fun openDateRange(){
-        val dateRange = MaterialDatePicker
-            .Builder
-            .dateRangePicker()
-            .setTitleText("Select a date")
-            .build()
-
-        dateRange.show(parentFragmentManager, "DATE_RANGE_PICKER")
-        dateRange.addOnPositiveButtonClickListener {
-            it.first
-            it.second
-        }
-    }
 
     private fun showChartAnalyzedSleep(listAnalyzedSleep: List<Sleep>){
         val entries = ArrayList<BarEntry>()
@@ -102,4 +81,5 @@ class SleepAnalyzedFragment: BaseFragment() {
 
         binding.chartSleepAnalyze.invalidate()
     }
+
 }

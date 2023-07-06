@@ -1,7 +1,6 @@
 package com.mter.selp.ui.fragments.charts
 
 import android.os.Bundle
-import android.text.method.TextKeyListener.Capitalize
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,21 +13,22 @@ import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentDayMoodBinding
+import com.mter.selp.databinding.FragmentDayMoodForProgressBinding
 import com.mter.selp.databinding.FragmentWeekMoodBinding
 import com.mter.selp.model.Mood
 import com.mter.selp.viewmodels.MoodAnalyzedViewModel
 import java.text.SimpleDateFormat
 import java.util.Date
 
-class MoodDayFragment: Fragment() {
-    private lateinit var binding: FragmentDayMoodBinding
+class MoodDayForProgressFragment: Fragment() {
+    private lateinit var binding: FragmentDayMoodForProgressBinding
     private val viewModel by viewModels<MoodAnalyzedViewModel>()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDayMoodBinding.inflate(inflater, container, false)
+        binding = FragmentDayMoodForProgressBinding.inflate(inflater, container, false)
         return binding.root
     }
 

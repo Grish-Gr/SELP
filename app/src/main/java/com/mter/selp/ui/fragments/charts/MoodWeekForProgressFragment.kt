@@ -1,7 +1,6 @@
 package com.mter.selp.ui.fragments.charts
 
 import android.os.Bundle
-import android.text.method.TextKeyListener.Capitalize
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,24 +10,28 @@ import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.formatter.IAxisValueFormatter
+import com.github.mikephil.charting.formatter.IValueFormatter
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
+import com.github.mikephil.charting.formatter.ValueFormatter
 import com.mter.selp.R
-import com.mter.selp.databinding.FragmentDayMoodBinding
 import com.mter.selp.databinding.FragmentWeekMoodBinding
+import com.mter.selp.databinding.FragmentWeekMoodForProgressBinding
 import com.mter.selp.model.Mood
 import com.mter.selp.viewmodels.MoodAnalyzedViewModel
 import java.text.SimpleDateFormat
 import java.util.Date
 
-class MoodDayFragment: Fragment() {
-    private lateinit var binding: FragmentDayMoodBinding
+class MoodWeekForProgressFragment: Fragment() {
+    private lateinit var binding: FragmentWeekMoodForProgressBinding
     private val viewModel by viewModels<MoodAnalyzedViewModel>()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDayMoodBinding.inflate(inflater, container, false)
+        binding = FragmentWeekMoodForProgressBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -37,33 +40,33 @@ class MoodDayFragment: Fragment() {
         viewModel.listMoodStat.observe(this.viewLifecycleOwner){
             showChart(it)
         }
-        viewModel.getMoodsOnDay()
+        viewModel.getMoodsOnWeek()
     }
 
-    private fun showChart(listMoodStat: List<Mood>){
+    private fun showChart(listMoodOnWeek: List<Mood>){
         val entries = ArrayList<Entry>()
-        listMoodStat.mapIndexed { index, mood ->
-            entries.add(Entry(index.toFloat(), mood.moodState, SimpleDateFormat("hh:mm").format(
-                Date(mood.date)
-            )))
+
+        listMoodOnWeek.mapIndexed { index, mood ->
+            if (!entries.any { it.data == SimpleDateFormat("dd-MM").format(Date(mood.date))}){
+                entries.add(Entry(index.toFloat(), mood.moodState, SimpleDateFormat("dd-MM").format(Date(mood.date))))
+            }
         }
-        val dataset = LineDataSet(entries, resources.getString(R.string.title_tab_on_day))
+        val dataset = LineDataSet(entries, resources.getString(R.string.title_tab_on_week))
         dataset.mode = LineDataSet.Mode.CUBIC_BEZIER
         dataset.setDrawFilled(true)
 
-        binding.chartDayMood.data = LineData(dataset)
+        binding.chartWeekMood.data = LineData(dataset)
 
-        binding.chartDayMood.xAxis.setDrawGridLines(false)
-        binding.chartDayMood.axisLeft.setDrawGridLines(false)
+        binding.chartWeekMood.xAxis.setDrawGridLines(false)
+        binding.chartWeekMood.axisLeft.setDrawGridLines(false)
 
-        with(binding.chartDayMood.xAxis) {
+        with(binding.chartWeekMood.xAxis) {
             position = XAxis.XAxisPosition.BOTTOM
             valueFormatter = IndexAxisValueFormatter(entries.map {
                 it.data.toString()
             })
         }
 
-        binding.chartDayMood.data = LineData(dataset)
-        binding.chartDayMood.invalidate()
+        binding.chartWeekMood.invalidate()
     }
 }
