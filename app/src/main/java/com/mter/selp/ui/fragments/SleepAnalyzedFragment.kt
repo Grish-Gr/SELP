@@ -6,16 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.github.mikephil.charting.components.XAxis
-import com.github.mikephil.charting.data.Entry
-import com.github.mikephil.charting.data.LineData
-import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.data.BarData
+import com.github.mikephil.charting.data.BarDataSet
+import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentAnalyzeSleepBinding
 import com.mter.selp.model.Sleep
 import com.mter.selp.viewmodels.SleepAnalyzedViewModel
-import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -79,18 +78,17 @@ class SleepAnalyzedFragment: BaseFragment() {
     }
 
     private fun showChartAnalyzedSleep(listAnalyzedSleep: List<Sleep>){
-        val entries = ArrayList<Entry>()
+        val entries = ArrayList<BarEntry>()
         listAnalyzedSleep.mapIndexed { index, sleep ->
             if (!entries.any { it.data == SimpleDateFormat("dd-MM").format(Date(sleep.createDate))}){
-                entries.add(Entry(index.toFloat(), sleep.timeSleepInHour, SimpleDateFormat("dd-MM").format(Date(sleep.createDate))))
+                entries.add(BarEntry(index.toFloat(), sleep.timeSleepInHour, SimpleDateFormat("dd-MM").format(Date(sleep.createDate))))
             }
         }
 
-        val dataset = LineDataSet(entries, "Analyze sleep time")
-        dataset.mode = LineDataSet.Mode.CUBIC_BEZIER
-        dataset.setDrawFilled(true)
+        val dataset = BarDataSet(entries, "Analyze sleep time")
 
-        binding.chartSleepAnalyze.data = LineData(dataset)
+
+        binding.chartSleepAnalyze.data = BarData(dataset)
 
         binding.chartSleepAnalyze.xAxis.setDrawGridLines(false)
         binding.chartSleepAnalyze.axisLeft.setDrawGridLines(false)

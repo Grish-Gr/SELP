@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class ViewChartsAdapter(fragment: Fragment): FragmentStateAdapter(fragment) {
+
     override fun getItemCount(): Int {
         return 2
     }
@@ -13,6 +14,7 @@ class ViewChartsAdapter(fragment: Fragment): FragmentStateAdapter(fragment) {
         Log.i("CR", position.toString())
         return if (position == 0){
             MoodDayFragment()
+
         } else {
             MoodWeekFragment()
         }

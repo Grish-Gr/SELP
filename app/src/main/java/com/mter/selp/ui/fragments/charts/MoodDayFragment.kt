@@ -1,6 +1,7 @@
 package com.mter.selp.ui.fragments.charts
 
 import android.os.Bundle
+import android.text.method.TextKeyListener.Capitalize
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

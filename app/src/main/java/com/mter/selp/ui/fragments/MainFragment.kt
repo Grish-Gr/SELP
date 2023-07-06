@@ -37,11 +37,7 @@ class MainFragment: BaseFragment() {
 
     private fun initNavigation() {
         binding.exercisesProgessive.setOnClickListener {
-            /*openFragment(ProgressHintFragment())
-            if (openProgressHint) {
-                progressHint.show(parentFragmentManager, null)
-                openProgressHint = false
-            }*/
+            openFragment(ProgressFragment())
         }
         binding.myMood.setOnClickListener {
             openFragment(MoodFragment())

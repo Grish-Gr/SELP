@@ -1,5 +1,6 @@
 package com.mter.selp.viewmodels
 
+import android.text.method.TextKeyListener.Capitalize
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -31,5 +32,9 @@ class MoodAnalyzedViewModel: ViewModel() {
         viewModelScope.launch {
             MoodRepository.saveMood(Mood(0L, state, Date().time))
         }
+    }
+
+    val isCapitalize: MutableLiveData<Boolean> by lazy {
+        MutableLiveData<Boolean>()
     }
 }
