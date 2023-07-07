@@ -45,37 +45,12 @@ class AccountFragment : BaseFragment() {
         }
 
         binding.result.setOnClickListener {
-            openFragment(MoodFragment())
+            openFragment(ProgressFragment())
         }
 
         binding.premium.setOnClickListener {
-
+            openFragment(PremiumFragment())
         }
-
-        binding.theme.setOnClickListener {
-            if (binding.themeColor.text == "светлая"){
-                binding.themeColor.setText("тёмная")
-            } else{
-                binding.themeColor.setText("светлая")
-            }
-        }
-
-        binding.notification.setOnClickListener {
-            if (binding.statusNotification.text == "off"){
-                binding.statusNotification.setText("on")
-            } else {
-                binding.statusNotification.setText("off")
-            }
-        }
-
-        binding.language.setOnClickListener {
-            if (binding.statusLanguage.text == "Русский"){
-                binding.statusLanguage.setText("English")
-            } else{
-                binding.statusLanguage.setText("Русский")
-            }
-        }
-
 
     }
 }

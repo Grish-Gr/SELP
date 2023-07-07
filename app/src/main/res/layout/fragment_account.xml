@@ -157,16 +157,15 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <TextView
+        <Spinner
             android:id="@+id/theme_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
-            android:layout_marginEnd="20dp"
-            android:text="светлая"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:entries="@array/themes"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -192,13 +191,13 @@
             app:cornerRadius="15dp"
             tools:ignore="MissingConstraints,RtlHardcoded"/>
 
-        <TextView
+        <Spinner
             android:id="@+id/status_notification"
-            android:layout_width="wrap_content"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="20dp"
-            android:text="off"
+            android:layout_marginTop="10dp"
+            android:entries="@array/notification"
+            android:scrollbarSize="2dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
@@ -228,16 +227,15 @@
             app:cornerRadius="15dp"
             tools:ignore="MissingConstraints"/>
 
-        <TextView
+        <Spinner
             android:id="@+id/status_language"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
-            android:layout_marginEnd="20dp"
-            android:text="Русский"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:entries="@array/language"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
