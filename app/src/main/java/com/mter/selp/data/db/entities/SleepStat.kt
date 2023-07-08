@@ -1,4 +1,4 @@
-package com.mter.selp.data.entities
+package com.mter.selp.data.db.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

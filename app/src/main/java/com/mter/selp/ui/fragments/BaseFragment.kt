@@ -3,13 +3,25 @@ package com.mter.selp.ui.fragments
 import android.app.AlertDialog
 import android.content.Context
 import androidx.fragment.app.Fragment
+import com.mter.selp.AppSelp
 import com.mter.selp.R
+import com.mter.selp.data.network.AuthService
+import com.mter.selp.data.network.TestService
 
 open class BaseFragment: Fragment() {
+
+    protected fun getAuthService(): AuthService {
+        return (activity?.application as AppSelp).authService
+    }
+
+    protected fun getTestService(): TestService {
+        return (activity?.application as AppSelp).testingService
+    }
+
     protected fun openFragment(fragment: BaseFragment){
         parentFragmentManager.beginTransaction()
             .replace(R.id.container_fragment, fragment)
-            .addToBackStack(null)
+            .addToBackStack("Main")
             .commit()
     }
 

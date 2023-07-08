@@ -3,6 +3,7 @@ package com.mter.selp
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.mter.selp.databinding.ActivityMainBinding
+import com.mter.selp.ui.fragments.StartLoginFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         if (supportFragmentManager.fragments.isEmpty()) {
             supportFragmentManager.beginTransaction()
-                .add(R.id.container_fragment, FragmentSign())
+                .add(R.id.container_fragment, StartLoginFragment())
                 .commit()
         }
 

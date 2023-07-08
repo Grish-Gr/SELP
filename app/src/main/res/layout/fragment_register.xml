@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_register"
-    tools:context=".FragmentRegister">
+    tools:context=".ui.fragments.RegistrationFragment">
 
     <ImageView
         android:id="@+id/selpLogoRegister"
@@ -90,6 +90,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerPasswordOneMore" />
+
+    <ProgressBar
+        android:id="@+id/progress_registration"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/create"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

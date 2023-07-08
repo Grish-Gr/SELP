@@ -1,6 +1,6 @@
 package com.mter.selp.model
 
-import com.mter.selp.data.entities.SleepStat
+import com.mter.selp.data.db.entities.SleepStat
 
 data class Sleep(
     val id: Long,
@@ -8,7 +8,7 @@ data class Sleep(
     val timeSleepInHour: Float
 ) {
     companion object{
-        fun from(sleep: Sleep): SleepStat{
+        fun from(sleep: Sleep): SleepStat {
             return SleepStat(sleep.id, sleep.createDate, sleep.timeSleepInHour)
         }
         fun to(sleepStat: SleepStat): Sleep{
