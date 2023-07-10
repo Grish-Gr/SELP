@@ -26,7 +26,7 @@
     <string name="enter_the_time">Ввести время</string>
     <string name="awakening">Время пробуждения</string>
     <string name="ex_total_sleep_time_8h_10m">"Общее время сна: "</string>
-    <string name="title_sound">Звук</string>
+    <string name="title_sound">Звук1</string>
     <string name="date_range_analyzed">Промежуток анализа</string>
     <string name="title_dialog_add_sleep_go_bed">Выберите время отхода ко сну</string>
     <string name="title_dialog_add_sleep_awake">Выберите время подъема</string>
