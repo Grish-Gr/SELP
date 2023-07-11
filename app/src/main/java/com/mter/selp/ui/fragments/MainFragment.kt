@@ -51,6 +51,9 @@ class MainFragment: BaseFragment() {
         binding.notes.setOnClickListener{
             openFragment(InformationFragment())
         }
+        binding.psychologicalTest.setOnClickListener{
+            openFragment(TestFragment())
+        }
     }
 
     override fun onStart() {

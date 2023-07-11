@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <!--1-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_1_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_1">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_1_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_1_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_1_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_1_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--2-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_1_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_2_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_2">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_2_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_2_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_2_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_2_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--3-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_2_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_3_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_3">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_3_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_3_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_3_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_3_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--4-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_3_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_4_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_4">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_4_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_4_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_4_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_4_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--5-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_4_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_5_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_5">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_5_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_5_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_5_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_5_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--6-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_5_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_6_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_6">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_6_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_6_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_6_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_6_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--7-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_6_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_7_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_7">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_7_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_7_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_7_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_7_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--8-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_7_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_8_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_8">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_8_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_8_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_8_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_8_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--9-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_8_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_9_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_9">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_9_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_9_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_9_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_9_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--10-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_9_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_10_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_10">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_10_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_10_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_10_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_10_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--11-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_10_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_11_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_11">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_11_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_11_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_11_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_11_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--12-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_11_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_12_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_12">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_12_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_12_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_12_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_12_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--13-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_12_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_13_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_13">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_13_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_13_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_13_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_13_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+        </RadioGroup>
+
+
+        <!--14-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_13_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_14_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_14">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_14_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_14_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_14_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_14_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--15-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_14_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_15_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_15">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_15_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_15_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_15_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_15_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--16-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_15_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_16_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_16">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_16_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_16_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_16_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_16_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--17-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_17"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_16_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_17_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_17">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_17_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_17_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_17_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_17_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--18-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_17_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_18_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_18">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_18_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_18_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_18_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_18_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <!--19-->
+        <TextView
+            android:id="@+id/anxiety_level_test_question_19"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="@string/anxiety_q19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_18_choice"/>
+
+        <RadioGroup
+            android:id="@+id/anxiety_level_test_question_19_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_19">
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_19_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_4"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_19_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_3"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_19_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_2"/>
+
+            <RadioButton
+                android:id="@+id/anxiety_level_test_question_19_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/anxiety_answer_1"/>
+
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_cancel"
+            android:layout_marginTop="16dp"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/save_mood"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_19_choice"/>
+
+        <Button
+            android:id="@+id/save_mood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_save"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@id/cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_19_choice"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
