@@ -43,7 +43,7 @@
             android:layout_height="32dp"
             android:background="@drawable/label_selp"
             android:backgroundTint="?attr/colorOnSurface"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
 
         <Button
             android:id="@+id/account"
