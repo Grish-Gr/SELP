@@ -150,6 +150,31 @@
     <string name="message_hint_reminder_mood">Привет, не забудь пожалуйста выбрать какое у тебя сейчас настроение, это достаточно важно, спасибо.</string>
     <string name="cancel_later">Позже</string>
     <string name="confirm_ok">Хорошо</string>
+    <string name="test_quality_sleep">Тест на определения качество сна</string>
+    <string name="test_anxiety_level">Тест на определение уровня тревожности</string>
+    <string name="anxiety_q1">Я чувствую себя более напряженным или возбужденным, чем обычно</string>
+    <string name="anxiety_q2">Я чувствую страх без очевидной причины.</string>
+    <string name="anxiety_q3">Я легко расстраиваюсь и начинаю паниковать.</string>
+    <string name="anxiety_q4">Я чувствую, как будто разваливаюсь на части.</string>
+    <string name="anxiety_q5">Я чувствую, что все в порядке, и ничего плохого не случится</string>
+    <string name="anxiety_q6">Мои руки и ноги трясутся и дрожат.</string>
+    <string name="anxiety_q7">Меня беспокоят головные боли, боли в шее и спине.</string>
+    <string name="anxiety_q8">Я чувствую слабость и быстро устаю.</string>
+    <string name="anxiety_q9">Я чувствую себя спокойно и могу сидеть, не ерзая.</string>
+    <string name="anxiety_q10">Я чувствую, что мое сердце бьется быстро</string>
+    <string name="anxiety_q11">Меня беспокоят головокружения.</string>
+    <string name="anxiety_q12">У меня бывают обмороки или я чувствую, что могу потерять сознание.</string>
+    <string name="anxiety_q13">Я дышу ровно и спокойно</string>
+    <string name="anxiety_q14">У меня немеют и покалывают пальцы рук и ног.</string>
+    <string name="anxiety_q15">Меня беспокоят боли в животе и расстройства желудка</string>
+    <string name="anxiety_q16">Мои руки обычно сухие и теплые</string>
+    <string name="anxiety_q17">Мое лицо становится горячим и краснеет.</string>
+    <string name="anxiety_q18">Я легко засыпаю и за ночь хорошо высыпаюсь</string>
+    <string name="anxiety_q19">По ночам меня мучают кошмары</string>
+    <string name="anxiety_answer_4">Редко</string>
+    <string name="anxiety_answer_3">Периодически</string>
+    <string name="anxiety_answer_2">Часто</string>
+    <string name="anxiety_answer_1">Почти всегда</string>
 
     <string-array name="themes">
         <item>Светлая</item>
