@@ -35,8 +35,13 @@ class InformationFragment: BaseFragment() {
         binding.openVideoInfo.setOnClickListener {
             openFragment(VideoInfoFragment())
         }
+
         binding.back.setOnClickListener {
             openFragment(MainFragment())
+        }
+
+        binding.openAddingArticles.setOnClickListener {
+            openFragment(AddingArticlesFragment())
         }
     }
 }

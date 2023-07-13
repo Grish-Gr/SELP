@@ -53,10 +53,8 @@ class MainFragment: BaseFragment() {
         binding.notes.setOnClickListener{
             openFragment(InformationFragment())
         }
-        binding.psychologicalTest.setOnClickListener {
-            lifecycleScope.launch {
-                getTestService().testing()
-            }
+        binding.psychologicalTest.setOnClickListener{
+            openFragment(TestFragment())
         }
     }
 
