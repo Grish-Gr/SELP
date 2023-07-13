@@ -19,4 +19,13 @@ open class DataModel : ViewModel() {
     val anxietyLevel: MutableLiveData<String> by lazy {
         MutableLiveData<String>()
     }
+
+    val questions: MutableLiveData<Array<String>> by lazy {
+        MutableLiveData<Array<String>>()
+    }
+
+    val questionsAfterAdd: MutableLiveData<Array<Array<String>>> by lazy {
+        MutableLiveData<Array<Array<String>>>()
+    }
+
 }

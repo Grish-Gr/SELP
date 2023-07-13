@@ -55,6 +55,10 @@ class TestFragment: BaseFragment() {
             openFragment(AnxietyLevelTestFragment())
         }
 
+        binding.addTest.setOnClickListener {
+            openFragment(AddTestsFragment())
+        }
+
     }
 
 

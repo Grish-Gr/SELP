@@ -50,12 +50,11 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    <Button
         android:id="@+id/test_quality_sleep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/test_quality_sleep"
-        android:drawableEnd="@drawable/ic_add"
         android:layout_margin="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_app_bar"/>
@@ -70,12 +69,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/test_quality_sleep" />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    <Button
         android:id="@+id/test_anxiety_level"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/test_anxiety_level"
-        android:drawableEnd="@drawable/ic_add"
         android:layout_margin="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result_quality_sleep"/>
@@ -89,5 +87,15 @@
         android:text=""
         app:layout_constraintTop_toBottomOf="@+id/test_anxiety_level"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/add_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сделать тест"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
