@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentMainBinding
+import com.mter.selp.model.UserService
 import kotlinx.coroutines.launch
 
 class MainFragment: BaseFragment() {
@@ -55,7 +56,7 @@ class MainFragment: BaseFragment() {
         }
         binding.psychologicalTest.setOnClickListener {
             lifecycleScope.launch {
-                getTestService().testing()
+                UserService.getUserInfo()
             }
         }
     }

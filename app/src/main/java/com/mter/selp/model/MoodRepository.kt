@@ -1,6 +1,7 @@
 package com.mter.selp.model
 
 import com.mter.selp.data.db.SelpDatabase
+import com.mter.selp.model.data.Mood
 
 object MoodRepository {
 

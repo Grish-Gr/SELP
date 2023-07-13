@@ -5,10 +5,13 @@ import android.content.Context
 import android.util.Base64
 import androidx.room.Room
 import com.mter.selp.data.db.SelpDatabase
-import com.mter.selp.data.network.AuthService
-import com.mter.selp.data.network.TestService
+import com.mter.selp.data.network.AuthRestService
+import com.mter.selp.data.network.UserRestService
+import com.mter.selp.data.network.response.JwtResponse
+import com.mter.selp.model.AuthService
 import com.mter.selp.model.MoodRepository
 import com.mter.selp.model.SleepRepository
+import com.mter.selp.model.UserService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,16 +20,9 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.util.Date
-import javax.crypto.Cipher
 
 class AppSelp: Application() {
-
-    lateinit var authService: AuthService
-        private set
-    lateinit var testingService: TestService
-        private set
 
     override fun onCreate() {
         super.onCreate()
@@ -39,29 +35,15 @@ class AppSelp: Application() {
     }
 
     private fun initRetrofit() {
-        createAuthService()
-
         val httpLogging = HttpLoggingInterceptor()
         httpLogging.level = HttpLoggingInterceptor.Level.BODY
 
         val okHttpClient = OkHttpClient.Builder()
             .addInterceptor(Interceptor { chain ->
-                var originalRequest = chain.request()
+                val originalRequest = chain.request()
 
                 if (!originalRequest.url.encodedPath.contains("/auth")) {
                     val setting = this.applicationContext.getSharedPreferences(SETTING_INTERNET, Context.MODE_PRIVATE)
-                    val expireTime = setting.getLong("expireTime", Long.MAX_VALUE)
-                    if (Date().time > expireTime) {
-                        CoroutineScope(Dispatchers.IO).launch {
-                            val refreshToken = Base64.decode(setting.getString("refreshToken", "")?.toByteArray(), Base64.DEFAULT)
-                            val jwtResponse = authService.refreshToken(String(refreshToken));
-                            setting.edit()
-                                .putLong("expireTime", jwtResponse.expireTime)
-                                .putString("refreshToken", Base64.encodeToString(jwtResponse.refreshToken.toByteArray(), Base64.DEFAULT))
-                                .putString("accessToken", Base64.encodeToString(jwtResponse.accessToken.toByteArray(), Base64.DEFAULT))
-                                .apply()
-                        }
-                    }
                     originalRequest.headers.plus(Pair("Authorization", "Bearer ${setting.getString("accessToken", "") ?: ""}"))
                 }
 
@@ -76,24 +58,47 @@ class AppSelp: Application() {
             .client(okHttpClient)
             .build()
 
-        testingService = retrofit.create(TestService::class.java)
+        val authRestService = retrofit.create(AuthRestService::class.java)
+        val userRestService = retrofit.create(UserRestService::class.java)
+
+        AuthService.init(
+            authRestService = authRestService,
+            successLogin = {
+                refreshToken(it)
+            },
+            getRefreshToken = {
+                getRefreshToken()
+            },
+            successRefreshTokens = {
+                refreshToken(it)
+            }
+        )
+        UserService.init(
+            userRestService = userRestService,
+            checkRefreshToken = {
+                checkNeedRefreshTokens()
+            }
+        )
     }
 
-    private fun createAuthService() {
-        val httpLogging = HttpLoggingInterceptor()
-        httpLogging.level = HttpLoggingInterceptor.Level.BODY
+    private fun checkNeedRefreshTokens(): Boolean {
+        val setting = this.applicationContext.getSharedPreferences(SETTING_INTERNET, Context.MODE_PRIVATE)
+        val expireTime = setting.getLong("expireTime", Long.MAX_VALUE)
+        return Date().time > expireTime
+    }
 
-        val okHttpClient = OkHttpClient.Builder()
-            .addInterceptor(httpLogging)
-            .build()
+    private fun refreshToken(jwtResponse: JwtResponse) {
+        val setting = this.applicationContext.getSharedPreferences(SETTING_INTERNET, Context.MODE_PRIVATE)
+        setting.edit()
+            .putLong("expireTime", jwtResponse.expireTime)
+            .putString("refreshToken", Base64.encodeToString(jwtResponse.refreshToken.toByteArray(), Base64.DEFAULT))
+            .putString("accessToken", Base64.encodeToString(jwtResponse.accessToken.toByteArray(), Base64.DEFAULT))
+            .apply()
+    }
 
-        val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(okHttpClient)
-            .build()
-
-        authService = retrofit.create(AuthService::class.java)
+    private fun getRefreshToken(): String {
+        val setting = this.applicationContext.getSharedPreferences(SETTING_INTERNET, Context.MODE_PRIVATE)
+        return String(Base64.decode(setting.getString("refreshToken", "")?.toByteArray(), Base64.DEFAULT))
     }
 
     companion object {
