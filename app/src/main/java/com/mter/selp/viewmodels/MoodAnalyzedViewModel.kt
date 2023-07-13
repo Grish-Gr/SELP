@@ -1,11 +1,10 @@
 package com.mter.selp.viewmodels
 
-import android.text.method.TextKeyListener.Capitalize
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mter.selp.model.Mood
+import com.mter.selp.model.data.Mood
 import com.mter.selp.model.MoodRepository
 import kotlinx.coroutines.launch
 import java.util.Date
