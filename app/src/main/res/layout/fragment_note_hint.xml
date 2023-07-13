@@ -6,7 +6,9 @@
     android:minWidth="280dp"
     style="@style/MaterialAlertDialog.Material3"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+
+    >
 
     <TextView
         android:id="@+id/title_reminder_dialog"
@@ -30,7 +32,7 @@
         android:textSize="18sp"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,10 +41,11 @@
         android:text="@string/understand"
         android:textColor="#5080FC"
         android:textColorLink="#5080FC"
+        android:backgroundTint="?attr/colorSecondaryVariant"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/reminder_text" />
 
-    <TextView
+    <Button
         android:id="@+id/not_open"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,6 +54,7 @@
         android:layout_marginEnd="7dp"
         android:text="@string/off_this_notification"
         android:textColor="#80231F20"
+        android:backgroundTint="#f2f3f4"
         app:layout_constraintStart_toEndOf="@id/close"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/reminder_text" />
