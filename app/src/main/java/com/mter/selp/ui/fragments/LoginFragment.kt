@@ -39,7 +39,6 @@ class LoginFragment : BaseFragment() {
 
         binding.signInButton.setOnClickListener {
             viewModel.loginInSystem(
-                getAuthService(),
                 binding.signInEmail.editableText.toString(),
                 binding.signInPassword.editableText.toString()
             )
@@ -49,13 +48,6 @@ class LoginFragment : BaseFragment() {
 
     private fun observeLogin() {
         viewModel.login.observe(this.viewLifecycleOwner) {
-            val settings = this.context?.getSharedPreferences(AppSelp.SETTING_INTERNET, Context.MODE_PRIVATE)
-            settings?.edit()
-                ?.putLong("expireTime", it.expireTime)
-                ?.putString("refreshToken", Base64.encodeToString(it.refreshToken.toByteArray(), Base64.DEFAULT))
-                ?.putString("accessToken", Base64.encodeToString(it.accessToken.toByteArray(), Base64.DEFAULT))
-                ?.apply()
-            parentFragmentManager.clearBackStack("Main")
             openFragment(MainFragment())
             binding.progressLogin.visibility = View.INVISIBLE
         }

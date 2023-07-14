@@ -1,4 +1,4 @@
-package com.mter.selp.model
+package com.mter.selp.model.data
 
 import com.mter.selp.data.db.entities.SleepStat
 
@@ -11,7 +11,7 @@ data class Sleep(
         fun from(sleep: Sleep): SleepStat {
             return SleepStat(sleep.id, sleep.createDate, sleep.timeSleepInHour)
         }
-        fun to(sleepStat: SleepStat): Sleep{
+        fun to(sleepStat: SleepStat): Sleep {
             return Sleep(sleepStat.id, sleepStat.createDate, sleepStat.timeSleepInHour)
         }
     }

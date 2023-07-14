@@ -5,18 +5,10 @@ import android.content.Context
 import androidx.fragment.app.Fragment
 import com.mter.selp.AppSelp
 import com.mter.selp.R
-import com.mter.selp.data.network.AuthService
-import com.mter.selp.data.network.TestService
+import com.mter.selp.data.network.AuthRestService
+import com.mter.selp.data.network.UserRestService
 
 open class BaseFragment: Fragment() {
-
-    protected fun getAuthService(): AuthService {
-        return (activity?.application as AppSelp).authService
-    }
-
-    protected fun getTestService(): TestService {
-        return (activity?.application as AppSelp).testingService
-    }
 
     protected fun openFragment(fragment: BaseFragment){
         parentFragmentManager.beginTransaction()

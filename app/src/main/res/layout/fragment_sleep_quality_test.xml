@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/falling_asleep_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="Время засыпания"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <RadioGroup
+            android:id="@+id/falling_asleep_time_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/falling_asleep_time">
+
+            <RadioButton
+                android:id="@+id/sleep_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Очень долго"/>
+
+            <RadioButton
+                android:id="@+id/sleep_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Долго"/>
+
+            <RadioButton
+                android:id="@+id/sleep_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Средне"/>
+
+            <RadioButton
+                android:id="@+id/sleep_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Недолго"/>
+
+            <RadioButton
+                android:id="@+id/sleep_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Мгновенно"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/sleep_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="Продолжительность сна"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/falling_asleep_time_choice"/>
+
+        <RadioGroup
+            android:id="@+id/sleep_duration_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sleep_duration">
+
+            <RadioButton
+                android:id="@+id/sleep_duration_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Очень короткий"/>
+
+            <RadioButton
+                android:id="@+id/sleep_duration_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Короткий"/>
+
+            <RadioButton
+                android:id="@+id/sleep_duration_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Средний"/>
+
+            <RadioButton
+                android:id="@+id/sleep_duration_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Долгий"/>
+
+            <RadioButton
+                android:id="@+id/sleep_duration_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Очень долгий"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/night_awakenings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="Ночные пробуждения"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sleep_duration_choice"/>
+
+        <RadioGroup
+            android:id="@+id/night_awakenings_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/night_awakenings">
+
+            <RadioButton
+                android:id="@+id/night_awakenings_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Очень часто"/>
+
+            <RadioButton
+                android:id="@+id/night_awakenings_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Часто"/>
+
+            <RadioButton
+                android:id="@+id/night_awakenings_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Не часто"/>
+
+            <RadioButton
+                android:id="@+id/night_awakenings_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Редко"/>
+
+            <RadioButton
+                android:id="@+id/night_awakenings_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Нет"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/dreams"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="Сны"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/night_awakenings_choice"/>
+
+        <RadioGroup
+            android:id="@+id/dreams_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dreams">
+
+            <RadioButton
+                android:id="@+id/dreams_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Множественные и тревожные"/>
+
+            <RadioButton
+                android:id="@+id/dreams_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Множественные"/>
+
+            <RadioButton
+                android:id="@+id/dreams_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Умеренно"/>
+
+            <RadioButton
+                android:id="@+id/dreams_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Временами"/>
+
+            <RadioButton
+                android:id="@+id/dreams_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Нет"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/quality_sleep"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="Качество сна"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dreams_choice"/>
+
+        <RadioGroup
+            android:id="@+id/quality_sleep_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checkedButton="@id/state_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quality_sleep">
+
+            <RadioButton
+                android:id="@+id/quality_sleep_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Очень плохо"/>
+
+            <RadioButton
+                android:id="@+id/quality_sleep_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Плохо"/>
+
+            <RadioButton
+                android:id="@+id/quality_sleep_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Средне"/>
+
+            <RadioButton
+                android:id="@+id/quality_sleep_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Хорошо"/>
+
+            <RadioButton
+                android:id="@+id/quality_sleep_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Отлично"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/quality_awakenings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="2dp"
+            android:text="Качество пробуждения"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quality_sleep_choice"/>
+
+        <RadioGroup
+            android:id="@+id/quality_awakenings_choice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checkedButton="@id/state_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quality_awakenings">
+
+            <RadioButton
+                android:id="@+id/quality_awakenings_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Очень плохо"/>
+
+            <RadioButton
+                android:id="@+id/quality_awakenings_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Плохо"/>
+
+            <RadioButton
+                android:id="@+id/quality_awakenings_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Средне"/>
+
+            <RadioButton
+                android:id="@+id/quality_awakenings_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Хорошо"/>
+
+            <RadioButton
+                android:id="@+id/quality_awakenings_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Отлично"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_cancel"
+            android:layout_marginTop="16dp"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/save_mood"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quality_awakenings_choice"/>
+
+        <Button
+            android:id="@+id/save_mood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_save"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@id/cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quality_awakenings_choice"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

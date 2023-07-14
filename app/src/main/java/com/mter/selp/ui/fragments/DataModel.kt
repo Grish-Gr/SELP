@@ -11,4 +11,21 @@ open class DataModel : ViewModel() {
     val mail: MutableLiveData<String> by lazy {
         MutableLiveData<String>()
     }
+
+    val qualitySleep: MutableLiveData<String> by lazy {
+        MutableLiveData<String>()
+    }
+
+    val anxietyLevel: MutableLiveData<String> by lazy {
+        MutableLiveData<String>()
+    }
+
+    val questions: MutableLiveData<Array<String>> by lazy {
+        MutableLiveData<Array<String>>()
+    }
+
+    val questionsAfterAdd: MutableLiveData<Array<Array<String>>> by lazy {
+        MutableLiveData<Array<Array<String>>>()
+    }
+
 }
