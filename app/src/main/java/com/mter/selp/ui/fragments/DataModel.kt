@@ -20,10 +20,6 @@ open class DataModel : ViewModel() {
         MutableLiveData<String>()
     }
 
-    val questions: MutableLiveData<Array<String>> by lazy {
-        MutableLiveData<Array<String>>()
-    }
-
     val questionsAfterAdd: MutableLiveData<Array<Array<String>>> by lazy {
         MutableLiveData<Array<Array<String>>>()
     }
