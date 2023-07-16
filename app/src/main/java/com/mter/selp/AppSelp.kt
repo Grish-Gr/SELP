@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.room.Room
 import com.mter.selp.data.SelpDatabase
 import com.mter.selp.model.MoodRepository
+import com.mter.selp.model.ResultTestRepository
 import com.mter.selp.model.SleepRepository
 
 class AppSelp: Application() {
@@ -13,5 +14,6 @@ class AppSelp: Application() {
             .build()
         MoodRepository.initRepository(database)
         SleepRepository.initDatabase(database)
+        ResultTestRepository.initDatabase(database)
     }
 }

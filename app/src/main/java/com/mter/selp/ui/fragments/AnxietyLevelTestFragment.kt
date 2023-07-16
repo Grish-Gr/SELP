@@ -5,13 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentAnxietyLevelTestBinding
+import com.mter.selp.viewmodels.ResultTestViewModel
 
 class AnxietyLevelTestFragment: BaseFragment() {
 
     private lateinit var binding: FragmentAnxietyLevelTestBinding
+    private val viewModel by viewModels<ResultTestViewModel>()
     private val dataModel : DataModel by activityViewModels()
+    private val typeTest: Int = 2
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -187,8 +191,12 @@ class AnxietyLevelTestFragment: BaseFragment() {
                     }
                 }
             }
+
             result = "$resultAnxietyLevel $result"
+
             dataModel.anxietyLevel.value = result
+            viewModel.saveResultTest(typeTest, result)
+
             parentFragmentManager.popBackStack()
         }
     }

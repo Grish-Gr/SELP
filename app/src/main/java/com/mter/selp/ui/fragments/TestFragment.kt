@@ -7,15 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleOwner
-import com.google.android.material.tabs.TabLayoutMediator
-import com.mter.selp.R
-import com.mter.selp.databinding.FragmentMoodBinding
 import com.mter.selp.databinding.FragmentTestBinding
-import com.mter.selp.ui.fragments.charts.ViewChartsAdapter
-import com.mter.selp.viewmodels.MoodAnalyzedViewModel
+import com.mter.selp.model.ResultTest
+import com.mter.selp.viewmodels.ResultTestViewModel
 
 class TestFragment: BaseFragment() {
     private lateinit var binding: FragmentTestBinding
+    private val resultTestViewModel by viewModels<ResultTestViewModel>()
     private val dataModel : DataModel by activityViewModels()
 
     override fun onCreateView(
@@ -33,14 +31,32 @@ class TestFragment: BaseFragment() {
         dataModel.qualitySleep.observe(activity as LifecycleOwner) {
             binding.resultQualitySleep.text = it
         }
-
         dataModel.anxietyLevel.observe(activity as LifecycleOwner) {
             binding.resultAnxietyLevel.text = it
         }
 
+        initObserve()
         initAction()
 
     }
+
+    private fun initObserve(){
+
+        resultTestViewModel.listResultTest.observe(this.viewLifecycleOwner) {
+            it.forEach {
+                val type = it.type
+                val result = "${it.result}"
+
+                if (type == 1){
+                    binding.resultQualitySleep.text = result
+                } else {
+                    binding.resultAnxietyLevel.text = result
+                }
+            }
+        }
+
+    }
+
 
     private fun initAction() {
         binding.account.setOnClickListener {
