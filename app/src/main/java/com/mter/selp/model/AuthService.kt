@@ -12,19 +12,13 @@ object AuthService {
 
     private lateinit var authRestService: AuthRestService
     private var successLogin: (jwtResponse: JwtResponse) -> Unit = {}
-    private var getRefreshToken: () -> String = {""}
-    private var successRefreshTokens: (jwtResponse: JwtResponse) -> Unit = {}
 
     fun init(
         authRestService: AuthRestService,
         successLogin: (jwtResponse: JwtResponse) -> Unit,
-        getRefreshToken: () -> String,
-        successRefreshTokens: (jwtResponse: JwtResponse) -> Unit
     ) {
         this.authRestService = authRestService
         this.successLogin = successLogin
-        this.getRefreshToken = getRefreshToken
-        this.successRefreshTokens = successRefreshTokens
     }
 
     suspend fun registration(
@@ -49,16 +43,6 @@ object AuthService {
             val response = authRestService.login(LoginRequest(email, password))
             successLogin(response)
             ResultOf.Success("Success")
-        } catch (ex: Exception) {
-            ResultOf.Error(ex)
-        }
-    }
-
-    suspend fun refreshToken(): ResultOf<Boolean> {
-        return try {
-            val response = authRestService.refreshToken(getRefreshToken())
-            successRefreshTokens(response)
-            ResultOf.Success(true)
         } catch (ex: Exception) {
             ResultOf.Error(ex)
         }

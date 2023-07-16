@@ -3,7 +3,9 @@ package com.mter.selp
 import android.app.Application
 import android.content.Context
 import android.util.Base64
+import android.util.Log
 import androidx.room.Room
+import com.google.gson.Gson
 import com.mter.selp.data.db.SelpDatabase
 import com.mter.selp.data.network.AuthRestService
 import com.mter.selp.data.network.UserRestService
@@ -12,15 +14,15 @@ import com.mter.selp.model.AuthService
 import com.mter.selp.model.MoodRepository
 import com.mter.selp.model.SleepRepository
 import com.mter.selp.model.UserService
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.Request
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.IOException
 import java.util.Date
+
 
 class AppSelp: Application() {
 
@@ -43,11 +45,36 @@ class AppSelp: Application() {
                 val originalRequest = chain.request()
 
                 if (!originalRequest.url.encodedPath.contains("/auth")) {
+                    val request = originalRequest.newBuilder()
                     val setting = this.applicationContext.getSharedPreferences(SETTING_INTERNET, Context.MODE_PRIVATE)
-                    originalRequest.headers.plus(Pair("Authorization", "Bearer ${setting.getString("accessToken", "") ?: ""}"))
-                }
 
-                chain.proceed(originalRequest)
+                    if (Date().time > setting.getLong("expireTime", Long.MIN_VALUE)) {
+                        Log.i("REFRESH_TOKENS", "Start refresh tokens for user")
+                        val refreshRequest: Request = Request.Builder()
+                            .url("${BASE_URL}api/v1/auth/refresh?token=${getRefreshToken()}")
+                            .get()
+                            .build()
+
+                        val response = OkHttpClient().newCall(refreshRequest).execute()
+                        if (!response.isSuccessful) {
+                            throw IOException("Запрос к серверу не был успешен: ${response.code} ${response.message}")
+                        } else {
+                            Log.i("REFRESH_TOKENS", "Success refresh tokens for user")
+                        }
+
+                        val tokens = Gson().fromJson(response.body?.string(), JwtResponse::class.java)
+                        setting.edit()
+                            .putLong("expireTime", tokens.expireTime)
+                            .putString("refreshToken", Base64.encodeToString(tokens.refreshToken.toByteArray(), Base64.DEFAULT))
+                            .putString("accessToken", Base64.encodeToString(tokens.accessToken.toByteArray(), Base64.DEFAULT))
+                            .apply()
+                    }
+
+                    request.addHeader("Authorization", "Bearer ${String(Base64.decode(setting.getString("accessToken", "")?.toByteArray(), Base64.DEFAULT))}")
+                    chain.proceed(request.build())
+                } else {
+                    chain.proceed(originalRequest)
+                }
             })
             .addInterceptor(httpLogging)
             .build()
@@ -65,26 +92,9 @@ class AppSelp: Application() {
             authRestService = authRestService,
             successLogin = {
                 refreshToken(it)
-            },
-            getRefreshToken = {
-                getRefreshToken()
-            },
-            successRefreshTokens = {
-                refreshToken(it)
             }
         )
-        UserService.init(
-            userRestService = userRestService,
-            checkRefreshToken = {
-                checkNeedRefreshTokens()
-            }
-        )
-    }
-
-    private fun checkNeedRefreshTokens(): Boolean {
-        val setting = this.applicationContext.getSharedPreferences(SETTING_INTERNET, Context.MODE_PRIVATE)
-        val expireTime = setting.getLong("expireTime", Long.MAX_VALUE)
-        return Date().time > expireTime
+        UserService.init(userRestService = userRestService)
     }
 
     private fun refreshToken(jwtResponse: JwtResponse) {
@@ -103,6 +113,9 @@ class AppSelp: Application() {
 
     companion object {
         const val SETTING_INTERNET = "SETTING_INTERNET"
-        const val BASE_URL = "http://192.168.0.101:8080/"
+        // Чтобы протестировать бэкенд: запускаете SELP_back,
+        // узнаете ip адрес компьютера (ipconfig в терминале)
+        // указываете ip адрес и порт (по умолчанию 8080)
+        const val BASE_URL = "http://192.168.1.102:8080/"
     }
 }
