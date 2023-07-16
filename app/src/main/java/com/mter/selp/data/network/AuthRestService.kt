@@ -18,6 +18,6 @@ interface AuthRestService {
     suspend fun login(@Body loginRequest: LoginRequest): JwtResponse
 
     @GET("/api/v1/refresh")
-    suspend fun refreshToken(@Query("token") token: String): JwtResponse
+    fun refreshToken(@Query("token") token: String): JwtResponse
 
 }
