@@ -8,7 +8,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleOwner
 import com.mter.selp.databinding.FragmentTestBinding
-import com.mter.selp.model.ResultTest
+import com.mter.selp.viewmodels.DataModel
 import com.mter.selp.viewmodels.ResultTestViewModel
 
 class TestFragment: BaseFragment() {

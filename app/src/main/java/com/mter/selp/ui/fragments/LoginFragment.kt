@@ -1,4 +1,4 @@
-package com.mter.selp.ui.fragments
+package com.mter.selp
 
 import android.content.Context
 import android.os.Bundle
@@ -10,6 +10,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import com.mter.selp.AppSelp
 import com.mter.selp.databinding.FragmentSignInBinding
+import com.mter.selp.ui.fragments.BaseFragment
+import com.mter.selp.viewmodels.DataModel
+import com.mter.selp.ui.fragments.MainFragment
 import com.mter.selp.viewmodels.AuthViewModel
 
 class LoginFragment : BaseFragment() {
