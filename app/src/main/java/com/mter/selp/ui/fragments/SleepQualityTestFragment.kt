@@ -5,13 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentSleepQualityTestBinding
+import com.mter.selp.viewmodels.MoodAnalyzedViewModel
+import com.mter.selp.viewmodels.ResultTestViewModel
 
 class SleepQualityTestFragment: BaseFragment() {
 
     private lateinit var binding: FragmentSleepQualityTestBinding
+    private val viewModel by viewModels<ResultTestViewModel>()
     private val dataModel : DataModel by activityViewModels()
+    private val typeTest: Int = 1
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -103,7 +108,10 @@ class SleepQualityTestFragment: BaseFragment() {
                 }
             }
             result = "$resultQualitySleep $result"
+
             dataModel.qualitySleep.value = result
+            viewModel.saveResultTest(typeTest, result)
+
             parentFragmentManager.popBackStack()
         }
     }

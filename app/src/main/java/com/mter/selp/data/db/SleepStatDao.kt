@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import com.mter.selp.data.db.entities.SleepStat
+import com.mter.selp.data.entities.SleepStat
 
 @Dao
 interface SleepStatDao {

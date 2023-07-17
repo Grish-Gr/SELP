@@ -33,7 +33,4 @@ class MoodAnalyzedViewModel: ViewModel() {
         }
     }
 
-    val isCapitalize: MutableLiveData<Boolean> by lazy {
-        MutableLiveData<Boolean>()
-    }
 }

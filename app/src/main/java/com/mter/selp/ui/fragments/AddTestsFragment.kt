@@ -13,7 +13,6 @@ import com.mter.selp.databinding.FragmentAddTestsBinding
 class AddTestsFragment: BaseFragment() {
     private lateinit var binding: FragmentAddTestsBinding
     private val adapter = QuestionAdapter()
-    private var answer = emptyArray<String>()
     private var answerAfterAdd = arrayOf<Array<String>>()
     private val dataModel : DataModel by activityViewModels()
 
@@ -31,6 +30,14 @@ class AddTestsFragment: BaseFragment() {
 
         dataModel.questionsAfterAdd.observe(activity as LifecycleOwner) {
             answerAfterAdd = it
+        }
+
+        binding.rcViewTest.layoutManager = LinearLayoutManager(context)
+        binding.rcViewTest.adapter = adapter
+
+        for (answer in answerAfterAdd) {
+            val question = Question(answer[0], answer[1], answer[2], answer[3], answer[4])
+            adapter.addQuestion(question)
         }
 
         initAction()
@@ -51,17 +58,7 @@ class AddTestsFragment: BaseFragment() {
                 openFragment(AddQuestionFragment())
             }
 
-            rcViewTest.layoutManager = LinearLayoutManager(context)
-            rcViewTest.adapter = adapter
 
-            refresh.setOnClickListener {
-
-                for (answer in answerAfterAdd) {
-                    val question = Question(answer[0], answer[1], answer[2], answer[3], answer[4])
-                    adapter.addQuestion(question)
-                }
-
-            }
 
         }
 
