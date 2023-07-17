@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
 import com.mter.selp.databinding.FragmentAccountBinding
+import com.mter.selp.viewmodels.DataModel
 
 class AccountFragment : BaseFragment() {
     private lateinit var binding: FragmentAccountBinding

@@ -1,4 +1,4 @@
-package com.mter.selp.data.db
+package com.mter.selp.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
