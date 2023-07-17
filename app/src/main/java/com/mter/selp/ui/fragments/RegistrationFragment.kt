@@ -16,6 +16,7 @@ import com.mter.selp.R
 import com.mter.selp.data.network.request.Sex
 import com.mter.selp.databinding.FragmentRegisterBinding
 import com.mter.selp.viewmodels.AuthViewModel
+import com.mter.selp.viewmodels.DataModel
 import java.text.SimpleDateFormat
 import java.util.Date
 

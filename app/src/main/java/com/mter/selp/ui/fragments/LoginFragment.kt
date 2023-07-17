@@ -1,4 +1,4 @@
-package com.mter.selp
+package com.mter.selp.ui.fragments
 
 import android.content.Context
 import android.os.Bundle
