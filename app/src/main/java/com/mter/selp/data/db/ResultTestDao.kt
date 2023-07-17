@@ -1,10 +1,10 @@
-package com.mter.selp.data
+package com.mter.selp.data.db
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.mter.selp.data.entities.ResultTestStat
+import com.mter.selp.data.db.entities.ResultTestStat
 
 @Dao
 interface ResultTestDao {

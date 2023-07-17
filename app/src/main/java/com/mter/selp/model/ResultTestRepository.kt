@@ -1,6 +1,6 @@
 package com.mter.selp.model
 
-import com.mter.selp.data.SelpDatabase
+import com.mter.selp.data.db.SelpDatabase
 
 object ResultTestRepository {
     private lateinit var database: SelpDatabase

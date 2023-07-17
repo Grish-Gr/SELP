@@ -1,6 +1,6 @@
 package com.mter.selp.model
 
-import com.mter.selp.data.entities.ResultTestStat
+import com.mter.selp.data.db.entities.ResultTestStat
 
 
 data class ResultTest(
@@ -10,7 +10,7 @@ data class ResultTest(
 
 ) {
     companion object{
-        fun from(resultTest: ResultTest): ResultTestStat{
+        fun from(resultTest: ResultTest): ResultTestStat {
             return ResultTestStat(resultTest.id, resultTest.type, resultTest.result)
         }
         fun to(resultTestStat: ResultTestStat): ResultTest{
