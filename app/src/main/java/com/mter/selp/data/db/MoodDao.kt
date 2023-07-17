@@ -1,11 +1,10 @@
-package com.mter.selp.data
+package com.mter.selp.data.db
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.mter.selp.data.entities.MoodStat
+import com.mter.selp.data.db.entities.MoodStat
 
 @Dao
 interface MoodDao {

@@ -1,10 +1,12 @@
-package com.mter.selp.data
+package com.mter.selp.data.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.mter.selp.data.entities.MoodStat
 import com.mter.selp.data.entities.ResultTestStat
 import com.mter.selp.data.entities.SleepStat
+import com.mter.selp.data.db.entities.MoodStat
+import com.mter.selp.data.db.entities.SleepStat
 
 @Database(entities = [MoodStat::class, SleepStat::class, ResultTestStat::class], version = 1)
 abstract class SelpDatabase: RoomDatabase() {

@@ -13,7 +13,7 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentAnalyzeSleepBinding
-import com.mter.selp.model.Sleep
+import com.mter.selp.model.data.Sleep
 import com.mter.selp.viewmodels.SleepAnalyzedViewModel
 import java.text.SimpleDateFormat
 import java.util.Date

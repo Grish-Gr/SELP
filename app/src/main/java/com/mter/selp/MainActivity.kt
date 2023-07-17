@@ -5,6 +5,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.mter.selp.databinding.ActivityMainBinding
+import com.mter.selp.ui.fragments.StartLoginFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         if (supportFragmentManager.fragments.isEmpty()) {
             supportFragmentManager.beginTransaction()
-                .add(R.id.container_fragment, FragmentSign())
+                .add(R.id.container_fragment, StartLoginFragment())
                 .commit()
         }
 
