@@ -13,7 +13,7 @@ import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
-import com.mter.selp.model.Sleep
+import com.mter.selp.model.data.Sleep
 import com.mter.selp.ui.fragments.charts.ViewChartsAdapterForProgress
 import com.mter.selp.viewmodels.SleepAnalyzedViewModel
 import java.text.SimpleDateFormat

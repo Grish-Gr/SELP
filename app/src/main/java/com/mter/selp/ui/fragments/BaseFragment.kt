@@ -3,13 +3,17 @@ package com.mter.selp.ui.fragments
 import android.app.AlertDialog
 import android.content.Context
 import androidx.fragment.app.Fragment
+import com.mter.selp.AppSelp
 import com.mter.selp.R
+import com.mter.selp.data.network.AuthRestService
+import com.mter.selp.data.network.UserRestService
 
 open class BaseFragment: Fragment() {
+
     protected fun openFragment(fragment: BaseFragment){
         parentFragmentManager.beginTransaction()
             .replace(R.id.container_fragment, fragment)
-            .addToBackStack(null)
+            .addToBackStack("Main")
             .commit()
     }
 

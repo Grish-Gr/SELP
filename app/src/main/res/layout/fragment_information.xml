@@ -9,34 +9,59 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/back"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/main_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="top"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/arrow"
-            android:elevation="4dp" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/menu"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/ic_menu"
-            android:elevation="4dp" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/back"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="7dp"
+                    android:foreground="@drawable/ic_dehaze"
+                    android:foregroundTint="?attr/colorOnSurface"
+                    android:background="@drawable/ic_dehaze"
+                    android:layout_gravity="center_vertical|start"/>
+
+                <View
+                    android:layout_width="90dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/label_selp"
+                    android:backgroundTint="?attr/colorOnSurface"
+                    android:layout_gravity="center"/>
+
+                <Button
+                    android:id="@+id/account"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginEnd="7dp"
+                    android:foreground="@drawable/ic_person"
+                    android:foregroundTint="?attr/colorOnSurface"
+                    android:background="@drawable/ic_person"
+                    android:layout_gravity="end|center_vertical"/>
+
+            </FrameLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
 
 
         <View
             android:id="@+id/rectangle_7"
             android:layout_width="wrap_content"
             android:layout_height="350dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="50dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/pt2"
@@ -46,20 +71,21 @@
             android:id="@+id/text_large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="7dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="15dp"
             android:gravity="top"
             android:text="@string/large_text"
             android:textColor="#FF000000"
             android:textSize="19sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rectangle_7" />
+            app:layout_constraintTop_toBottomOf="@+id/rectangle_7"
+            android:lineSpacingMultiplier="1.15"/>
         <View
             android:id="@+id/photo"
             android:layout_width="wrap_content"
-            android:layout_height="150dp"
+            android:layout_height="250dp"
             app:layout_constraintTop_toBottomOf="@+id/text_large"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -70,40 +96,43 @@
             android:id="@+id/second_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="7dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="15dp"
             android:gravity="top"
             android:text="@string/second_text"
             android:textColor="#FF000000"
             android:textSize="19sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/photo" />
+            app:layout_constraintTop_toBottomOf="@+id/photo"
+            android:lineSpacingMultiplier="1.15"/>
         <View
             android:id="@+id/photo2"
             android:layout_width="wrap_content"
-            android:layout_height="150dp"
+            android:layout_height="250dp"
             app:layout_constraintTop_toBottomOf="@+id/second_text"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:background="@drawable/jp2"
+
             />
 
         <TextView
             android:id="@+id/three_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="7dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
             android:gravity="top"
             android:text="@string/three_text"
             android:textColor="#FF000000"
             android:textSize="19sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/photo2" />
+            app:layout_constraintTop_toBottomOf="@+id/photo2"
+            android:lineSpacingMultiplier="1.15"/>
         <View
             android:id="@+id/photo3"
             android:layout_width="wrap_content"
@@ -118,16 +147,17 @@
             android:id="@+id/four_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="7dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
             android:gravity="top"
             android:text="@string/four_text"
             android:textColor="#FF000000"
             android:textSize="19sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/photo3" />
+            app:layout_constraintTop_toBottomOf="@+id/photo3"
+            android:lineSpacingMultiplier="1.15"/>
 
         <Button
             android:id="@+id/openVideoInfo"

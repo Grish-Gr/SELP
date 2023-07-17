@@ -1,16 +1,12 @@
-package com.mter.selp
+package com.mter.selp.ui.fragments
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.mter.selp.databinding.FragmentAccountBinding
 import com.mter.selp.databinding.FragmentSignBinding
-import com.mter.selp.ui.fragments.BaseFragment
 
-class FragmentSign : BaseFragment() {
+class StartLoginFragment : BaseFragment() {
     private lateinit var binding: FragmentSignBinding
 
     override fun onCreateView(
@@ -29,11 +25,11 @@ class FragmentSign : BaseFragment() {
 
     fun initAction(){
         binding.signIn.setOnClickListener {
-            openFragment(FragmentSignIn())
+            openFragment(LoginFragment())
         }
 
         binding.register.setOnClickListener {
-            openFragment(FragmentRegister())
+            openFragment(RegistrationFragment())
         }
     }
 }

@@ -9,9 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.lifecycleScope
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentMainBinding
 import com.mter.selp.viewmodels.DataModel
+import com.mter.selp.model.UserService
+import kotlinx.coroutines.launch
 
 class MainFragment: BaseFragment() {
 
@@ -107,6 +110,7 @@ class MainFragment: BaseFragment() {
 
             val settings = this.activity?.getSharedPreferences(SETTINGS_APP, Context.MODE_PRIVATE)
             settings?.edit()?.putBoolean(HELP_WITH_SOUND, true)?.apply()
+            openFragment(BreathHelpVolumeFragment())
         }
         binding.optionHelpBreathVideo.setOnClickListener {
             it.backgroundTintList = context?.getColorStateList(R.color.md_theme_light_colorSecondaryVariant)
@@ -114,6 +118,7 @@ class MainFragment: BaseFragment() {
 
             val settings = this.activity?.getSharedPreferences(SETTINGS_APP, Context.MODE_PRIVATE)
             settings?.edit()?.putBoolean(HELP_WITH_SOUND, false)?.apply()
+            openFragment(BreathHelpVideoFragment())
         }
     }
 

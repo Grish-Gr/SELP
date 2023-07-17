@@ -1,18 +1,24 @@
 package com.mter.selp
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Base64
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import com.mter.selp.AppSelp
 import com.mter.selp.databinding.FragmentSignInBinding
 import com.mter.selp.ui.fragments.BaseFragment
 import com.mter.selp.viewmodels.DataModel
 import com.mter.selp.ui.fragments.MainFragment
+import com.mter.selp.viewmodels.AuthViewModel
 
-class FragmentSignIn : BaseFragment() {
+class LoginFragment : BaseFragment() {
     private lateinit var binding: FragmentSignInBinding
     private val dataModel : DataModel by activityViewModels()
+    private val viewModel by viewModels<AuthViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,16 +32,27 @@ class FragmentSignIn : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initAction()
+        observeLogin()
     }
 
-    fun initAction(){
+    private fun initAction(){
         binding.createProfile.setOnClickListener {
-            openFragment(FragmentRegister())
+            openFragment(RegistrationFragment())
         }
 
         binding.signInButton.setOnClickListener {
+            viewModel.loginInSystem(
+                binding.signInEmail.editableText.toString(),
+                binding.signInPassword.editableText.toString()
+            )
+            binding.progressLogin.visibility = View.VISIBLE
+        }
+    }
+
+    private fun observeLogin() {
+        viewModel.login.observe(this.viewLifecycleOwner) {
             openFragment(MainFragment())
-            dataModel.mail.value = binding.signInEmail.text.toString()
+            binding.progressLogin.visibility = View.INVISIBLE
         }
     }
 }

@@ -10,14 +10,10 @@ import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
-import com.github.mikephil.charting.formatter.IAxisValueFormatter
-import com.github.mikephil.charting.formatter.IValueFormatter
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
-import com.github.mikephil.charting.formatter.ValueFormatter
 import com.mter.selp.R
-import com.mter.selp.databinding.FragmentWeekMoodBinding
 import com.mter.selp.databinding.FragmentWeekMoodForProgressBinding
-import com.mter.selp.model.Mood
+import com.mter.selp.model.data.Mood
 import com.mter.selp.viewmodels.MoodAnalyzedViewModel
 import java.text.SimpleDateFormat
 import java.util.Date
