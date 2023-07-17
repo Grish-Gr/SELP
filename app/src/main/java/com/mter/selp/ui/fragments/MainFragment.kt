@@ -7,12 +7,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.LifecycleOwner
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentMainBinding
+import com.mter.selp.viewmodels.DataModel
 
 class MainFragment: BaseFragment() {
 
     private lateinit var binding: FragmentMainBinding
+    private val dataModel : DataModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,6 +29,8 @@ class MainFragment: BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        premiumOn()
         initAction()
         initNavigation()
         showHintDialog(
@@ -35,7 +41,22 @@ class MainFragment: BaseFragment() {
         )
     }
 
+
+    private fun premiumOn() {
+        dataModel.selpPremium.observe(activity as LifecycleOwner) {
+            var selpPremium = it
+            if (selpPremium){
+                binding.psychologicalTest.visibility = View.VISIBLE
+                binding.meditation.visibility = View.VISIBLE
+            } else {
+                binding.psychologicalTest.visibility = View.INVISIBLE
+                binding.meditation.visibility = View.INVISIBLE
+            }
+        }
+    }
+
     private fun initNavigation() {
+
         binding.exercisesProgessive.setOnClickListener {
             openFragment(ProgressFragment())
         }

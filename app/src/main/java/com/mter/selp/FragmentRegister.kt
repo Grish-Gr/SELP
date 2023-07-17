@@ -8,7 +8,7 @@ import androidx.fragment.app.activityViewModels
 import com.mter.selp.databinding.FragmentRegisterBinding
 import com.mter.selp.ui.fragments.BaseFragment
 import com.mter.selp.ui.fragments.MainFragment
-import com.mter.selp.ui.fragments.DataModel
+import com.mter.selp.viewmodels.DataModel
 
 class FragmentRegister : BaseFragment() {
     private lateinit var binding: FragmentRegisterBinding

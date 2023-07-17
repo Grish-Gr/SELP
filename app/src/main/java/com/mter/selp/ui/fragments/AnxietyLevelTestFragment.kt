@@ -8,6 +8,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentAnxietyLevelTestBinding
+import com.mter.selp.viewmodels.DataModel
 import com.mter.selp.viewmodels.ResultTestViewModel
 
 class AnxietyLevelTestFragment: BaseFragment() {
