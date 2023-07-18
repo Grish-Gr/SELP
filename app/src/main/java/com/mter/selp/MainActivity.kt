@@ -3,14 +3,15 @@ package com.mter.selp
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.mter.selp.databinding.ActivityMainBinding
+import com.mter.selp.ui.fragments.MainFragment
 import com.mter.selp.ui.fragments.StartLoginFragment
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         if (supportFragmentManager.fragments.isEmpty()) {
             supportFragmentManager.beginTransaction()
-                .add(R.id.container_fragment, StartLoginFragment())
+                .add(R.id.container_fragment, MainFragment())
                 .commit()
         }
 
@@ -29,11 +30,4 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun createNewTextView(text: String): TextView? {
-        val lparams = ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.WRAP_CONTENT, ConstraintLayout.LayoutParams.WRAP_CONTENT)
-        val textView = TextView(this)
-        textView.layoutParams = lparams
-        textView.text = "New text: $text"
-        return textView
-    }
 }
