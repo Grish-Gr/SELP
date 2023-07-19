@@ -1,6 +1,7 @@
 package com.mter.selp.ui.fragments
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
@@ -20,6 +21,8 @@ class MainFragment: BaseFragment() {
 
     private lateinit var binding: FragmentMainBinding
     private val dataModel : DataModel by activityViewModels()
+    var prefSelpPrem : SharedPreferences? = null
+    var selpPremium = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,6 +36,9 @@ class MainFragment: BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        prefSelpPrem = activity?.getSharedPreferences("TABLE", Context.MODE_PRIVATE)
+        selpPremium = prefSelpPrem?.getBoolean("selpPremium", false)!!
+
         premiumOn()
         initAction()
         initNavigation()
@@ -44,18 +50,25 @@ class MainFragment: BaseFragment() {
         )
     }
 
+    private fun saveSelectPrem(result: Boolean){
+        val editor = prefSelpPrem?.edit()
+        editor?.putBoolean("selpPremium", result)
+        editor?.apply()
+    }
+
 
     private fun premiumOn() {
         dataModel.selpPremium.observe(activity as LifecycleOwner) {
-            var selpPremium = it
-            if (selpPremium){
-                binding.psychologicalTest.visibility = View.VISIBLE
-                binding.meditation.visibility = View.VISIBLE
-            } else {
-                binding.psychologicalTest.visibility = View.INVISIBLE
-                binding.meditation.visibility = View.INVISIBLE
-            }
+            selpPremium = it
         }
+        if (selpPremium){
+            binding.psychologicalTest.visibility = View.VISIBLE
+            binding.meditation.visibility = View.VISIBLE
+        } else {
+            binding.psychologicalTest.visibility = View.INVISIBLE
+            binding.meditation.visibility = View.INVISIBLE
+        }
+        saveSelectPrem(selpPremium)
     }
 
     private fun initNavigation() {
@@ -96,6 +109,7 @@ class MainFragment: BaseFragment() {
     }
 
     private fun initAction(){
+
         binding.helpCard.setOnClickListener {
             val settings = this.activity?.getSharedPreferences(SETTINGS_APP, Context.MODE_PRIVATE)
             if (settings?.getBoolean(HELP_WITH_SOUND, true) == true){

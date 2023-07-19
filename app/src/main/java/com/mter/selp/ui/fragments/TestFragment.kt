@@ -14,7 +14,6 @@ import com.mter.selp.viewmodels.ResultTestViewModel
 class TestFragment: BaseFragment() {
     private lateinit var binding: FragmentTestBinding
     private val resultTestViewModel by viewModels<ResultTestViewModel>()
-    private val dataModel : DataModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,13 +26,6 @@ class TestFragment: BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        dataModel.qualitySleep.observe(activity as LifecycleOwner) {
-            binding.resultQualitySleep.text = it
-        }
-        dataModel.anxietyLevel.observe(activity as LifecycleOwner) {
-            binding.resultAnxietyLevel.text = it
-        }
 
         initObserve()
         initAction()
@@ -54,11 +46,15 @@ class TestFragment: BaseFragment() {
                 }
             }
         }
-
+        resultTestViewModel.getListResultTest()
     }
 
 
     private fun initAction() {
+        binding.back.setOnClickListener {
+            openFragment(MainFragment())
+        }
+
         binding.account.setOnClickListener {
             openFragment(AccountFragment())
         }
