@@ -69,6 +69,8 @@ class AppSelp: Application() {
                             .putLong("expireTime", tokens.expireTime)
                             .putString("refreshToken", Base64.encodeToString(tokens.refreshToken.toByteArray(), Base64.DEFAULT))
                             .putString("accessToken", Base64.encodeToString(tokens.accessToken.toByteArray(), Base64.DEFAULT))
+                            .putString("paidSubscriptionCode", Base64.encodeToString(tokens.paidSubscriptionCode.toByteArray(), Base64.DEFAULT))
+                            .putString("role", Base64.encodeToString(tokens.role.toByteArray(), Base64.DEFAULT))
                             .apply()
                     }
 
@@ -105,6 +107,8 @@ class AppSelp: Application() {
             .putLong("expireTime", jwtResponse.expireTime)
             .putString("refreshToken", Base64.encodeToString(jwtResponse.refreshToken.toByteArray(), Base64.DEFAULT))
             .putString("accessToken", Base64.encodeToString(jwtResponse.accessToken.toByteArray(), Base64.DEFAULT))
+            .putString("paidSubscriptionCode", Base64.encodeToString(jwtResponse.paidSubscriptionCode.toByteArray(), Base64.DEFAULT))
+            .putString("role", Base64.encodeToString(jwtResponse.role.toByteArray(), Base64.DEFAULT))
             .apply()
     }
 

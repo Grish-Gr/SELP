@@ -18,5 +18,8 @@ data class JwtResponse(
 
     @SerializedName("role")
     val role: String,
+
+    @SerializedName("paidSubscriptionCode")
+    val paidSubscriptionCode: String,
 ) {
 }
