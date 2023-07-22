@@ -34,6 +34,7 @@ class AppSelp: Application() {
         MoodRepository.initRepository(database)
         SleepRepository.initDatabase(database)
         ResultTestRepository.initDatabase(database)
+        FailedRequestToServerRepository.initRepository(database)
 
         initRetrofit()
     }
