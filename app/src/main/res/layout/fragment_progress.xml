@@ -97,7 +97,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/chart_sleep_analyze" />
 
-<!--            <TextView-->
+            <Button
+                android:id="@+id/download_stat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="downloadStat"
+                android:text="Скачать данные" />
+
+            <!--            <TextView-->
 <!--                android:layout_width="wrap_content"-->
 <!--                android:layout_height="32dp"-->
 <!--                android:layout_marginTop="24dp"-->

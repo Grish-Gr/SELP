@@ -5,7 +5,7 @@ import java.util.Date
 
 data class RegistrationRequest(
 
-    @SerializedName("name")
+    @SerializedName("username")
     val username: String,
 
     @SerializedName("sex")
