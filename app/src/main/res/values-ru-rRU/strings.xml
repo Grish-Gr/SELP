@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SELP</string>
-    <string name="title_exercise_progress">Прогресс упражнений</string>
+    <string name="title_exercise_progress">Прогресс</string>
     <string name="title_psychological_test">Тесты</string>
-    <string name="title_my_mood">Моё настроение</string>
+    <string name="title_my_mood">Настроение</string>
     <string name="title_sleep">Сон</string>
     <string name="title_notes">Заметки</string>
-    <string name="title_meditation_music">Музыка для медитации</string>
+    <string name="title_meditation_music">Медитации</string>
     <string name="title_button_video">Видео</string>
-    <string name="title_buttonsound">Звук</string>
+    <string name="title_buttonsound">Аудио</string>
+
     <string name="hint_breath_inhale">Медленный вдох</string>
     <string name="hint_breath_exhale">Медленный выдох</string>
     <string name="title_cancel">Отмена</string>

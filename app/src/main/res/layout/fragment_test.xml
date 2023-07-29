@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/main_app_bar"
@@ -50,52 +55,216 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <Button
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/image_meditation"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:src="@drawable/meditation_basic_fon"
+        android:elevation="4dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/meditation_basic_fon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/main_app_bar" >
+
+        <TextView
+            android:id="@+id/title_help_btn"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:gravity="center"
+            android:text="В этом разделе доступны для прохождения разные тесты которые помогут тебе более объективно оценить твое психологическое здоровье."
+            android:textColor="?attr/colorSurface"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/add_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="138dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Создать тест"
+            android:textColor="#000000"
+            android:textColorLink="#5080FC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_help_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/title_test_what_u_see"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="55dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="е здоровье."-->
+<!--        android:textColor="?attr/colorSurface"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/image_meditation" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/test_quality_sleep"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/test_quality_sleep"-->
+<!--        android:layout_margin="12dp"-->
+<!--        android:textColor="#5080FC"-->
+<!--        android:textColorLink="#5080FC"-->
+<!--        android:backgroundTint="?attr/colorSecondaryVariant"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/image_meditation"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/result_quality_sleep"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="12dp"-->
+<!--        android:textSize="18sp"-->
+<!--        android:text=""-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/test_quality_sleep" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/test_anxiety_level"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/test_anxiety_level"-->
+<!--        android:layout_margin="12dp"-->
+<!--        android:textColor="#5080FC"-->
+<!--        android:textColorLink="#5080FC"-->
+<!--        android:backgroundTint="?attr/colorSecondaryVariant"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/result_quality_sleep"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/result_anxiety_level"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="12dp"-->
+<!--        android:textSize="18sp"-->
+<!--        android:text=""-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/test_anxiety_level"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/test_quality_sleep"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/test_quality_sleep"
-        android:layout_margin="12dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_app_bar"/>
+        android:layout_width="330dp"
+        android:layout_height="157dp"
+        android:src="@drawable/meditation_fone"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="376dp"
 
-    <TextView
-        android:id="@+id/result_quality_sleep"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:textSize="18sp"
-        android:text=""
+        android:elevation="4dp"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/kit_for_progress"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/test_quality_sleep" />
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/image_meditation">
 
-    <Button
+        <Button
+            android:id="@+id/test_quality_sleep_butt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:backgroundTint="#f2f3f4"
+            android:text="Пройти"
+            android:textColor="#80231F20"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="63dp" />
+
+        <TextView
+            android:id="@+id/title_test_sleep"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:text="@string/test_quality_sleep"
+            android:textColor="?attr/colorSurface"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/result_quality_sleep"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:gravity="left"
+            android:textColor="#DCDCDC"
+            android:textSize="22sp"
+            android:layout_margin="12dp"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title_test_sleep" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
         android:id="@+id/test_anxiety_level"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/test_anxiety_level"
-        android:layout_margin="12dp"
+        android:layout_width="330dp"
+        android:layout_height="157dp"
+        android:src="@drawable/night_for_test"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="537dp"
+        android:elevation="4dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/night_for_test"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result_quality_sleep"/>
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/test_quality_sleep">
 
-    <TextView
-        android:id="@+id/result_anxiety_level"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:textSize="18sp"
-        android:text=""
-        app:layout_constraintTop_toBottomOf="@+id/test_anxiety_level"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/title_5min"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:text="@string/test_anxiety_level"
+            android:textColor="?attr/colorSurface"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/add_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Сделать тест"
-        android:layout_margin="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <Button
+            android:id="@+id/read_article_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:backgroundTint="#f2f3f4"
+            android:text="Пройти"
+            android:textColor="#80231F20"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="63dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/result_anxiety_level"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:gravity="left"
+            android:textColor="#DCDCDC"
+            android:textSize="22sp"
+            android:layout_margin="12dp"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/read_article_1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

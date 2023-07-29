@@ -3,10 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <com.github.mikephil.charting.charts.LineChart
         android:layout_marginTop="32dp"
         android:layout_marginHorizontal="4dp"
         android:id="@+id/chart_week_mood"
+        android:background="@drawable/blue_ramka"
         android:layout_width="match_parent"
         android:layout_height="400dp"/>
 

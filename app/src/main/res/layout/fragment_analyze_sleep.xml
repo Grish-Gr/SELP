@@ -68,6 +68,7 @@
         android:layout_marginHorizontal="4dp"
         android:layout_width="match_parent"
         android:layout_height="400dp"
+        android:background="@drawable/blue_ramka"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/range_date_analyzed_sleep"/>

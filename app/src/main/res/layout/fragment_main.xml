@@ -185,7 +185,7 @@
                     android:layout_height="74dp"
                     android:layout_marginStart="28dp"
                     android:layout_marginTop="43dp"
-                    android:background="@drawable/background_item_main_options"
+                    android:background="@drawable/rectangle_1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -197,7 +197,7 @@
                             android:id="@+id/ic_exercises_progessive"
                             android:layout_width="22dp"
                             android:layout_height="23dp"
-                            android:layout_margin="16dp"
+                            android:layout_margin="12dp"
                             android:background="@drawable/ic_progress_graphics"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -228,7 +228,7 @@
                     android:layout_height="74dp"
                     android:layout_marginStart="25dp"
                     android:layout_marginTop="43dp"
-                    android:background="@drawable/background_item_main_options"
+                    android:background="@drawable/rectangle_1"
                     app:layout_constraintEnd_toStartOf="@id/sleep"
                     app:layout_constraintStart_toEndOf="@id/exercises_progessive"
                     app:layout_constraintTop_toTopOf="parent">
@@ -241,7 +241,7 @@
                             android:id="@+id/ic_exercises_progessive_3"
                             android:layout_width="22dp"
                             android:layout_height="23dp"
-                            android:layout_margin="16dp"
+                            android:layout_margin="12dp"
                             android:background="@drawable/ic_mood"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -273,7 +273,7 @@
                     android:layout_marginStart="25dp"
                     android:layout_marginTop="43dp"
                     android:layout_marginEnd="27dp"
-                    android:background="@drawable/background_item_main_options"
+                    android:background="@drawable/rectangle_1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/my_mood"
                     app:layout_constraintTop_toTopOf="parent">
@@ -286,7 +286,7 @@
                             android:id="@+id/ic_exercises_progessive_4"
                             android:layout_width="22dp"
                             android:layout_height="23dp"
-                            android:layout_margin="16dp"
+                            android:layout_margin="12dp"
                             android:background="@drawable/ic_sleep"
                             android:backgroundTint="?attr/colorOnSurface"
                             app:layout_constraintStart_toStartOf="parent"
@@ -321,7 +321,7 @@
                     android:layout_marginBottom="44dp"
                     android:layout_marginTop="43dp"
                     android:visibility="invisible"
-                    android:background="@drawable/background_item_main_options"
+                    android:background="@drawable/rectangle_1"
                     app:layout_constraintTop_toBottomOf="@id/exercises_progessive"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
@@ -343,7 +343,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
+                            android:layout_margin="12dp"
                             android:minLines="2"
                             android:text="@string/title_psychological_test"
                             android:textSize="11sp"
@@ -365,7 +365,7 @@
                     android:layout_marginStart="25dp"
                     android:layout_marginBottom="44dp"
                     android:layout_marginTop="43dp"
-                    android:background="@drawable/background_item_main_options"
+                    android:background="@drawable/rectangle_1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/meditation"
                     app:layout_constraintStart_toEndOf="@id/psychological_test"
@@ -379,7 +379,7 @@
                             android:id="@+id/ic_exercises_progessive_5"
                             android:layout_width="22dp"
                             android:layout_height="23dp"
-                            android:layout_margin="16dp"
+                            android:layout_margin="12dp"
                             android:background="@drawable/ic_note"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -412,7 +412,7 @@
                     android:layout_marginBottom="44dp"
                     android:layout_marginTop="43dp"
                     android:visibility="invisible"
-                    android:background="@drawable/background_item_main_options"
+                    android:background="@drawable/rectangle_1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/notes"
                     app:layout_constraintTop_toBottomOf="@id/sleep">
@@ -425,7 +425,7 @@
                             android:id="@+id/ic_exercises_progessive_7"
                             android:layout_width="22dp"
                             android:layout_height="23dp"
-                            android:layout_margin="16dp"
+                            android:layout_margin="12dp"
                             android:background="@drawable/ic_meditation"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -443,7 +443,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/ic_exercises_progessive_7" />
-
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
