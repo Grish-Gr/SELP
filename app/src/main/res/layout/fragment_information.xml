@@ -54,8 +54,18 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-
-
+        <Button
+            android:id="@+id/open_adding_articles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="70dp"
+            android:text="Написать статью"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/main_app_bar"/>
 
         <View
             android:id="@+id/rectangle_7"
@@ -63,7 +73,7 @@
             android:layout_height="350dp"
             android:layout_marginTop="50dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/open_adding_articles"
             android:background="@drawable/pt2"
             />
 
@@ -171,14 +181,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/open_adding_articles"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Написать статью"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

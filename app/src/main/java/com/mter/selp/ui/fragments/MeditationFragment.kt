@@ -1,4 +1,4 @@
-package com.mter.selp.ui.fragments.sheets
+package com.mter.selp.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,7 +14,7 @@ import com.mter.selp.ui.fragments.MeditationThreeMinFragment
 import com.mter.selp.ui.fragments.MeditationTwoMinFragment
 import com.mter.selp.ui.fragments.VideoInfoFragment
 
-class MeditationSheetFragment : BottomSheetDialogFragment() {
+class MeditationFragment {
     private lateinit var binding: FragmentMeditationBinding
 //    override fun onCreateView(
 //        inflater: LayoutInflater,
@@ -42,4 +42,5 @@ class MeditationSheetFragment : BottomSheetDialogFragment() {
 //
 //
 //    }
+
 }
