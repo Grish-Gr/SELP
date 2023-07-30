@@ -35,6 +35,7 @@ android {
     packagingOptions {
         exclude 'META-INF/proguard/androidx-annotations.pro'
     }
+    namespace 'com.mter.selp'
 }
 dependencies {
 

@@ -11,6 +11,7 @@ import com.mter.selp.data.network.AuthRestService
 import com.mter.selp.data.network.UserRestService
 import com.mter.selp.data.network.response.JwtResponse
 import com.mter.selp.model.AuthService
+import com.mter.selp.model.FailedRequestToServerRepository
 import com.mter.selp.model.MoodRepository
 import com.mter.selp.model.ResultTestRepository
 import com.mter.selp.model.SleepRepository

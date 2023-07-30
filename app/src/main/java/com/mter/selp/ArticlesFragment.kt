@@ -33,7 +33,7 @@ class ArticlesFragment {
             )
         }
 
-        private fun initAction(){
+        private fun initAction() {
             binding.openVideoInfo.setOnClickListener {
                 openFragment(VideoInfoFragment())
             }
@@ -46,4 +46,5 @@ class ArticlesFragment {
                 openFragment(AddingArticlesFragment())
             }
         }
+    }
 }
