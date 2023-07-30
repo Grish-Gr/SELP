@@ -4,148 +4,222 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_register"
     tools:context=".ui.fragments.RegistrationFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/selpLogoRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="132dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_logo"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/profileName"
-        android:layout_width="228dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="95dp"
-        android:layout_marginEnd="67dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Логин"
-        android:textColor="#B3231F20"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selpLogoRegister" />
-
-    <EditText
-        android:id="@+id/registerEmail"
-        android:layout_width="228dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="67dp"
-        android:ems="10"
-        android:hint="E-mail"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profileName" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sex_choice"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Пол"
-        android:layout_margin="72dp"
-        app:layout_constraintTop_toBottomOf="@id/registerEmail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <AutoCompleteTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container_choice_birthday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sex_choice">
-
+        <ImageView
+            android:id="@+id/list2.2"
+            android:layout_width="475dp"
+            android:layout_height="800dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:srcCompat="@drawable/list_sign2"
+            tools:ignore="MissingConstraints" />
         <TextView
-            android:id="@+id/birthdate"
+            android:id="@+id/sign_up_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Выбирите дату"
+            android:text="Sign Up"
+            android:textSize="26dp"
+            android:fontFamily="sans-serif"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:layout_margin="40dp"/>
 
-        <ImageButton
-            android:id="@+id/change_birthdate"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:background="#00000000"
-            android:foregroundTint="?attr/colorOnSurface"
-            android:foreground="@drawable/ic_date_range"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/base_register"
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_text"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/name_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Имя"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
 
+            <EditText
+                android:id="@+id/profileName"
+                android:layout_width="337dp"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Логин"
+                android:textColor="#B3231F20"
+                android:background="@drawable/stroki"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name_reg"/>
 
-    <EditText
-        android:id="@+id/registerPassword"
-        android:layout_width="228dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="67dp"
-        android:ems="10"
-        android:hint="Пароль"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_choice_birthday" />
+            <TextView
+                android:id="@+id/age_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Возраст"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileName" />
 
-    <EditText
-        android:id="@+id/registerPasswordOneMore"
-        android:layout_width="228dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="67dp"
-        android:ems="10"
-        android:hint="Повторите пароль"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_choice_birthday"
+                android:layout_width="337dp"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/stroki"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/age_reg">
 
-    <Button
-        android:id="@+id/create"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="85dp"
-        android:backgroundTint="#CCBBDCFF"
-        android:text="Создать профиль"
-        android:textColor="#231F20"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerPasswordOneMore" />
+                <TextView
+                    android:id="@+id/birthdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Выберите дату"
+                    android:textSize="20sp"
+                    android:textColor="#B3231F20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
+                <ImageButton
+                    android:id="@+id/change_birthdate"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="#00000000"
+                    android:foregroundTint="?attr/colorOnSurface"
+                    android:foreground="@drawable/ic_date_range"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/sex_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Пол"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_choice_birthday"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sex_choice"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:hint="Пол"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/stroki"
+                app:layout_constraintTop_toBottomOf="@id/sex_reg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/mail_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Электронная почта"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sex_choice"/>
+
+            <EditText
+                android:id="@+id/registerEmail"
+                android:layout_width="337dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/stroki"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mail_reg" />
+
+            <TextView
+                android:id="@+id/firs_pass_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Пароль"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerEmail"/>
+
+            <EditText
+                android:id="@+id/registerPassword"
+                android:layout_width="337dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Пароль"
+                android:inputType="textPassword"
+                android:background="@drawable/stroki"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firs_pass_reg" />
+
+            <TextView
+                android:id="@+id/second_pass_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Повторите пароль"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/registerPassword"/>
+
+            <EditText
+                android:id="@+id/registerPasswordOneMore"
+                android:layout_width="337dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Повторите пароль"
+                android:inputType="textPassword"
+                android:background="@drawable/stroki"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/second_pass_reg" />
+
+            <Button
+                android:id="@+id/create"
+                android:layout_width="337dp"
+                android:layout_height="58dp"
+                android:backgroundTint="#98C4EC"
+                android:layout_marginTop="25dp"
+                android:text="SIGN UP"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerPasswordOneMore" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     <ProgressBar
         android:id="@+id/progress_registration"
         android:layout_width="48dp"
@@ -154,8 +228,7 @@
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/create"/>
-
+        app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

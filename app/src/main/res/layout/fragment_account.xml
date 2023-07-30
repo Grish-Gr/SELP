@@ -4,279 +4,304 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="#BFDFFF"
-    android:background="#3999FC">
-<!--    android:startColor="#BFDFFF"-->
-<!--    android:endColor="#3999FC"-->
-<!--    android:angle="225"-->
-
-
+    android:background="@drawable/gradient_account">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/main_app_bar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_gravity="top"
-
-        android:background="#FFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/white_part"
-        app:layout_constraintTop_toTopOf="parent">
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/back"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_marginStart="7dp"
-            android:foreground="@drawable/ic_dehaze"
-            android:foregroundTint="?attr/colorOnSurface"
-            android:background="@drawable/ic_dehaze"
-            android:layout_gravity="center_vertical|start"/>
-
-        <View
-            android:layout_width="90dp"
-            android:layout_height="32dp"
-            android:background="@drawable/label_selp"
-            android:backgroundTint="?attr/colorOnSurface"
-            android:layout_gravity="center" />
-
-        <Button
-            android:id="@+id/account"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_marginEnd="7dp"
-            android:foreground="@drawable/ic_person"
-            android:foregroundTint="?attr/colorOnSurface"
-            android:background="@drawable/ic_person"
-            android:layout_gravity="end|center_vertical"/>
-
-    </FrameLayout>
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/white_part"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_gravity="top"
-
-        android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_app_bar">
+        app:layout_constraintTop_toTopOf="parent">
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:cornerRadius="15dp">
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="360dp"
-                android:layout_height="120dp"
-                android:layout_marginTop="10dp"
+            <Button
+                android:id="@+id/back"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/ic_dehaze"
+                android:foreground="@drawable/ic_dehaze"
+                android:foregroundTint="?attr/colorOnSurface" />
+
+            <View
+                android:layout_width="90dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@drawable/label_selp"
+                android:backgroundTint="?attr/colorOnSurface" />
+
+            <Button
+                android:id="@+id/account"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/ic_person"
+                android:foreground="@drawable/ic_person"
+                android:foregroundTint="?attr/colorOnSurface" />
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/white_part"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="@drawable/acc_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_app_bar">
+            <View
+                android:layout_width="357dp"
+                android:layout_height="94dp"
+                android:background="@drawable/background2_acc"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <View
+                android:id="@+id/profile_picture_oval"
+                android:layout_width="142dp"
+                android:layout_height="142dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/backgroung_in_account"/>
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ellipse_31"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <View
                 android:id="@+id/profile_picture"
-                android:layout_width="152dp"
-                android:layout_height="152dp"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/ic_profile_pic"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/ic_profile_pic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-            android:id="@+id/user_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="230dp"
-            android:autofillHints=""
-            android:importantForAutofill="no"
-            android:text="User name"
-            android:textSize="23sp"
-            android:layout_gravity="center_horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/profile_picture"
-            tools:ignore="LabelFor" />
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:autofillHints=""
+                android:importantForAutofill="no"
+                android:text="User name"
+                android:textSize="23sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_picture"
+                tools:ignore="LabelFor" />
 
-        <TextView
-            android:id="@+id/user_mail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="280dp"
-            android:autofillHints=""
-            android:importantForAutofill="no"
-            android:text="User email"
-            android:textSize="10sp"
-            android:layout_gravity="center_horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/user_name"
-            tools:ignore="LabelFor" />
+            <TextView
+                android:id="@+id/user_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:importantForAutofill="no"
+                android:text="User email"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_name"
+                tools:ignore="LabelFor" />
 
             <Button
                 android:id="@+id/change_info"
-                android:layout_width="110dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="230dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/transparent"
-                android:paddingTop="2dp"
                 android:text="Изменить"
-                android:textColor="@android:color/black"
-                android:textSize="12sp"
-                app:cornerRadius="15dp"
+                android:textColor="#231F20"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                app:cornerRadius="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_mail"
                 app:strokeColor="#231F2033"
                 app:strokeWidth="1dp" />
-        </FrameLayout>
-    </com.google.android.material.appbar.AppBarLayout>
 
-    <Button
-        android:id="@+id/result"
-        android:layout_width="270dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="36dp"
-        android:backgroundTint="#FFFF"
-        android:text="Мои результаты"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:gravity="start"
-        app:cornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/white_part" />
 
-    <Button
-        android:id="@+id/premium"
-        android:layout_width="270dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="11dp"
-        android:backgroundTint="#FFFF"
 
-        android:text="Selp PREMIUM"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:gravity="start"
-        app:cornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/result"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/theme_constraint"
-        android:layout_width="270dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="45dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/blue_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/premium">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/white_part"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
-            android:id="@+id/theme"
+            android:id="@+id/result"
             android:layout_width="270dp"
             android:layout_height="49dp"
-            android:backgroundTint="#FFFF"
-            android:gravity="left"
-            android:text="Тема"
-            android:textColor="@android:color/black"
+            android:backgroundTint="#FFFFFF"
+            android:gravity="start|center"
+            android:layout_marginTop="30dp"
+            android:text="Мои результаты"
+            android:textColor="#231F20"
             android:textSize="18sp"
-            app:cornerRadius="15dp"
+            app:cornerRadius="11dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints" />
-
-        <Spinner
-            android:id="@+id/theme_color"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:textColor="#919191"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints"
-            android:entries="@array/themes"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/notification_constraint"
-        android:layout_width="270dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="45dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/theme_constraint">
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/notification"
+            android:id="@+id/premium"
             android:layout_width="270dp"
             android:layout_height="49dp"
+            android:layout_marginTop="11dp"
             android:backgroundTint="#FFFF"
-            android:gravity="left"
-            android:text="Уведомления"
+            android:gravity="start|center"
+            android:text="Selp PREMIUM"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            app:cornerRadius="15dp"
-            tools:ignore="MissingConstraints,RtlHardcoded"/>
-
-        <Spinner
-            android:id="@+id/status_notification"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:entries="@array/notification"
-            android:scrollbarSize="2dp"
+            app:cornerRadius="11dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/result" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/theme_constraint"
+            android:layout_width="270dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/premium">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/language_constraint"
-        android:layout_width="270dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="45dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notification_constraint">
+            <Button
+                android:id="@+id/theme"
+                android:layout_width="270dp"
+                android:layout_height="49dp"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="left|center"
+                android:text="Тема"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:cornerRadius="11dp"
+                tools:ignore="MissingConstraints" />
+
+            <Spinner
+                android:id="@+id/theme_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:entries="@array/themes"
+                android:textColor="#919191"
+                app:layout_constraintBaseline_toBaselineOf="@id/theme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notification_constraint"
+            android:layout_width="270dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/theme_constraint">
+
+            <Button
+                android:id="@+id/notification"
+                android:layout_width="270dp"
+                android:layout_height="49dp"
+                android:backgroundTint="#FFFF"
+                android:gravity="left|center"
+                android:text="Уведомления"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:cornerRadius="11dp"
+                tools:ignore="MissingConstraints,RtlHardcoded" />
+
+            <Spinner
+                android:id="@+id/status_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:entries="@array/notification"
+                android:scrollbarSize="2dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/notification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/language_constraint"
+            android:layout_width="270dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notification_constraint">
+
+            <Button
+                android:id="@+id/language"
+                android:layout_width="270dp"
+                android:layout_height="49dp"
+                android:backgroundTint="#FFFF"
+                android:gravity="start|center"
+                android:text="Язык"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:cornerRadius="11dp"
+                tools:ignore="MissingConstraints" />
+
+            <Spinner
+                android:id="@+id/status_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:entries="@array/language"
+                app:layout_constraintBaseline_toBaselineOf="@id/language"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/language"
+            android:id="@+id/admin"
             android:layout_width="270dp"
             android:layout_height="49dp"
-            android:gravity="start"
+            android:layout_marginTop="11dp"
             android:backgroundTint="#FFFF"
-            android:text="Язык"
+            android:gravity="start|center"
+            android:text="Стать администратором"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            app:cornerRadius="15dp"
-            tools:ignore="MissingConstraints"/>
-
-        <Spinner
-            android:id="@+id/status_language"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
+            app:cornerRadius="11dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints"
-            android:entries="@array/language"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/language_constraint"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
