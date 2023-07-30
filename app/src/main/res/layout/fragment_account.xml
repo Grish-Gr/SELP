@@ -10,8 +10,6 @@
 <!--    android:endColor="#3999FC"-->
 <!--    android:angle="225"-->
 
-
-
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/main_app_bar"
         android:layout_width="match_parent"

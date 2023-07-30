@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/main_app_bar"
@@ -44,19 +44,19 @@
                     android:backgroundTint="?attr/colorOnSurface" />
 
 
-        <Button
-            android:id="@+id/account"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_gravity="end|center_vertical"
-            android:layout_marginEnd="7dp"
-            android:background="@drawable/ic_person"
-            android:foreground="@drawable/ic_person"
-            android:foregroundTint="?attr/colorOnSurface" />
+                <Button
+                    android:id="@+id/account"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/ic_person"
+                    android:foreground="@drawable/ic_person"
+                    android:foregroundTint="?attr/colorOnSurface" />
 
-    </FrameLayout>
+            </FrameLayout>
 
-</com.google.android.material.appbar.AppBarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/image_meditation"
@@ -77,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="55dp"
                 android:gravity="center"
-                android:text="Медитация - это психологический инструмент для работы со своим сознанием. "
+                android:text="В разделе Статьи вы сможете узнать больше полезной информации о Панических атаках и других психологических заболеваниях"
                 android:textColor="?attr/colorSurface"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -85,13 +85,13 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/close"
+                android:id="@+id/openVideoInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="128dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="15dp"
                 android:backgroundTint="#FFFFFF"
-                android:text="Узнать больше"
+                android:text="Посмотреть видео"
                 android:textColor="#000000"
                 android:textColorLink="#5080FC"
                 app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="320dp"
 
-            android:text="Ваша программа на день"
+            android:text="Доступные вам статьи:"
             android:textSize="21sp"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="29dp"
@@ -113,111 +113,42 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="parent"/>
 
-<!--        <TextView-->
-<!--            android:id="@+id/your_programm_text"-->
-<!--            android:layout_width="353dp"-->
-<!--            android:layout_height="121dp"-->
-<!--            android:layout_marginTop="268dp"-->
-<!--            android:gravity="center"-->
-<!--            android:text="Контент, подобранный специально для вас"-->
-<!--            android:textSize="20sp"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            tools:layout_editor_absoluteX="29dp" />-->
+        <!--        <TextView-->
+        <!--            android:id="@+id/your_programm_text"-->
+        <!--            android:layout_width="353dp"-->
+        <!--            android:layout_height="121dp"-->
+        <!--            android:layout_marginTop="268dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Контент, подобранный специально для вас"-->
+        <!--            android:textSize="20sp"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            tools:layout_editor_absoluteX="29dp" />-->
 
-
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/image_in_meditation_3min"
-        android:layout_width="330dp"
-        android:layout_height="127dp"
-        android:src="@drawable/meditation_fone"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="376dp"
-
-        android:elevation="4dp"
-        android:layout_marginTop="46dp"
-        android:background="@drawable/meditation_fone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintTop_toBottomOf="@+id/image_meditation">
-
-        <Button
-            android:id="@+id/button_play1"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:background="@drawable/play_for_medit"
-            android:foreground="@drawable/play_for_medit"
-            tools:layout_editor_absoluteX="272dp"
-            tools:layout_editor_absoluteY="69dp"/>
-
-        <TextView
-            android:id="@+id/title_3min"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="left"
-            android:text="Сделай небольшой перерыв"
-            android:textColor="?attr/colorSurface"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/title_time_3min"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:gravity="left"
-            android:text="2 минуты"
-            android:textColor="#DCDCDC"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/title_3min" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--        <ImageView-->
-<!--            android:id="@+id/image_info_meditation"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:src="@drawable/line_play_meditation"/>-->
-
-        <!--        <ImageView-->
-        <!--            android:id="@+id/image_info_meditation"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="match_parent"-->
-        <!--            android:src="@drawable/line_play_meditation"/>-->
 
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-
-            android:id="@+id/image_in_meditation_5min"
+            android:id="@+id/image_in_meditation_3min"
             android:layout_width="330dp"
             android:layout_height="127dp"
-            android:src="@drawable/meditation_1_pic"
-            tools:layout_editor_absoluteX="40dp"
-            tools:layout_editor_absoluteY="537dp"
-
+            android:src="@drawable/meditation_fone"
+            tools:layout_editor_absoluteX="41dp"
+            tools:layout_editor_absoluteY="376dp"
             android:elevation="4dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/meditation_1_pic"
+            android:layout_marginTop="46dp"
+            android:background="@drawable/image_article_first"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints"
-            app:layout_constraintTop_toBottomOf="@+id/image_in_meditation_3min">
+            app:layout_constraintTop_toBottomOf="@+id/image_meditation">
 
             <TextView
-                android:id="@+id/title_5min"
+                android:id="@+id/title_3min"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:gravity="left"
-                android:text="Ежедневная медитация"
+                android:text="Что такое Паническая атака ?"
                 android:textColor="?attr/colorSurface"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -225,28 +156,55 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/title_time_5min"
+                android:id="@+id/title_time_3min"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
                 android:gravity="left"
-                android:text="3 минуты"
+                android:text="10 минут"
                 android:textColor="#DCDCDC"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/title_5min" />
+                app:layout_constraintTop_toTopOf="@+id/title_3min" />
 
             <Button
-                android:id="@+id/button_play2"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
-                android:background="@drawable/play_for_medit"
-                android:foreground="@drawable/play_for_medit"
-                tools:layout_editor_absoluteX="272dp"
-                tools:layout_editor_absoluteY="69dp"/>
+                android:id="@+id/read_article_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#f2f3f4"
+                android:text="Прочитать"
+                android:textColor="#80231F20"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteY="63dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <!--        <ImageView-->
+        <!--            android:id="@+id/image_info_meditation"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:src="@drawable/line_play_meditation"/>-->
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/image_info_meditation"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:src="@drawable/line_play_meditation"/>-->
+
+        <Button
+            android:id="@+id/open_adding_articles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="140dp"
+            android:text="Написать статью"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/image_in_meditation_3min"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

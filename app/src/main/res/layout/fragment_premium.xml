@@ -1,42 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.PremiumFragment">
+    tools:context=".ui.fragments.PremiumFragment"
+    android:background="#BBDCFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#BBDCFF"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="7dp"
+                android:foreground="@drawable/ic_dehaze"
+                android:foregroundTint="?attr/colorOnSurface"
+                android:background="@drawable/ic_dehaze"
+                android:layout_gravity="center_vertical|start"/>
+
+            <View
+                android:layout_width="90dp"
+                android:layout_height="32dp"
+                android:background="@drawable/label_selp"
+                android:backgroundTint="?attr/colorOnSurface"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/account"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="7dp"
+                android:foreground="@drawable/ic_person"
+                android:foregroundTint="?attr/colorOnSurface"
+                android:background="@drawable/ic_person"
+                android:layout_gravity="end|center_vertical"/>
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/image_premium"
+        android:layout_width="376dp"
+        android:layout_height="282dp"
+        android:src="@drawable/meditation_basic_fon"
+        android:elevation="4dp"
+        android:layout_marginTop="-40dp"
+        android:background="@drawable/selp_premium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/main_app_bar" >
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/image_ramka_selp_premium"
+        android:layout_width="295dp"
+        android:layout_height="286dp"
+        android:layout_marginTop="282dp"
+        android:background="@drawable/ramka_selp_premium"
+        android:elevation="4dp"
+        android:src="@drawable/meditation_basic_fon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_app_bar"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/title_200"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="Всего за 200руб. в месяц"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_usual_infos"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="95dp"
+            android:gravity="center"
+            android:text="После оформления подписки вы сможете пользоваться приложением SELP без каких-либо ограничений."
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/selp_premium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="288dp"
         android:layout_marginEnd="156dp"
-        android:text="selp PREMIUM"
+        android:text="Selp Premium"
+        android:textSize="31sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <Button
         android:id="@+id/cancel_buy"
-        android:layout_width="wrap_content"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="610dp"
+        android:background="@drawable/text_selp_premium"
         android:text="Позже"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toTopOf="@+id/image_premium"/>
 
     <Button
         android:id="@+id/accept_buy"
-        android:layout_width="wrap_content"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="128dp"
-        android:text="Купить"
+        android:layout_marginHorizontal="9dp"
+        android:layout_marginBottom="1dp"
+        android:text="Оформить подписку"
+        android:background="@drawable/text_selp_premium"
+        android:layout_marginTop="610dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_premium"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
