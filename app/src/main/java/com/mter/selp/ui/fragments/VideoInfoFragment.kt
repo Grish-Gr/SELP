@@ -52,7 +52,7 @@ class VideoInfoFragment: BaseFragment() {
         }
 
         binding.back.setOnClickListener {
-            openFragment(InformationFragment())
+            openFragment(ArticlesFragment())
         }
     }
 
