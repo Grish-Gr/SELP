@@ -5,18 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
 import androidx.appcompat.content.res.AppCompatResources
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentMeditation3minVideoBinding
 
-
 class MeditationThreeMinFragment: BaseFragment() {
     private lateinit var binding: FragmentMeditation3minVideoBinding
-    private lateinit var animationIncrease: Animation
-    private lateinit var animationDecrease: Animation
-    private lateinit var pauseIncrease: Animation
-    private lateinit var pauseDecrease: Animation
     private lateinit var sound: MediaPlayer
     private var startFromPlay = false
     private var isPLayAnimation = false
@@ -33,8 +27,7 @@ class MeditationThreeMinFragment: BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //initMedia()
-        //initAnimation()
+        initMedia()
         initAction()
     }
 
@@ -49,7 +42,7 @@ class MeditationThreeMinFragment: BaseFragment() {
             } else {
                 if (sound.isPlaying){
                     sound.stop()
-//                    initMedia()
+                    initMedia()
                 }
                 it.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_pause)
                 binding.volumeHelpBreath.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_volume_on)
@@ -68,7 +61,7 @@ class MeditationThreeMinFragment: BaseFragment() {
                 }
                 else{
                     sound.stop()
-                   // initMedia()
+                    initMedia()
                 }
                 false
 
@@ -89,5 +82,15 @@ class MeditationThreeMinFragment: BaseFragment() {
             sound.stop()
             parentFragmentManager.popBackStack()
         }
+    }
+
+    private fun initMedia() {
+        sound = MediaPlayer.create(this@MeditationThreeMinFragment.context, R.raw.meditation_3min)
+        sound.isLooping = true
+    }
+
+    override fun onDestroy() {
+        sound.stop()
+        super.onDestroy()
     }
 }

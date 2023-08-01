@@ -28,10 +28,10 @@ class AddingArticlesFragment: BaseFragment() {
         binding.cancelAddingArticles.setOnClickListener {
             binding.titleArticles.text = null
             binding.textArticles.text = null
-            openFragment(InformationFragment())
+            openFragment(ArticlesFragment())
         }
         binding.saveArticles.setOnClickListener {
-            openFragment(InformationFragment())
+            openFragment(ArticlesFragment())
         }
     }
 }

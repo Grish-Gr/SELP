@@ -43,19 +43,19 @@
                     android:backgroundTint="?attr/colorOnSurface" />
 
 
-        <Button
-            android:id="@+id/account"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_gravity="end|center_vertical"
-            android:layout_marginEnd="7dp"
-            android:background="@drawable/ic_person"
-            android:foreground="@drawable/ic_person"
-            android:foregroundTint="?attr/colorOnSurface" />
+                <Button
+                    android:id="@+id/account"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/ic_person"
+                    android:foreground="@drawable/ic_person"
+                    android:foregroundTint="?attr/colorOnSurface" />
 
-    </FrameLayout>
+            </FrameLayout>
 
-</com.google.android.material.appbar.AppBarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/image_meditation"
@@ -150,8 +150,9 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@+id/image_meditation">
+          
         <TextView
             android:id="@+id/title_time_3min"
             android:layout_width="300dp"
@@ -165,7 +166,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/title_3min" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/title_3min"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="Сделай небольшой перерыв"
+                android:textColor="?attr/colorSurface"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
 
