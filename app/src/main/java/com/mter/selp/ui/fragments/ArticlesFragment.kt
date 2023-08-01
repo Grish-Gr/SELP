@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentArticlesBinding
-import com.mter.selp.databinding.FragmentInformationBinding
 
-class ArticlesFragment {
-    class InformationFragment: BaseFragment() {
+class ArticlesFragment : BaseFragment() {
+
         private lateinit var binding: FragmentArticlesBinding
 
         override fun onCreateView(
@@ -42,9 +41,13 @@ class ArticlesFragment {
                 openFragment(MainFragment())
             }
 
+            binding.readArticle1.setOnClickListener {
+                openFragment(InformationFragment())
+            }
+
             binding.openAddingArticles.setOnClickListener {
                 openFragment(AddingArticlesFragment())
             }
         }
-    }
+
 }

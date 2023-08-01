@@ -86,10 +86,13 @@ class MainFragment: BaseFragment() {
             openFragment(SleepAnalyzedFragment())
         }
         binding.notes.setOnClickListener{
-            openFragment(InformationFragment())
+            openFragment(ArticlesFragment())
         }
         binding.psychologicalTest.setOnClickListener{
             openFragment(TestFragment())
+        }
+        binding.meditation.setOnClickListener{
+            openFragment(MeditationFragment())
         }
     }
 

@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
 import androidx.appcompat.content.res.AppCompatResources
 import com.mter.selp.R
 import com.mter.selp.databinding.FragmentMeditation2minVideoBinding
@@ -13,8 +12,6 @@ import com.mter.selp.databinding.FragmentMeditation2minVideoBinding
 class MeditationTwoMinFragment : BaseFragment(){
 
     private lateinit var binding: FragmentMeditation2minVideoBinding
-    private lateinit var pauseIncrease: Animation
-    private lateinit var pauseDecrease: Animation
     private lateinit var sound: MediaPlayer
     private var startFromPlay = false
     private var isPLayAnimation = false
@@ -31,8 +28,7 @@ class MeditationTwoMinFragment : BaseFragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        initMedia()
-//        initAnimation()
+        initMedia()
         initAction()
     }
 
@@ -42,13 +38,13 @@ class MeditationTwoMinFragment : BaseFragment(){
                 it.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_play)
                 binding.volumeHelpBreath.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_volume_off)
                 sound.stop()
-               // initMedia()
+                initMedia()
                 isPLayAnimation = false
                 volumeOn = false
             } else {
                 if (sound.isPlaying){
                     sound.stop()
-                  //  initMedia()
+                    initMedia()
                 }
                 it.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_pause)
                 binding.volumeHelpBreath.foreground = AppCompatResources.getDrawable(it.context, R.drawable.ic_volume_on)
@@ -67,7 +63,7 @@ class MeditationTwoMinFragment : BaseFragment(){
                 }
                 else{
                     sound.stop()
-                    //initMedia()
+                    initMedia()
                 }
                 false
 
@@ -88,5 +84,15 @@ class MeditationTwoMinFragment : BaseFragment(){
             sound.stop()
             parentFragmentManager.popBackStack()
         }
+    }
+
+    private fun initMedia() {
+        sound = MediaPlayer.create(this@MeditationTwoMinFragment.context, R.raw.meditation_2min)
+        sound.isLooping = true
+    }
+
+    override fun onDestroy() {
+        sound.stop()
+        super.onDestroy()
     }
 }
