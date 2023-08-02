@@ -28,6 +28,7 @@ class MeditationFragment : BaseFragment() {
         binding.openMeditation2min.setOnClickListener {
             openFragment(MeditationTwoMinFragment())
         }
+
         binding.openMeditation3min.setOnClickListener {
             openFragment(MeditationThreeMinFragment())
         }

@@ -113,6 +113,10 @@ class MainFragment: BaseFragment() {
 
     private fun initAction(){
 
+        binding.back.setOnClickListener {
+            openFragment(SidebarFragment())
+        }
+
         binding.helpCard.setOnClickListener {
             val settings = this.activity?.getSharedPreferences(SETTINGS_APP, Context.MODE_PRIVATE)
             if (settings?.getBoolean(HELP_WITH_SOUND, true) == true){

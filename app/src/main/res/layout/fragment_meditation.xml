@@ -72,7 +72,7 @@
             app:layout_constraintTop_toBottomOf="@+id/main_app_bar" >
 
             <TextView
-                android:id="@+id/title_help_btn"
+                android:id="@+id/title_meditation"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="55dp"
@@ -95,7 +95,7 @@
                 android:textColor="#000000"
                 android:textColorLink="#5080FC"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title_help_btn" />
+                app:layout_constraintTop_toBottomOf="@+id/title_meditation" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -128,7 +128,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/image_in_meditation_3min"
+            android:id="@+id/image_in_meditation_2min"
             android:layout_width="330dp"
             android:layout_height="127dp"
             android:src="@drawable/meditation_fone"
@@ -143,17 +143,8 @@
             tools:ignore="MissingConstraints"
             app:layout_constraintTop_toBottomOf="@+id/image_meditation">
 
-            <Button
-                android:id="@+id/open_meditation_2min"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
-                android:background="@drawable/play_for_medit"
-                android:foreground="@drawable/play_for_medit"
-                tools:layout_editor_absoluteX="272dp"
-                tools:layout_editor_absoluteY="69dp"/>
-
             <TextView
-                android:id="@+id/title_3min"
+                android:id="@+id/title_2min"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -166,7 +157,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/title_time_3min"
+                android:id="@+id/title_time_2min"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
@@ -176,7 +167,17 @@
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/title_3min" />
+                app:layout_constraintTop_toTopOf="@+id/title_2min" />
+
+            <Button
+                android:id="@+id/open_meditation_2min"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/play_for_medit"
+                android:foreground="@drawable/play_for_medit"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_time_2min"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -196,7 +197,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
 
-            android:id="@+id/image_in_meditation_5min"
+            android:id="@+id/image_in_meditation_3min"
             android:layout_width="330dp"
             android:layout_height="127dp"
             android:src="@drawable/meditation_1_pic"
@@ -209,10 +210,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints"
-            app:layout_constraintTop_toBottomOf="@+id/image_in_meditation_3min">
+            app:layout_constraintTop_toBottomOf="@+id/image_in_meditation_2min">
 
             <TextView
-                android:id="@+id/title_5min"
+                android:id="@+id/title_3min"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -225,7 +226,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/title_time_5min"
+                android:id="@+id/title_time_3min"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
@@ -235,7 +236,7 @@
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/title_5min" />
+                app:layout_constraintTop_toTopOf="@+id/title_3min" />
 
             <Button
                 android:id="@+id/open_meditation_3min"
@@ -243,8 +244,9 @@
                 android:layout_height="42dp"
                 android:background="@drawable/play_for_medit"
                 android:foreground="@drawable/play_for_medit"
-                tools:layout_editor_absoluteX="272dp"
-                tools:layout_editor_absoluteY="69dp"/>
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title_time_3min"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
