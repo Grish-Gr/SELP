@@ -20,10 +20,10 @@ class MeditationFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initAction()
+        /*initAction()*/
     }
 
-    private fun initAction(){
+    /*private fun initAction(){
 
         binding.openMeditation2min.setOnClickListener {
             openFragment(MeditationTwoMinFragment())
@@ -33,6 +33,6 @@ class MeditationFragment : BaseFragment() {
             openFragment(MeditationThreeMinFragment())
         }
 
-    }
+    }*/
 
 }
