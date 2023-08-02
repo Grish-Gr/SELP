@@ -169,21 +169,6 @@
         tools:ignore="MissingConstraints"
         app:layout_constraintTop_toBottomOf="@+id/image_meditation">
 
-        <Button
-            android:id="@+id/test_quality_sleep_butt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#f2f3f4"
-            android:text="Пройти"
-            android:textColor="#80231F20"
-            android:layout_marginBottom="10dp"
-            android:layout_marginStart="200dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="2dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="63dp" />
 
         <TextView
             android:id="@+id/title_test_sleep"
@@ -198,11 +183,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:id="@+id/test_quality_sleep_butt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:backgroundTint="#f2f3f4"
+            android:text="Пройти"
+            android:textColor="#80231F20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_test_sleep" />
+
         <TextView
             android:id="@+id/result_quality_sleep"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="85dp"
+            android:layout_marginTop="55dp"
             android:gravity="left"
             android:textColor="#DCDCDC"
             android:textSize="22sp"
@@ -210,7 +206,7 @@
             android:text=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/title_test_sleep" />
+            app:layout_constraintTop_toBottomOf="@id/test_quality_sleep_butt" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -231,7 +227,7 @@
         app:layout_constraintTop_toBottomOf="@+id/test_quality_sleep">
 
         <TextView
-            android:id="@+id/title_5min"
+            android:id="@+id/title_test_anxiety"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -244,26 +240,21 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/read_article_1"
+            android:id="@+id/test_anxiety_level_butt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
             android:backgroundTint="#f2f3f4"
             android:text="Пройти"
             android:textColor="#80231F20"
-            android:layout_marginBottom="10dp"
-            android:layout_marginStart="200dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="2dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/test_anxiety_level" />
+            app:layout_constraintTop_toBottomOf="@id/title_test_anxiety" />
 
         <TextView
             android:id="@+id/result_anxiety_level"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="85dp"
+            android:layout_marginTop="55dp"
             android:gravity="left"
             android:textColor="#DCDCDC"
             android:textSize="22sp"
@@ -271,7 +262,7 @@
             android:text=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/read_article_1" />
+            app:layout_constraintTop_toBottomOf="@id/test_anxiety_level_butt" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -59,11 +59,11 @@ class TestFragment: BaseFragment() {
             openFragment(AccountFragment())
         }
 
-        binding.testQualitySleep.setOnClickListener {
+        binding.testQualitySleepButt.setOnClickListener {
             openFragment(SleepQualityTestFragment())
         }
 
-        binding.testAnxietyLevel.setOnClickListener {
+        binding.testAnxietyLevelButt.setOnClickListener {
             openFragment(AnxietyLevelTestFragment())
         }
 
