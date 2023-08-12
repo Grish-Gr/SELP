@@ -25,11 +25,11 @@ class MeditationFragment : BaseFragment() {
 
     private fun initAction(){
 
-        binding.openMeditation2min.setOnClickListener {
+        binding.buttonPlay1.setOnClickListener {
             openFragment(MeditationTwoMinFragment())
         }
 
-        binding.openMeditation3min.setOnClickListener {
+        binding.buttonPlay2.setOnClickListener {
             openFragment(MeditationThreeMinFragment())
         }
 
