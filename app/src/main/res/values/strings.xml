@@ -10,6 +10,12 @@
     <string name="title_button_video">Video</string>
     <string name="title_buttonsound">Audio</string>
 
+    <string name="title_mood_dialog">Ваше настроение сейчас:</string>
+    <string name="mood_angry">Злое</string>
+    <string name="mood_dreary">Нормальное</string>
+    <string name="mood_depressed">Депрессивное</string>
+    <string name="mood_elated">Приподнятое</string>
+    <string name="mood_cheerful">Бодрое</string>
     <string name="hint_breath_start">Когда ты чувствуешь сильный страх,</string>
     <string name="hint_breath_inhale">сделай глубокий вдох носом на 4 счета,</string>
     <string name="hint_breath_pause_inhale">задержи дыхание на 4 счета,</string>
@@ -125,12 +131,6 @@
     <string name="title_cancel">Cancel</string>
     <string name="title_save">Save</string>
     <string name="title_time_sleep">Time sleep</string>
-    <string name="title_mood_dialog">Your mood now:</string>
-    <string name="mood_angry">Angry</string>
-    <string name="mood_dreary">Dreary</string>
-    <string name="mood_depressed">Depressed</string>
-    <string name="mood_elated">Elated</string>
-    <string name="mood_cheerful">Cheerful</string>
     <string name="title_video">Video</string>
     <string name="title_your_mood">Your mood</string>
     <string name="going_to_bed">Going to bed</string>
@@ -202,5 +202,7 @@
         Казалось бы, в чём тут важность? Всем известный ритм дыхания, но он настолько важен, что способен изменить вашу манеру мышления, успокоить разум, перенаправить ваш мыслительный процесс и улучшить работу многих систем физического тела.
         Этот принцип также используется для практикующих курс «випассана». Он универсален, поэтому очень важно освоить его с самого начала.
     </string>
+    <string name="selp_premium">SELP premium</string>
+    <string name="title_premium">SELP Premium</string>
 
 </resources>

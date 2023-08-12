@@ -2,117 +2,219 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
-        <!--1-->
-        <TextView
-            android:id="@+id/anxiety_level_test_question_1"
-            android:layout_width="0dp"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/test_anxiety_header"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_margin="2dp"
-            android:text="@string/anxiety_q1"
-            android:textStyle="bold"
+            android:layout_gravity="top"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="4dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/ramka_for_test_head_anxiety"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:id="@+id/title_test_anxiety"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:layout_margin="2dp"
+                android:text="Тест"
+                android:gravity="center"
+                android:textColor="?attr/colorSurface"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="52dp"
+                android:layout_marginStart="42dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <RadioGroup
-            android:id="@+id/anxiety_level_test_question_1_choice"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_1">
+            <TextView
+                android:id="@+id/title_name_test_anxiety"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:text="на определение уровня тревожности"
+                android:textColor="?attr/colorSurface"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="52dp"
+                android:layout_marginStart="42dp"
+                app:layout_constraintStart_toStartOf="@+id/test_anxiety_header"
+                app:layout_constraintTop_toTopOf="@+id/title_test_anxiety"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-            <RadioButton
-                android:id="@+id/anxiety_level_test_question_1_4"
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--1 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_1"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintTop_toTopOf="@+id/test_anxiety_header"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/anxiety_answer_4"/>
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/anxiety_level_test_question_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_margin="2dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/anxiety_q1"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="@+id/test_anxiety_header"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
-            <RadioButton
-                android:id="@+id/anxiety_level_test_question_1_3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/anxiety_answer_3"/>
+                <RadioGroup
+                    android:id="@+id/anxiety_level_test_question_1_choice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_1">
 
-            <RadioButton
-                android:id="@+id/anxiety_level_test_question_1_2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/anxiety_answer_2"/>
+                    <RadioButton
+                        android:id="@+id/anxiety_level_test_question_1_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/anxiety_answer_4"/>
 
-            <RadioButton
-                android:id="@+id/anxiety_level_test_question_1_1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/anxiety_answer_1"/>
+                    <RadioButton
+                        android:id="@+id/anxiety_level_test_question_1_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/anxiety_answer_3"/>
 
-        </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/anxiety_level_test_question_1_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/anxiety_answer_2"/>
 
+                    <RadioButton
+                        android:id="@+id/anxiety_level_test_question_1_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/anxiety_answer_1"/>
+
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--2-->
-        <TextView
-            android:id="@+id/anxiety_level_test_question_2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_margin="2dp"
-            android:text="@string/anxiety_q2"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_2"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_1_choice"/>
-
-        <RadioGroup
-            android:id="@+id/anxiety_level_test_question_2_choice"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_2">
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_1"
+            app:layout_constraintVertical_bias="0.0">
 
-            <RadioButton
-                android:id="@+id/anxiety_level_test_question_2_4"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/anxiety_answer_4"/>
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/anxiety_level_test_question_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_margin="2dp"
+                    android:text="@string/anxiety_q2"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/anxiety_level_question_1"/>
 
-            <RadioButton
-                android:id="@+id/anxiety_level_test_question_2_3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/anxiety_answer_3"/>
+                <RadioGroup
+                    android:id="@+id/anxiety_level_test_question_2_choice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_2">
 
-            <RadioButton
-                android:id="@+id/anxiety_level_test_question_2_2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/anxiety_answer_2"/>
+                    <RadioButton
+                        android:id="@+id/anxiety_level_test_question_2_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/anxiety_answer_4"/>
 
-            <RadioButton
-                android:id="@+id/anxiety_level_test_question_2_1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/anxiety_answer_1"/>
+                    <RadioButton
+                        android:id="@+id/anxiety_level_test_question_2_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/anxiety_answer_3"/>
 
-        </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/anxiety_level_test_question_2_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/anxiety_answer_2"/>
 
+                    <RadioButton
+                        android:id="@+id/anxiety_level_test_question_2_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/anxiety_answer_1"/>
+
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--3-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_3"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_2"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_3"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -124,7 +226,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_3_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -156,12 +258,31 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--4-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_4"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_3"
+            app:layout_constraintVertical_bias="0.0">>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_4"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -173,7 +294,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_4_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -205,12 +326,30 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--5-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_5"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_4"
+            app:layout_constraintVertical_bias="0.0">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_5"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -222,7 +361,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_5_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -254,12 +393,31 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--6-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_6"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_5"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_6"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -271,7 +429,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_6_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -301,14 +459,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/anxiety_answer_1"/>
-
         </RadioGroup>
-
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
         <!--7-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_7"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_6"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_7"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -320,7 +495,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_7_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -350,14 +525,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/anxiety_answer_1"/>
-
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--8-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_8"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_7"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_8"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -369,7 +562,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_8_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -401,12 +594,31 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--9-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_9"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_8"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_9"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -418,7 +630,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_9_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -450,12 +662,31 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--10-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_10"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_9"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_10"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -467,7 +698,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_10_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -499,12 +730,31 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--11-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_11"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_10"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_11"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -516,7 +766,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_11_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -548,12 +798,31 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--12-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_12"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_11"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_12"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -565,7 +834,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_12_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -597,12 +866,31 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--13-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_13"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_12"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_13"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -614,7 +902,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_13_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -645,12 +933,31 @@
                 android:layout_height="match_parent"
                 android:text="@string/anxiety_answer_1"/>
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--14-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_14"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_13"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_14"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -662,7 +969,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_14_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -694,12 +1001,31 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--15-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_15"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_14"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_15"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -711,7 +1037,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_15_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -743,12 +1069,31 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--16-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_16"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_15"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_16"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -760,7 +1105,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_16_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -792,12 +1137,31 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--17-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_17"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_16"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_17"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -809,7 +1173,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_17_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -841,12 +1205,31 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--18-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_18"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_17"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_18"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -858,7 +1241,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_18_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -888,14 +1271,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/anxiety_answer_1"/>
-
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <!--19-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/anxiety_level_question_19"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="260dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/anxiety_level_question_18"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:id="@+id/anxiety_level_test_question_19"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_margin="2dp"
@@ -907,7 +1308,7 @@
 
         <RadioGroup
             android:id="@+id/anxiety_level_test_question_19_choice"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -939,32 +1340,32 @@
                 android:text="@string/anxiety_answer_1"/>
 
         </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <Button
             android:id="@+id/cancel"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title_cancel"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="1dp"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_marginEnd="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/save_mood"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_19_choice"/>
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_question_19"/>
 
         <Button
             android:id="@+id/save_mood"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:text="@string/title_save"
-            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
             android:layout_marginStart="2dp"
             app:layout_constraintStart_toEndOf="@id/cancel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_test_question_19_choice"/>
+            app:layout_constraintTop_toBottomOf="@+id/anxiety_level_question_19"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.core.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>

@@ -1,6 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="216dp"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="top"
+        tools:ignore="MissingConstraints">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="7dp"
+                android:foreground="@drawable/ic_dehaze"
+                android:foregroundTint="?attr/colorOnSurface"
+                android:background="@drawable/ic_dehaze"
+                android:layout_gravity="center_vertical|start"/>
+
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:id="@+id/butt_audio"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/title_buttonsound"
+        android:textStyle="bold"
+        android:textColor="#1C1C1C"
+        android:backgroundTint="#C2E0FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_app_bar" />
+
+    <Button
+        android:id="@+id/butt_video"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/title_button_video"
+        android:textStyle="bold"
+        android:textColor="#1C1C1C"
+        android:backgroundTint="#C2E0FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt_audio" />
+
+    <Button
+        android:id="@+id/butt_mood"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/title_my_mood"
+        android:textStyle="bold"
+        android:textColor="#1C1C1C"
+        android:backgroundTint="#C2E0FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt_video" />
+
+    <Button
+        android:id="@+id/butt_sleep"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/title_sleep"
+        android:textStyle="bold"
+        android:textColor="#1C1C1C"
+        android:backgroundTint="#C2E0FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt_mood" />
+
+    <Button
+        android:id="@+id/butt_articles"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/title_notes"
+        android:textStyle="bold"
+        android:textColor="#1C1C1C"
+        android:backgroundTint="#C2E0FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt_sleep" />
+
+    <Button
+        android:id="@+id/butt_medit"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/title_meditation_music"
+        android:textStyle="bold"
+        android:textColor="#1C1C1C"
+        android:backgroundTint="#C2E0FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt_articles" />
+    <Button
+        android:id="@+id/butt_test"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/title_meditation_music"
+        android:textStyle="bold"
+        android:textColor="#1C1C1C"
+        android:backgroundTint="#C2E0FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt_medit" />
+
+    <Button
+        android:id="@+id/butt_premium"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/title_premium"
+        android:textStyle="bold"
+        android:textColor="#1C1C1C"
+        android:backgroundTint="#C2E0FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butt_test" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/lists_for_sleep">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/main_app_bar"
@@ -68,7 +69,6 @@
         android:layout_marginHorizontal="4dp"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:background="@drawable/blue_ramka"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/range_date_analyzed_sleep"/>

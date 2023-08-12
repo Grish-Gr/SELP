@@ -86,10 +86,13 @@ class MainFragment: BaseFragment() {
             openFragment(SleepAnalyzedFragment())
         }
         binding.notes.setOnClickListener{
-            openFragment(InformationFragment())
+            openFragment(ArticlesFragment())
         }
         binding.psychologicalTest.setOnClickListener{
             openFragment(TestFragment())
+        }
+        binding.meditation.setOnClickListener{
+            openFragment(MeditationFragment())
         }
     }
 
@@ -109,6 +112,10 @@ class MainFragment: BaseFragment() {
     }
 
     private fun initAction(){
+
+        binding.back.setOnClickListener {
+            openFragment(SidebarFragment())
+        }
 
         binding.helpCard.setOnClickListener {
             val settings = this.activity?.getSharedPreferences(SETTINGS_APP, Context.MODE_PRIVATE)

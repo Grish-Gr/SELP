@@ -30,10 +30,10 @@ class AuthViewModel: BaseViewModel() {
         }
     }
 
-    fun registration(email: String, password: String, sex: Sex, birthdateTime: Long) {
+    fun registration(username: String, email: String, password: String, sex: Sex, birthdateTime: Long) {
         viewModelScope.launch {
             val response = AuthService.registration(
-                username = "Jkljklj",
+                username = username,
                 sex = sex,
                 birthdate = birthdateTime,
                 email = email,

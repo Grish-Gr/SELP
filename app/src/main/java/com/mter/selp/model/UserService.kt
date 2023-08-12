@@ -22,4 +22,13 @@ object UserService {
             ResultOf.Error(ex)
         }
     }
+
+    suspend fun getAdminPermission(secretKey: String): ResultOf<UserInfo> {
+        return try {
+            val response = userRestService.getAdminPermission(secretKey)
+            ResultOf.Success(UserInfo.from(response))
+        } catch (ex: Exception) {
+            ResultOf.Error(ex)
+        }
+    }
 }

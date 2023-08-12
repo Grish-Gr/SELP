@@ -2,27 +2,77 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/add_mood_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="4dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/ramka_for_test_head_anxiety"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/title_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:layout_margin="2dp"
+                android:text="Оцени своё настроение сейчас"
+                android:gravity="center"
+                android:textColor="?attr/colorSurface"
+                android:textStyle="bold"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="52dp"
+                android:layout_marginStart="42dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mood_question1"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintTop_toTopOf="@+id/add_mood_header"
+            app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
     <TextView
         android:id="@+id/title_mood_dialog"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_margin="2dp"
         android:text="@string/title_mood_dialog"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/test_mood_header"/>
 
     <RadioGroup
         android:id="@+id/mood_choice"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:checkedButton="@id/mood_2"
@@ -34,48 +84,65 @@
             android:id="@+id/mood_5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Отлично"/>
+            android:text="@string/mood_cheerful"/>
 
         <RadioButton
             android:id="@+id/mood_4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Хорошо"/>
+            android:text="@string/mood_elated"/>
 
         <RadioButton
             android:id="@+id/mood_3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Нормально"/>
+            android:text="@string/mood_dreary"/>
 
         <RadioButton
             android:id="@+id/mood_2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Плохо"/>
+            android:text="@string/mood_depressed"/>
 
         <RadioButton
             android:id="@+id/mood_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Ужасно"/>
+            android:text="@string/mood_angry"/>
 
     </RadioGroup>
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mood_question2"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="300dp"
+            app:layout_constraintTop_toTopOf="@+id/mood_question1"
+            app:layout_constraintVertical_bias="0.0">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
     <TextView
         android:id="@+id/title_mood_2"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_margin="2dp"
         android:text="Оцените на сколько сильно вы ощущаете данную эмоцию?"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mood_choice"/>
+        app:layout_constraintTop_toBottomOf="@+id/mood_question2"/>
 
     <RadioGroup
         android:id="@+id/mood_choice_2"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:checkedButton="@id/proc_75"
@@ -126,21 +193,38 @@
             android:text="90% - 100%"/>
 
     </RadioGroup>
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mood_question3"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="300dp"
+            app:layout_constraintTop_toTopOf="@+id/mood_question2"
+            app:layout_constraintVertical_bias="0.0">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
     <TextView
         android:id="@+id/title_mood_3"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_margin="2dp"
         android:text="Оцените Ваше состояние на данный момент:"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mood_choice_2"/>
+        app:layout_constraintTop_toBottomOf="@+id/mood_question3"/>
 
     <RadioGroup
         android:id="@+id/mood_choice_3"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:checkedButton="@id/state_4"
@@ -176,37 +260,34 @@
             android:id="@+id/state_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Ненависть"/>
+            android:text="Ничего не чувствую из перечисленного"/>
 
     </RadioGroup>
-
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
     <Button
         android:id="@+id/cancel"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_cancel"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="340dp"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_marginEnd="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/save_mood"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mood_choice_3"/>
+        app:layout_constraintTop_toTopOf="@+id/mood_question3"/>
 
     <Button
         android:id="@+id/save_mood"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:text="@string/title_save"
-        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
         android:layout_marginStart="2dp"
         app:layout_constraintStart_toEndOf="@id/cancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mood_choice_3"/>
+        app:layout_constraintTop_toBottomOf="@+id/mood_question3"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
 </androidx.core.widget.NestedScrollView>

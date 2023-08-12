@@ -32,16 +32,10 @@ class InformationFragment: BaseFragment() {
     }
 
     private fun initAction(){
-        binding.openVideoInfo.setOnClickListener {
-            openFragment(VideoInfoFragment())
-        }
 
         binding.back.setOnClickListener {
-            openFragment(MainFragment())
+            openFragment(ArticlesFragment())
         }
 
-        binding.openAddingArticles.setOnClickListener {
-            openFragment(AddingArticlesFragment())
-        }
     }
 }

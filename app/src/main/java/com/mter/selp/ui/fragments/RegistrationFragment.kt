@@ -58,6 +58,7 @@ class RegistrationFragment : BaseFragment() {
     fun initAction(){
         binding.create.setOnClickListener {
             viewModel.registration(
+                username = binding.profileName.editableText.toString(),
                 email = binding.registerEmail.editableText.toString(),
                 password = binding.registerPassword.editableText.toString(),
                 sex = when(binding.sexChoice.editText.toString()){
