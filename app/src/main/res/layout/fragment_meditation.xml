@@ -143,8 +143,9 @@
                 android:layout_height="42dp"
                 android:background="@drawable/play_for_medit"
                 android:foreground="@drawable/play_for_medit"
-                tools:layout_editor_absoluteX="272dp"
-                tools:layout_editor_absoluteY="69dp"/>
+                android:layout_margin="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
             <TextView
                 android:id="@+id/title_3min"
@@ -244,8 +245,9 @@
                     android:layout_height="42dp"
                     android:background="@drawable/play_for_medit"
                     android:foreground="@drawable/play_for_medit"
-                    tools:layout_editor_absoluteX="272dp"
-                    tools:layout_editor_absoluteY="69dp"/>
+                    android:layout_margin="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
